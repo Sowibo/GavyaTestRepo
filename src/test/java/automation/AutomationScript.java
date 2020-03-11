@@ -20,7 +20,7 @@ public class AutomationScript extends CustomWebDriver{
 	public void launchUrl() {
 		driver.get(Settings.getInstance().getProperty("url"));
 	}
-	
+	//GG
 	
 	
 }
