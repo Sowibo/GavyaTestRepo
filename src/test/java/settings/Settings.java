@@ -14,7 +14,6 @@ import settings.Settings;
 public class Settings {
 	public static Settings getInstance(){
 		return new Settings();
-		
 	}
 	public String getProperty(String key) {
 		String s="";
@@ -22,14 +21,7 @@ public class Settings {
 		try {
 			FileInputStream file=new FileInputStream("src/test/resources/settings.properties");
 			properties.load(file);
-			 s=properties.getProperty(key);
-//			 String s1=properties.getProperty(urldb);
-//			 String s2=properties.getProperty(username);
-//			 String s3=properties.getProperty(password);
-			  
-//			  System.out.println("value of flag:"+get);
-
-			 
+			s=properties.getProperty(key);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
