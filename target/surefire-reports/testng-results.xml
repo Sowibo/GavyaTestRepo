@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-11T15:29:02 IST" name="HomePageSuite" finished-at="2020-03-11T15:29:25 IST" duration-ms="23350">
+  <suite started-at="2020-03-12T21:45:19 IST" name="HomePageSuite" finished-at="2020-03-12T21:46:19 IST" duration-ms="60589">
     <groups>
     </groups>
-    <test started-at="2020-03-11T15:29:02 IST" name="BeforeSuite" finished-at="2020-03-11T15:29:02 IST" duration-ms="15">
+    <test started-at="2020-03-12T21:45:19 IST" name="BeforeSuite" finished-at="2020-03-12T21:45:19 IST" duration-ms="45">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-11T15:29:08 IST" name="TCID1" finished-at="2020-03-11T15:29:25 IST" duration-ms="16974">
+    <test started-at="2020-03-12T21:45:19 IST" name="TCID1" finished-at="2020-03-12T21:45:54 IST" duration-ms="34485">
       <class name="testcases.TCID1">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@50de0926]" started-at="2020-03-11T15:29:08 IST" name="startTest" finished-at="2020-03-11T15:29:25 IST" duration-ms="16917" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@50de0926]" started-at="2020-03-12T21:45:19 IST" name="startTest" finished-at="2020-03-12T21:45:54 IST" duration-ms="34437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- testcases.TCID1 -->
+    </test> <!-- TCID1 -->
+    <test started-at="2020-03-12T21:45:54 IST" name="TCID59" finished-at="2020-03-12T21:45:56 IST" duration-ms="2439">
+      <class name="testcases.TCID59">
+        <test-method signature="lastNameCheck()[pri:0, instance:testcases.TCID59@76b10754]" started-at="2020-03-12T21:45:54 IST" name="lastNameCheck" finished-at="2020-03-12T21:45:56 IST" duration-ms="2436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastNameCheck -->
+      </class> <!-- testcases.TCID59 -->
+    </test> <!-- TCID59 -->
+    <test started-at="2020-03-12T21:45:56 IST" name="TCID60" finished-at="2020-03-12T21:46:05 IST" duration-ms="8442">
+      <class name="testcases.TCID60">
+        <test-method signature="invalidEmailValidation()[pri:0, instance:testcases.TCID60@58a90037]" started-at="2020-03-12T21:45:56 IST" name="invalidEmailValidation" finished-at="2020-03-12T21:46:05 IST" duration-ms="8441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailValidation -->
+      </class> <!-- testcases.TCID60 -->
+    </test> <!-- TCID60 -->
+    <test started-at="2020-03-12T21:46:05 IST" name="TCID61" finished-at="2020-03-12T21:46:11 IST" duration-ms="6115">
+      <class name="testcases.TCID61">
+        <test-method signature="emailValidation()[pri:0, instance:testcases.TCID61@40f08448]" started-at="2020-03-12T21:46:05 IST" name="emailValidation" finished-at="2020-03-12T21:46:11 IST" duration-ms="6109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailValidation -->
+      </class> <!-- testcases.TCID61 -->
+    </test> <!-- TCID61 -->
+    <test started-at="2020-03-12T21:46:11 IST" name="TCID62" finished-at="2020-03-12T21:46:16 IST" duration-ms="5440">
+      <class name="testcases.TCID62">
+        <test-method signature="phoneNumValidation()[pri:0, instance:testcases.TCID62@32464a14]" started-at="2020-03-12T21:46:11 IST" name="phoneNumValidation" finished-at="2020-03-12T21:46:16 IST" duration-ms="5435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneNumValidation -->
+      </class> <!-- testcases.TCID62 -->
+    </test> <!-- TCID62 -->
+    <test started-at="2020-03-12T21:46:16 IST" name="TCID63" finished-at="2020-03-12T21:46:19 IST" duration-ms="3057">
+      <class name="testcases.TCID63">
+        <test-method signature="phoneNumEmpty()[pri:0, instance:testcases.TCID63@32cf48b7]" started-at="2020-03-12T21:46:16 IST" name="phoneNumEmpty" finished-at="2020-03-12T21:46:19 IST" duration-ms="3055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneNumEmpty -->
+      </class> <!-- testcases.TCID63 -->
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-11T15:28:29 IST" name="init" finished-at="2020-03-11T15:29:02 IST" duration-ms="32987" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-12T21:45:12 IST" name="init" finished-at="2020-03-12T21:45:19 IST" duration-ms="6534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-    </test> <!-- TCID1 -->
+    </test> <!-- TCID63 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>

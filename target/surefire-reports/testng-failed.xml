@@ -10,4 +10,31 @@
       </class> <!-- testcases.TCID1 -->
     </classes>
   </test> <!-- TCID1(failed) -->
+  <test thread-count="5" name="TCID59(failed)" verbose="0">
+    <classes>
+      <class name="testcases.TCID59">
+        <methods>
+          <include name="lastNameCheck"/>
+        </methods>
+      </class> <!-- testcases.TCID59 -->
+    </classes>
+  </test> <!-- TCID59(failed) -->
+  <test thread-count="5" name="TCID60(failed)" verbose="0">
+    <classes>
+      <class name="testcases.TCID60">
+        <methods>
+          <include name="emailValidation"/>
+        </methods>
+      </class> <!-- testcases.TCID60 -->
+    </classes>
+  </test> <!-- TCID60(failed) -->
+  <test thread-count="5" name="TCID61(failed)" verbose="0">
+    <classes>
+      <class name="testcases.TCID61">
+        <methods>
+          <include name="emailValidation"/>
+        </methods>
+      </class> <!-- testcases.TCID61 -->
+    </classes>
+  </test> <!-- TCID61(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->
