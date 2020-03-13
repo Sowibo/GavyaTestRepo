@@ -500,42 +500,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
 	}
-	//set primary address
-//	public void SetPrimary() {
-//		
-//		WebElement fullname,mobilenum,area,flatnum,city,district,pin,landmark,delibtn,okbtn;
-//		fullname=driver.findElement(By.name("fullname"));
-//		fullname.sendKeys("neerajasnath");
-//		
-//		mobilenum=driver.findElement(By.name("mobile"));
-//		mobilenum.sendKeys("8129481454");
-//		
-//		flatnum=driver.findElement(By.name("house"));
-//		flatnum.sendKeys("13B");
-//		
-//		
-//		area=driver.findElement(By.name("area"));
-//		area.sendKeys("AKG Nagar,Peroorkada");
-//		
-//		city=driver.findElement(By.name("city"));
-//		city.sendKeys("Peroorkada");
-//		
-//		district=driver.findElement(By.name("district"));
-//		district.sendKeys("Trivandram");
-//		
-//		
-//		pin=driver.findElement(By.name("pin"));
-//		pin.sendKeys("605501");
-//		
-//		landmark=driver.findElement(By.name("landmark"));
-//		landmark.sendKeys("Peroor Hospital");
-//		
-//		
-//		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
-//		delibtn.click();
-//		
-//		okbtn.click();
-//	}
+	
 	
 	
 }
