@@ -12,5 +12,100 @@
       <class name="testcases.TCID1"/>
     </classes>
   </test>
-   
+   <test name="TCID147">
+    <classes>
+      <class name="testcases.TCID147"/>
+    </classes>
+  </test>
+  <test name="TCID148">
+    <classes>
+      <class name="testcases.TCID148"/>
+    </classes>
+  </test>
+  <test name="TCID149">
+    <classes>
+      <class name="testcases.TCID149"/>
+    </classes>
+  </test>
+  <test name="TCID150">
+    <classes>
+      <class name="testcases.TCID150"/>
+    </classes>
+  </test>
+  <test name="TCID151">
+    <classes>
+      <class name="testcases.TCID151"/>
+    </classes>
+  </test>
+    <test name="TCID152">
+    <classes>
+      <class name="testcases.TCID152"/>
+    </classes>
+  </test>
+  <test name="TCID153">
+    <classes>
+      <class name="testcases.TCID153"/>
+    </classes>
+  </test>
+  <test name="TCID154">
+    <classes>
+      <class name="testcases.TCID154"/>
+    </classes>
+  </test>
+  <test name="TCID155">
+    <classes>
+      <class name="testcases.TCID155"/>
+    </classes>
+  </test>
+  <test name="TCID156">
+    <classes>
+      <class name="testcases.TCID156"/>
+    </classes>
+  </test
+  <test name="TCID157">
+    <classes>
+      <class name="testcases.TCID157"/>
+    </classes>
+  </test
+  
+ <test name="TCID158">
+    <classes>
+      <class name="testcases.TCID158"/>
+    </classes>
+  </test> 
+  <test name="TCID159">
+    <classes>
+      <class name="testcases.TCID159"/>
+    </classes>
+  </test> 
+   <test name="TCID160">
+    <classes>
+      <class name="testcases.TCID160"/>
+    </classes>
+  </test> 
+    <test name="TCID161">
+    <classes>
+      <class name="testcases.TCID161"/>
+    </classes>
+  </test>
+  <test name="TCID162">
+    <classes>
+      <class name="testcases.TCID162"/>
+    </classes>
+  </test>
+  <test name="TCID163">
+    <classes>
+      <class name="testcases.TCID163"/>
+    </classes>
+  </test>
+  <test name="TCID164">
+    <classes>
+      <class name="testcases.TCID164"/>
+    </classes>
+  </test>
+  <test name="TCID165">
+    <classes>
+      <class name="testcases.TCID165"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

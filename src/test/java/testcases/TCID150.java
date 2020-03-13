@@ -6,7 +6,7 @@ import automation.AutomationScript;
 
 
 
-public class TCID147 {
+public class TCID150 {
 	@Test
 	public  void flatNum() {
 		AutomationScript.returnobj().launchUrl();
@@ -14,7 +14,7 @@ public class TCID147 {
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().FlatEmpty();
-	}		
-	
+		AutomationScript.returnobj().AreaInvalid();
+		
+	}
 }

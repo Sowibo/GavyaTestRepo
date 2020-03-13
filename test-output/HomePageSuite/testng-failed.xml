@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TCID1(failed)">
+    <classes>
+      <class name="testcases.TCID1">
+        <methods>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- testcases.TCID1 -->
+    </classes>
+  </test> <!-- TCID1(failed) -->
+  <test thread-count="5" name="TCID147(failed)">
+    <classes>
+      <class name="testcases.TCID147">
+        <methods>
+          <include name="flatNum"/>
+        </methods>
+      </class> <!-- testcases.TCID147 -->
+    </classes>
+  </test> <!-- TCID147(failed) -->
+</suite> <!-- Failed suite [HomePageSuite] -->
