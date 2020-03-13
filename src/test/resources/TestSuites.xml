@@ -12,13 +12,12 @@
       <class name="testcases.TCID1"/>
     </classes>
   </test>
-  <test name="TCID59">
+	<test name="TCID59">
     <classes>
       <class name="testcases.TCID59"/>
     </classes>
- 	</test>
-   
-     <test name="TCID60">
+  </test>
+  <test name="TCID60">
     <classes>
       <class name="testcases.TCID60"/>
     </classes>
@@ -33,11 +32,24 @@
       <class name="testcases.TCID62"/>
     </classes>
   </test>
-  <test name="TCID63">
+   <test name="TCID63">
     <classes>
       <class name="testcases.TCID63"/>
     </classes>
   </test>
-  
-   
+  <test name="TCID64">
+    <classes>
+      <class name="testcases.TCID64"/>
+    </classes>
+  </test>
+  <test name="TCID65">
+    <classes>
+      <class name="testcases.TCID65"/>
+    </classes>
+  </test>
+  <test name="TCID66">
+    <classes>
+      <class name="testcases.TCID66"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

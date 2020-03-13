@@ -1,18 +1,14 @@
 package testcases;
 
-
-
 import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID59 {
+public class TCID65 {
 	@Test
-	public void lastNameCheck() {
+	public void phoneNumNegative() {
 		AutomationScript.returnobj().launchUrl();
 		AutomationScript.returnobj().registerOpen();
-		AutomationScript.returnobj().lastNameValidation();
-		
+		AutomationScript.returnobj().phoneLengthNegative();
 	}
-	
 }
