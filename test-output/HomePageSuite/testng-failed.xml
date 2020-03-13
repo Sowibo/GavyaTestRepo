@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TCID90(failed)">
+  <test thread-count="5" name="TCID101(failed)">
     <classes>
-      <class name="testcases.TCID90">
+      <class name="testcases.TCID101">
         <methods>
           <include name="startTest"/>
         </methods>
-      </class> <!-- testcases.TCID90 -->
+      </class> <!-- testcases.TCID101 -->
     </classes>
-  </test> <!-- TCID90(failed) -->
+  </test> <!-- TCID101(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->
