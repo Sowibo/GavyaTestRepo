@@ -8,10 +8,99 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27</td><td></td><td></td></tr>
+<tr><th colspan="8">HomePageSuite</th></tr>
+<tr><td><a href="#t0">BeforeSuite</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">66</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">TCID1</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">185</td><td></td><td></td></tr>
+<tr><td><a href="#t2">TCID119</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">102</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">TCID120</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">65</td><td></td><td></td></tr>
+<tr><td><a href="#t4">TCID121</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">111</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">TCID122</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">21</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">5</th><th class="num">0</th><th class="num">0</th><th class="num">550</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">HomePageSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">TCID1 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TCID1</td><td><a href="#m0">startTest</a></td><td rowspan="1">1584114898093</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">TCID119 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TCID119</td><td><a href="#m1">test119</a></td><td rowspan="1">1584114898318</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">TCID120 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TCID120</td><td><a href="#m2">test120</a></td><td rowspan="1">1584114898540</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">TCID121 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TCID121</td><td><a href="#m3">test121</a></td><td rowspan="1">1584114898736</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">TCID122 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testcases.BeforeSuites</td><td><a href="#m4">init</a></td><td rowspan="1">1584114897266</td><td rowspan="1">329</td></tr><tr><th colspan="4">TCID122 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.TCID122</td><td><a href="#m5">test122</a></td><td rowspan="1">1584114898927</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2></body>
+<h2>BeforeSuite</h2><h2>TCID1</h2><h3 id="m0">testcases.TCID1#startTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TCID119</h2><h3 id="m1">testcases.TCID119#test119</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TCID120</h2><h3 id="m2">testcases.TCID120#test120</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TCID121</h2><h3 id="m3">testcases.TCID121#test121</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TCID122</h2><h3 id="m4">testcases.BeforeSuites#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testcases.TCID122#test122</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\User\Desktop\sql\dependens\geckodriver\geckodriver.exe&quot;
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at webdriver.CustomWebDriver.initialize(CustomWebDriver.java:18)
+	at testcases.BeforeSuites.init(BeforeSuites.java:12)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

@@ -1,19 +1,16 @@
 package testcases;
 
-import java.util.concurrent.TimeUnit;
-
 import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID119 {
+public class TCID120 {
+	
 	@Test
-	public  void test119() {
+	public  void test120() {
 //		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
-		AutomationScript.returnobj().testPhoneNumber();
-//		AutomationScript.returnobj().testPhoneNumberHigh();
+		AutomationScript.returnobj().testValidData();
 	}
-
 }
