@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TCID2(failed)">
     <classes>
-      <class name="testcases.TCID4">
+      <class name="testcases.TCID2">
         <methods>
-          <include name="cartMinus"/>
+          <include name="addCart"/>
         </methods>
-      </class> <!-- testcases.TCID4 -->
+      </class> <!-- testcases.TCID2 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TCID2(failed) -->
+  <test thread-count="5" name="TCID3(failed)">
+    <classes>
+      <class name="testcases.TCID3">
+        <methods>
+          <include name="cartPlus"/>
+        </methods>
+      </class> <!-- testcases.TCID3 -->
+    </classes>
+  </test> <!-- TCID3(failed) -->
+  <test thread-count="5" name="TCID16(failed)">
+    <classes>
+      <class name="testcases.TCID16">
+        <methods>
+          <include name="checkout_emp"/>
+        </methods>
+      </class> <!-- testcases.TCID16 -->
+    </classes>
+  </test> <!-- TCID16(failed) -->
+</suite> <!-- Failed suite [HomePageSuite] -->

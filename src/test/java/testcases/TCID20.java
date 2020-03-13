@@ -1,15 +1,12 @@
 package testcases;
 
-import org.testng.annotations.Test;
-
 import automation.AutomationScript;
 
-public class TCID3 {
-	@Test
-	public  void cartPlus(){
+public class TCID20 {
+	public void clearPro() {
 		AutomationScript.returnobj().launchUrl();
 		AutomationScript.returnobj().cookie();
-		AutomationScript.returnobj().addProduct();
-		
+		AutomationScript.returnobj().cart();
+		AutomationScript.returnobj().clearEmpty();
 	}
 }
