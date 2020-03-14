@@ -9,11 +9,12 @@ import automation.AutomationScript;
 public class TCID119 {
 	@Test
 	public  void test119() {
-//		AutomationScript.returnobj().logIn();
+		
+		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
 		AutomationScript.returnobj().testPhoneNumber();
-//		AutomationScript.returnobj().testPhoneNumberHigh();
+
 	}
 
 }

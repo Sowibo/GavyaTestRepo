@@ -32,4 +32,70 @@
       <class name="testcases.TCID122"/>
     </classes>
   </test>
+  <test name="TCID123">
+    <classes>
+      <class name="testcases.TCID123"/>
+    </classes>
+  </test>
+  <test name="TCID132">
+    <classes>
+      <class name="testcases.TCID132"/>
+    </classes>
+  </test>
+  <test name="TCID133">
+    <classes>
+      <class name="testcases.TCID133"/>
+    </classes>
+  </test>
+  <test name="TCID134">
+    <classes>
+      <class name="testcases.TCID134"/>
+    </classes>
+  </test>
+  <test name="TCID135">
+    <classes>
+      <class name="testcases.TCID135"/>
+    </classes>
+  </test>
+  <test name="TCID136">
+    <classes>
+      <class name="testcases.TCID136"/>
+    </classes>
+  </test>
+  <test name="TCID137">
+    <classes>
+      <class name="testcases.TCID137"/>
+    </classes>
+  </test>
+  <test name="TCID138">
+    <classes>
+      <class name="testcases.TCID138"/>
+    </classes>
+  </test>
+  <test name="TCID139">
+    <classes>
+      <class name="testcases.TCID139"/>
+    </classes>
+  </test>
+  <test name="TCID142">
+    <classes>
+      <class name="testcases.TCID142"/>
+    </classes>
+  </test>
+  <test name="TCID143">
+    <classes>
+      <class name="testcases.TCID143"/>
+    </classes>
+  </test>
+  <test name="TCID144">
+    <classes>
+      <class name="testcases.TCID144"/>
+    </classes>
+  </test>
+  <test name="TCID145">
+    <classes>
+      <class name="testcases.TCID145"/>
+    </classes>
+  </test>
+  
 </suite> <!-- Suite -->

@@ -21,6 +21,8 @@ public class Settings {
 		Properties properties=new Properties();
 		try {
 			FileInputStream file=new FileInputStream("src/test/resources/settings.properties");
+			
+//			FileInputStream file=new FileInputStream("GreenGavyaTest/src/test/resources/settings.properties");
 			properties.load(file);
 			 s=properties.getProperty(key);
 //			 String s1=properties.getProperty(urldb);

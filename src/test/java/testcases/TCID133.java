@@ -6,7 +6,7 @@ import automation.AutomationScript;
 
 public class TCID133 {
 	@Test
-	public  void test123() {
+	public  void test133() {
 		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().changePass();

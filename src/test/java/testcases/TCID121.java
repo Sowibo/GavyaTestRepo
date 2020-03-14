@@ -8,7 +8,7 @@ public class TCID121 {
 
 	@Test
 	public  void test121() {
-//		AutomationScript.returnobj().logIn();
+		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
 		AutomationScript.returnobj().checkUpdate();

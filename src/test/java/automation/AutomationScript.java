@@ -218,7 +218,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		public void removeAddress() {
 			WebElement remove;
-//			ADD,PROCEED,CHECKOUT
+
 			remove = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[1]/div/div/h5/a"));
 			remove.click();	
 		}
@@ -342,6 +342,62 @@ public class AutomationScript extends CustomWebDriver{
 			lmark.sendKeys("near hss school");	
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();		
+		}
+//		144
+		
+		public void mobileNumberLenPositive() {
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
+			fname = driver.findElement(By.id("fullname"));
+			fname.sendKeys("keerthisudev");		
+			mnum = driver.findElement(By.id("mobile"));
+			mnum.sendKeys("999999");
+			flatnum = driver.findElement(By.id("house"));
+			flatnum.sendKeys("myhome123");			
+			area = driver.findElement(By.id("area"));
+			area.sendKeys("akg nagar peroorkkada");			
+			city =  driver.findElement(By.id("city"));
+			city.sendKeys("Thiruvananthapuram");
+			district = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/select"));
+			district.sendKeys("Trivandrum");		
+			pin = driver.findElement(By.id("pin"));
+			pin.sendKeys("695020");		
+			lmark = driver.findElement(By.id("landmark"));
+			lmark.sendKeys("near hss school");	
+			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
+			deliverbtn.click();		
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			mnum.clear();
+			mnum.sendKeys("100000000000000");
+			deliverbtn.click();
+			
+		}
+		
+//		145
+		
+		public void mobileNumberLenNegative() {
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
+			fname = driver.findElement(By.id("fullname"));
+			fname.sendKeys("keerthisudev");		
+			mnum = driver.findElement(By.id("mobile"));
+			mnum.sendKeys("99999");
+			flatnum = driver.findElement(By.id("house"));
+			flatnum.sendKeys("myhome123");			
+			area = driver.findElement(By.id("area"));
+			area.sendKeys("akg nagar peroorkkada");			
+			city =  driver.findElement(By.id("city"));
+			city.sendKeys("Thiruvananthapuram");
+			district = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/select"));
+			district.sendKeys("Trivandrum");		
+			pin = driver.findElement(By.id("pin"));
+			pin.sendKeys("695020");		
+			lmark = driver.findElement(By.id("landmark"));
+			lmark.sendKeys("near hss school");	
+			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
+			deliverbtn.click();		
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			mnum.clear();
+			mnum.sendKeys("1000000000000000");
+			deliverbtn.click();
 		}
 			
 }
