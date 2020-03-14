@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 129.089 sec <<< FAILURE! - in TestSuite
-lastNameCheck(testcases.TCID59)  Time elapsed: 10.727 sec  <<< FAILURE!
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 89.519 sec <<< FAILURE! - in TestSuite
+lastNameCheck(testcases.TCID59)  Time elapsed: 6.672 sec  <<< FAILURE!
 java.lang.AssertionError: TCID <59> failed: <no show error message when give last name length as 16>
 	at org.testng.Assert.fail(Assert.java:97)
-	at automation.AutomationScript.lastNameValidation(AutomationScript.java:57)
+	at automation.AutomationScript.lastNameValidation(AutomationScript.java:54)
 	at testcases.TCID59.lastNameCheck(TCID59.java:14)
 
