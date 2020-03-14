@@ -1,5 +1,7 @@
 package automation;
 
+import static org.testng.Assert.fail;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -58,7 +60,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void FlatEmpty() {
 			
-		WebElement fullname,mobilenum,area,city,district,pin,landmark,delibtn;
+		WebElement fullname,mobilenum,area,city,district,pin,landmark,delibtn,element;
 		
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
@@ -84,33 +86,60 @@ public class AutomationScript extends CustomWebDriver{
 		 
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
+
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[5]"));
+		String elementval = element.getText();
+		String value="Must have atleast 3-75 character!";
+		if(elementval.equals(value)) {
+			System.out.println("TCID147 sucess");
+		}
+		else {
+			
+			fail("TCID <147> failed: <no show error message when flat number field is empty>");
+		}
+		
+		
+		
 	}
 	//flat number fileld with input data in positive case
 	
 	public void FlatPositive() {
 		
 		WebElement flatnum,delibtn;
-		
 		flatnum=driver.findElement(By.name("house"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
-		flatnum.sendKeys("13B");
+		flatnum.sendKeys("133");
 		delibtn.click();
-		delibtn.clear();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		
-		flatnum.sendKeys("133B");
+		flatnum.clear();
+		flatnum.sendKeys("1333");
 		delibtn.click();
-		delibtn.clear();
-		 
-		flatnum.sendKeys("133asedgtryhgfcdftresduhnbvdfrtukjnbvcdftyuiknhgfcxasertyuiokjB");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		flatnum.clear();
+		flatnum.sendKeys("13454565676787654567876545678908765456789056789065432467689087654567897654");
 		delibtn.click();
-		delibtn.clear();
-		
-		 
-		flatnum.sendKeys("133asedgtryhgfcdftresduhnbvdfrtukjnbvcdftyuiknhgfcxasertyuiokjnB");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		flatnum.clear();
+		flatnum.sendKeys("134545656676787654567876545678908765456789056789065432467689087654567897654");
 		delibtn.click();
-		
+
 		
 	}
 
@@ -118,30 +147,40 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void FlatNegative() {
 		
-		WebElement flatnum,delibtn;
-		
-		
+		WebElement flatnum,delibtn,element;
 		flatnum=driver.findElement(By.name("house"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
-		flatnum.sendKeys("1");
-		delibtn.click();
-		delibtn.clear();
-		
-		
-		flatnum.sendKeys("1B");
-		delibtn.click();
-		delibtn.clear();
-		 
-		flatnum.sendKeys("133asedgtryhgfcdftresduhnbvdfrtukjnbvcdftyuikbnhgfcxasertyuiokjnB");
-		delibtn.click();
-		delibtn.clear();
-		
-		 
-		flatnum.sendKeys("133asedgtryhgfcdftresduhnbvdfrtukjnbvcdftyuiknhgfcxasertyuiokjnytB");
-		delibtn.click();
-		
-		
+		flatnum.sendKeys("13");
+		btn.click();
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[5]"));
+		String elementval = element.getText();
+		String value="Must have atleast 3-75 character!";
+		if(elementval.equals(value)) {
+			System.out.println("TCID149 sucess");
+		}
+		else {
+			
+			fail("TCID <149> failed: <no show error message when phone number length is not correct>");
+		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		flatnum.clear();
+		flatnum.sendKeys("1346545656676787654567876545678908765456789056789065432467689087654567897654");
+		btn.click();
+		String elementvalue = element.getText();
+		String value1="Must have atleast 3-75 character!";
+		if(elementvalue.equals(value1)) {
+			System.out.println("TCID149 sucess");
+		}
+		else {
+			
+			fail("TCID <149> failed: <no show error message when phone number length is not correct>");
+		}
 		
 	}
 	//Invalid Area
@@ -159,7 +198,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void AreaEmpty() {
 		
-		WebElement fullname,mobilenum,flatnum,city,district,pin,landmark,delibtn;
+		WebElement fullname,mobilenum,flatnum,city,district,pin,landmark,delibtn,element;
 		
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
@@ -185,6 +224,17 @@ public class AutomationScript extends CustomWebDriver{
 		 
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
+		
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[7]"));
+		String elementval = element.getText();
+		String value="Must have atleast 3-50 character!";
+		if(elementval.equals(value)) {
+			System.out.println("TCID151 sucess");
+		}
+		else {
+			
+			fail("TCID <151> failed: <no show error message when area field is empty>");
+		}
 	}
 	
 	//Area fileld with input data in positive case
@@ -196,23 +246,35 @@ public class AutomationScript extends CustomWebDriver{
 		area=driver.findElement(By.name("area"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKG");
+		area.sendKeys("Per");
 		delibtn.click();
-		delibtn.clear();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKGN");
+		area.clear();
+		area.sendKeys("Pero");
 		delibtn.click();
-		delibtn.clear();
-		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKGsdaertgfvcsdertyujnbgfdsryuikjnbhgrtyuilmnbvse");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		area.clear();
+		area.sendKeys("Perogtyfdcvghnbghjuytredfvbhjklpoiuytedscfrtyhnbg");
 		delibtn.click();
-		delibtn.clear();
-		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKGsdaertgfvcsdertyujnbgfdsryuikjnbhgrtyuilmnbvseu");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		area.clear();
+		area.sendKeys("Perogtyfducvghnbghjuytredfvbhjklpoiuytedscfrtyhnbg");
 		delibtn.click();
 		
 	}
@@ -221,30 +283,42 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void AreaNegative() {
 		
-		WebElement area,delibtn;
+		WebElement area,delibtn,element;
 		
 		area=driver.findElement(By.name("area"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("A");
+		area.sendKeys("Pe");
 		delibtn.click();
-		delibtn.clear();
 		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AK");
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[7]"));
+		String elementval = element.getText();
+		String value="Must have atleast 3-50 character!";
+		if(elementval.equals(value)) {
+			System.out.println("TCID153 sucess");
+		}
+		else {
+			
+			fail("TCID <153> failed: <no show error message when area  length is not correct>");
+		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		area.clear();
+		area.sendKeys("Peroogtyfducvghnbghjuytredfvbhjklpoiuytedscfrtyhnbg");
 		delibtn.click();
-		delibtn.clear();
-		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKGsdaertgfvcsdertyujnbgfdTsryuikjnbhgrtyuilmnbvseu");
-		delibtn.click();
-		delibtn.clear();
-		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKGsdaertgfvTFcsdertyujnbgfdsryuikjnbhgrtyuilmnbvseu");
-		delibtn.click();
-	
+		String elementvalue = element.getText();
+		String value1="Must have atleast 3-50 character!";
+		if(elementvalue.equals(value1)) {
+			System.out.println("TCID153 sucess");
+		}
+		else {
+			
+			fail("TCID <153> failed: <no show error message when area length is not correct>");
+		}
 	}
 	//City Invalid
 
@@ -262,7 +336,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void CityEmpty() {
 		
-		WebElement fullname,mobilenum,flatnum,area,district,pinnum,landmark,delibtn;
+		WebElement fullname,mobilenum,flatnum,area,district,pinnum,landmark,delibtn,element;
 		
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
@@ -288,6 +362,17 @@ public class AutomationScript extends CustomWebDriver{
 		 
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
+		
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[9]"));
+		String elementval = element.getText();
+		String value="Must have atleast 3-50 character!";
+		if(elementval.equals(value)) {
+			System.out.println("TCID155 sucess");
+		}
+		else {
+			
+			fail("TCID <155> failed: <no show error message when city field is empty>");
+		}
 	}
 	
 	//City fileld with input data in positive case
@@ -299,24 +384,35 @@ public class AutomationScript extends CustomWebDriver{
 		city=driver.findElement(By.name("city"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
-		city=driver.findElement(By.name("city"));
-		city.sendKeys("Bal");
+		city.sendKeys("Tvm");
 		delibtn.click();
-	    delibtn.clear();
-	    
-	    city=driver.findElement(By.name("city"));
-		city.sendKeys("Bala");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		city.clear();
+		city.sendKeys("Tvmp");
 		delibtn.click();
-	    delibtn.clear();
-	    
-	    city=driver.findElement(By.name("city"));
-		city.sendKeys("Balarfderthbvfdaertyujnhfdertyuiolknhbvfseryuiopl");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		city.clear();
+		city.sendKeys("Tvmpredfrtuhnbgfdswertyuiolmjhnbfdwertyuioplmkhgf");
 		delibtn.click();
-	    delibtn.clear();
-	    
-	    
-	    city=driver.findElement(By.name("city"));
-		city.sendKeys("Balarfderthbvfdaertyujnhfdertyuiolkmnhbvfseryuiopl");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		city.clear();
+		city.sendKeys("Tvmpredfrtuhnbgfdswertyuiolmjhnbfdwertyuioplmkhgfy");
 		delibtn.click();
 	    
 	}
@@ -324,30 +420,41 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void CityNegative() {
 	
-	WebElement city,delibtn;
+	WebElement city,delibtn,element;
 	
 	city=driver.findElement(By.name("city"));
 	delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 	
-	city=driver.findElement(By.name("city"));
-	city.sendKeys("B");
+	city.sendKeys("Tv");
 	delibtn.click();
-    delibtn.clear();
-    
-    city=driver.findElement(By.name("city"));
-	city.sendKeys("Ba");
+	element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[9]"));
+	String elementval = element.getText();
+	String value="Must have atleast 3-50 character!";
+	if(elementval.equals(value)) {
+		System.out.println("TCID157 sucess");
+	}
+	else {
+		
+		fail("TCID <157> failed: <no show error message when city length is not correct>");
+	}
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	city.clear();
+	city.sendKeys("Tvmpredf7rtuhnbgfdswertyuiolmjhnbfdwertyuioplmkhgfy");
 	delibtn.click();
-    delibtn.clear();
-    
-    city=driver.findElement(By.name("city"));
-	city.sendKeys("Balarfderthbvfdaertyujnhfdertyuiolknhbvfseryuioplyt");
-	delibtn.click();
-    delibtn.clear();
-    
-    
-    city=driver.findElement(By.name("city"));
-	city.sendKeys("Balarfderthbvfdaertyujnhfdertyuiolkmnhbvfseryuioplyt");
-	delibtn.click();
+	String elementvalue = element.getText();
+	String value1="Must have atleast 3-50 character!";
+	if(elementvalue.equals(value1)) {
+		System.out.println("TCID157 sucess");
+	}
+	else {
+		
+		fail("TCID <157> failed: <no show error message when area length is not correct>");
+	}
 
 	}
 	//All options available in district field
@@ -420,7 +527,7 @@ public class AutomationScript extends CustomWebDriver{
 	//Pin filed is empty case
 	
 	public void PinEmpty() {
-		WebElement fullname,mobilenum,flatnum,area,city,district,landmark,delibtn;
+		WebElement fullname,mobilenum,flatnum,area,city,district,landmark,delibtn,element;
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
 		
@@ -444,7 +551,19 @@ public class AutomationScript extends CustomWebDriver{
 		 
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
+		
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[12]"));
+		String elementval = element.getText();
+		String value="Enter a valid PIN number";
+		if(elementval.equals(value)) {
+			System.out.println("TCID162 sucess");
+		}
+		else {
+			
+			fail("TCID <162> failed: <no show error message when pin numnber filed is empty>");
+		}
 	}
+	
 	
 	//Pinfield positive case
 	
@@ -469,38 +588,5 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.clear();
 	}
 	
-	//Landmark is Empty case
-	
-	public void LandEmpty() {
-		WebElement fullname,mobilenum,area,flatnum,city,district,pin,delibtn;
-		fullname=driver.findElement(By.name("fullname"));
-		fullname.sendKeys("neerajasnath");
-		
-		mobilenum=driver.findElement(By.name("mobile"));
-		mobilenum.sendKeys("8129481454");
-		
-		flatnum=driver.findElement(By.name("house"));
-		flatnum.sendKeys("13B");
-		
-		
-		area=driver.findElement(By.name("area"));
-		area.sendKeys("AKG Nagar,Peroorkada");
-		
-		city=driver.findElement(By.name("city"));
-		city.sendKeys("Peroorkada");
-		
-		district=driver.findElement(By.name("district"));
-		district.sendKeys("Trivandram");
-		
-		
-		pin=driver.findElement(By.name("pin"));
-		pin.sendKeys("605501");
-		
-		 
-		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
-		delibtn.click();
-	}
-	
-	
-	
+
 }
