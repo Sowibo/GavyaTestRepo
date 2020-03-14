@@ -52,11 +52,16 @@ public class AutomationScript extends CustomWebDriver{
 		comment.sendKeys("SoWiBo is not just a software development house. 100 percent of our profits are used for social causes.");
 		btn.click();
 		
+		
+	}
+	public void alert() {
+		driver.switchTo().alert().accept();
+		
 	}
 	public void invalidContactUs() {
 		WebElement contact,select,name,email,phnum,comment,btn;
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -66,18 +71,16 @@ public class AutomationScript extends CustomWebDriver{
 		comment=driver.findElement(By.id("comment"));
 		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div[2]/form/button"));
 		name.sendKeys("g123##$%^");
+		
 		email.sendKeys("gopikagopakumaran1@gmail.com");
 		phnum.sendKeys("7592018435");
 		comment.sendKeys("SoWiBo is not just a software development house. 100 percent of our profits are used for social causes.");
 		btn.click();
+		
 	}
-//	public void button() {
-//		
-//	}
-//	
 	public void login() {
 		WebElement sendkey,email,password,button;
-		sendkey=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		sendkey=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
 		sendkey.click();
 		email=driver.findElement(By.id("email"));
 		email.sendKeys("gopikagopakumaran1@gmail.com");
@@ -86,6 +89,19 @@ public class AutomationScript extends CustomWebDriver{
 		button=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
 		button.click();
 	}
+	public void logout() {
+		WebElement logout;
+		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		logout.click();
+	}
+	public void accountSetting() {
+		WebElement setting,account;
+		setting=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		setting.click();
+		account=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/div/ul/li[2]/p"));
+		account.click();
+	}
+	
 
 
 	
