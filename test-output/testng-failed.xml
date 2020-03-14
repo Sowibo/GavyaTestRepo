@@ -10,15 +10,6 @@
       </class> <!-- testcases.TCID2 -->
     </classes>
   </test> <!-- TCID2(failed) -->
-  <test thread-count="5" name="TCID3(failed)">
-    <classes>
-      <class name="testcases.TCID3">
-        <methods>
-          <include name="cartPlus"/>
-        </methods>
-      </class> <!-- testcases.TCID3 -->
-    </classes>
-  </test> <!-- TCID3(failed) -->
   <test thread-count="5" name="TCID16(failed)">
     <classes>
       <class name="testcases.TCID16">

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-HomePageSuite" class="navigator-link ">
-                    <span class="test-stats">8 tests</span>
+                    <span class="test-stats">6 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,11 +103,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID2" class="method navigator-link" hash-for-method="addCart">addCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID3" class="method navigator-link" hash-for-method="cartPlus">cartPlus</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -124,6 +119,11 @@
                       <a href="#" panel-name="suite-HomePageSuite" class="show-methods passed suite-HomePageSuite"> (show)</a> <!-- show-methods passed suite-HomePageSuite -->
                     </span>
                     <div class="method-list-content passed suite-HomePageSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID3" class="method navigator-link" hash-for-method="cartPlus">cartPlus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID1" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
@@ -157,8 +157,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P4MLSHK&apos;, ip: &apos;192.168.15.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10692, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12760, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 797163f9-95ca-4c28-ae77-50d8c02d7d53
 *** Element info: {Using=xpath, value=/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -170,7 +170,7 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.cart(AutomationScript.java:33)
+	at automation.AutomationScript.cart(AutomationScript.java:74)
 	at testcases.TCID2.addCart(TCID2.java:12)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 32 stack frames
@@ -190,14 +190,13 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
                   <a name="checkout_emp">
                   </a> <!-- checkout_emp -->
                   <span class="method-name">checkout_emp</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div/div[2]/div/div/div[2]/button
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to convert data to an object
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P4MLSHK&apos;, ip: &apos;192.168.15.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10692, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
-*** Element info: {Using=xpath, value=/html/body/div/div[2]/div/div/div[2]/button}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12760, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 797163f9-95ca-4c28-ae77-50d8c02d7d53
+*** Element info: {Using=xpath, value=/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -208,46 +207,8 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.cookie(AutomationScript.java:38)
+	at automation.AutomationScript.checkout_empty(AutomationScript.java:46)
 	at testcases.TCID16.checkout_emp(TCID16.java:11)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HomePageSuite-class-failed -->
-          <div class="suite-HomePageSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testcases.TCID3</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="cartPlus">
-                  </a> <!-- cartPlus -->
-                  <span class="method-name">cartPlus</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div/div[2]/div/div/div[2]/button
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P4MLSHK&apos;, ip: &apos;192.168.15.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10692, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
-*** Element info: {Using=xpath, value=/html/body/div/div[2]/div/div/div[2]/button}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.cookie(AutomationScript.java:38)
-	at testcases.TCID3.cartPlus(TCID3.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -266,6 +227,21 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
                   <a name="startTest">
                   </a> <!-- startTest -->
                   <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID3</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cartPlus">
+                  </a> <!-- cartPlus -->
+                  <span class="method-name">cartPlus</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -310,16 +286,6 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
       &lt;class name=&quot;testcases.TCID18&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TCID18 --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;TCID19&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;testcases.TCID19&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TCID19 --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;TCID20&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;testcases.TCID20&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TCID20 --&gt;
 &lt;/suite&gt; &lt;!-- HomePageSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -347,12 +313,6 @@ Session ID: 87cfbd5b-ff4f-42f4-931f-c307cf83b9e6
               </li>
               <li>
                 <span class="test-name">TCID18 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">TCID19 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">TCID20 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -382,24 +342,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'startTest')
 data.setCell(0, 2, 'testcases.TCID1')
-data.setCell(0, 3, 53801);
+data.setCell(0, 3, 8900);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addCart')
 data.setCell(1, 2, 'testcases.TCID2')
-data.setCell(1, 3, 25342);
+data.setCell(1, 3, 2460);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'cartPlus')
-data.setCell(2, 2, 'testcases.TCID3')
-data.setCell(2, 3, 19937);
+data.setCell(2, 1, 'checkout_emp')
+data.setCell(2, 2, 'testcases.TCID16')
+data.setCell(2, 3, 960);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkout_emp')
-data.setCell(3, 2, 'testcases.TCID16')
-data.setCell(3, 3, 13516);
+data.setCell(3, 1, 'cartPlus')
+data.setCell(3, 2, 'testcases.TCID3')
+data.setCell(3, 3, 882);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-HomePageSuite">
               </div> <!-- times-div-HomePageSuite -->
             </div> <!-- times-div -->
@@ -435,7 +395,7 @@ return data;
               <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">18973 ms</span>
+                <span class="method-start">46755 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -444,16 +404,14 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addCart</span>
-                <span class="method-start">73303 ms</span>
+                <span class="method-start">56208 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID3</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">cartPlus</span>
-                <span class="method-start">99354 ms</span>
+                <span class="method-start">59268 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -462,7 +420,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">checkout_emp</span>
-                <span class="method-start">119691 ms</span>
+                <span class="method-start">60341 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -28,11 +28,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	//manuraj
-	public void cart() {
-		    WebElement cart;
-			cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
-			cart.click();
-	}
+	
 	public void cookie() {
 		WebElement cookie;
 		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
@@ -45,15 +41,29 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void checkout_empty() {
 		WebElement checkout,clear;
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
-		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
 		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
 		clear.click();
-		checkout.click();
-	}
-	public void checkout() {
-		WebElement checkout;
 		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		checkout.click();
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+	}
+	public void checkout()  {
+		WebElement checkout;
+		
+		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		checkout.click();
 	}
 	public void clearEmpty() {
@@ -61,4 +71,15 @@ public class AutomationScript extends CustomWebDriver{
 		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
 		clear.click();
 	}
+	public void cart() {
+	    WebElement cart;
+		cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
+		cart.click();
+}
+	public void cartCheckout() {
+	    WebElement click;
+	    click=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[3]/div/div[2]/div/p[2]/a"));
+	    click.click();
+		
+}
 }
