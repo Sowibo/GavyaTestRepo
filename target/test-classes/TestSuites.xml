@@ -103,9 +103,4 @@
       <class name="testcases.TCID164"/>
     </classes>
   </test>
-  <test name="TCID165">
-    <classes>
-      <class name="testcases.TCID165"/>
-    </classes>
-  </test>
 </suite> <!-- Suite -->
