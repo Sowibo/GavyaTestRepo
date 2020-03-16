@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID67 {
+public class TCID69 {
 	@Test
-	public void conformFieldEmpty() {
+	public void passwordFieldNegative() {
 		AutomationScript.returnobj().launchUrl();
 		AutomationScript.returnobj().registerOpen();
-		AutomationScript.returnobj().conformPasswordEmpty();
+		AutomationScript.returnobj().passWordNegative();
 	}
 }

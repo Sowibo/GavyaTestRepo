@@ -49,7 +49,7 @@ public class AutomationScript extends CustomWebDriver{
 			String value=(driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/div/div[1]/div[2]/span"))).getText();
 
 		
-			if(value.equals(" ")) {
+			if(value.equals(" ")||(value.equals(null))) {
 				
 				fail("TCID <59> failed: <no show error message when give last name length as 16>");
 			}
@@ -70,13 +70,14 @@ public class AutomationScript extends CustomWebDriver{
 		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		
 
-		email.sendKeys("veena.com");
+		email.sendKeys("veena");
 		btn.click();
 		String message=email.getAttribute("validationMessage");
 		
 		
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <60> failed: <no show error message when email address with invalid data>");
+			
 			
 		}
 		else {
@@ -104,7 +105,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/div/span[1]"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <61> failed: <no show error message when email field is empty>");
 		}
 		else {
@@ -122,7 +123,7 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String message=phnum.getAttribute("validationMessage");
 
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <62> failed: <no show error message when phone number with invalid data>");
 		}
 		else {
@@ -148,7 +149,7 @@ public class AutomationScript extends CustomWebDriver{
 		phnumelement=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/span[2]"));
 		String elementval = phnumelement.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <63> failed: <no show error message when phone number field is empty>");
 			
 		}
@@ -167,7 +168,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/span[2]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("tcid64 sucess 1 test case");
 		}
@@ -187,7 +188,7 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval1 = element.getText();
 		
-		if(elementval1.equals(" ")) {
+		if(elementval1.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("tcid64 sucess 2 test case");
 		}
@@ -206,7 +207,7 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval2 = element.getText();
 		
-		if(elementval2.equals(" ")) {
+		if(elementval2.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("tcid64 sucess 3 test case");
 		}
@@ -225,7 +226,7 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval3 = element.getText();
 		
-		if(elementval3.equals(" ")) {
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("tcid64 sucess 4 test case");
 		}
@@ -243,7 +244,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/span[2]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <65> failed: <no show error message when  phone number length is incorrect >");
 		}
@@ -262,7 +263,7 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementvalue1 = element.getText();
 		
-		if(elementvalue1.equals(" ")) {
+		if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <65> failed: <no show error message when phone number length is not correct>");
 		}
@@ -290,12 +291,39 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[2]/div[1]/span"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <66> failed: <no show error message when password field is empty>");
 		}
 		else {
 			System.out.println("tcid66 sucess");
+			
+		}
+	}
+	public void conformPasswordEmpty() {
+		WebElement firstname,lastname,email,phnum,password,refferal,btn,element;
+		firstname=driver.findElement(By.id("fname"));
+		lastname=driver.findElement(By.id("lname"));
+		email=driver.findElement(By.id("email"));
+		phnum=driver.findElement(By.id("phone"));
+		password=driver.findElement(By.id("password"));
+		refferal=driver.findElement(By.id("referral"));
+		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		firstname.sendKeys("veena");
+		lastname.sendKeys("vl");
+		email.sendKeys("veena@sowibo.com");
+		phnum.sendKeys("7034994370");
+		password.sendKeys("veenavava123");
+		refferal.sendKeys("vgjj123@");
+		btn.click();
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/div/div[2]/div[2]/span[2]"));
+		String elementval = element.getText();
+		if(elementval.equals(" ")||(elementval.equals(null))) {
+			
+			fail("TCID <67> failed: <no show error message when password field is empty>");
+		}
+		else {
+			System.out.println("tcid67 sucess");
 			
 		}
 	}
@@ -308,13 +336,13 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[2]/div[1]/span"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
-			System.out.println("tcid67 sucess first case");
+		if(elementval.equals(" ")||(elementval.equals(null))) {
+			System.out.println("tcid68 sucess first case");
 			
 		}
 		else {
 			
-			fail("TCID <67> failed: <show error message when password field positive in first case>");
+			fail("TCID <68> failed: <show error message when password field positive in first case>");
 		}
 		try {
 			Thread.sleep(2000);
@@ -327,13 +355,13 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval1 = element.getText();
 
-		if(elementval1.equals(" ")) {
-			System.out.println("tcid67 sucess second case");
+		if(elementval1.equals(" ")||(elementval.equals(null))) {
+			System.out.println("tcid68 sucess second case");
 			
 		}
 		else {
 			
-			fail("TCID <67> failed: <show error message when password field positive in second case>");
+			fail("TCID <68> failed: <show error message when password field positive in second case>");
 		}
 		try {
 			Thread.sleep(2000);
@@ -346,13 +374,13 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval2 = element.getText();
 
-		if(elementval2.equals(" ")) {
-			System.out.println("tcid67 sucess third case");
+		if(elementval2.equals(" ")||(elementval.equals(null))) {
+			System.out.println("tcid68 sucess third case");
 			
 		}
 		else {
 			
-			fail("TCID <67> failed: <show error message when password field positive in third case>");
+			fail("TCID <68> failed: <show error message when password field positive in third case>");
 		}
 		try {
 			Thread.sleep(2000);
@@ -365,13 +393,72 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval3 = element.getText();
 
-		if(elementval3.equals(" ")) {
-			System.out.println("tcid67 sucess forth case");
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
+			System.out.println("tcid68 sucess forth case");
 			
 		}
 		else {
 			
-			fail("TCID <67> failed: <show error message when password field positive in forth case>");
+			fail("TCID <68> failed: <show error message when password field positive in forth case>");
+		}
+	}
+	
+	public void passWordNegative() {
+		WebElement password,btn,element;
+		password=driver.findElement(By.id("password"));
+		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		password.sendKeys("veena12");
+		btn.click();
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[2]/div[1]/span"));
+		String elementval = element.getText();
+		
+		if(elementval.equals(" ")||(elementval.equals(null))) {
+			
+			fail("TCID <69> failed: <no show error message when password field incorrect length in first case>");
+			
+		}
+		else {
+			
+			System.out.println("tcid69 sucess first case");
+		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		password.clear();
+		password.sendKeys("veenaveenaveena12");
+		btn.click();
+		String elementval3 = element.getText();
+
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
+			
+			fail("TCID <69> failed: <no show error message when password field incorrect length in second case>");
+		}
+		else {
+			
+			System.out.println("tcid69 sucess second case");
+		}
+	}
+	
+	public void passWordInvalidDta() {
+		WebElement password,btn,element;
+		password=driver.findElement(By.id("password"));
+		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		password.sendKeys("vee");
+		btn.click();
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[2]/div[1]/span"));
+		String elementval = element.getText();
+		
+		if(elementval.equals(" ")||(elementval.equals(null))) {
+			
+			fail("TCID <70> failed: <no show error message when give invalid password >");
+			
+		}
+		else {
+			
+			System.out.println("tcid70 sucess");
 		}
 	}
 }
