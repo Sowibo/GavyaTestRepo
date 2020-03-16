@@ -61,12 +61,12 @@
     <classes>
       <class name="testcases.TCID156"/>
     </classes>
-  </test
+  </test>
   <test name="TCID157">
     <classes>
       <class name="testcases.TCID157"/>
     </classes>
-  </test
+  </test>
   
  <test name="TCID158">
     <classes>
@@ -101,6 +101,36 @@
   <test name="TCID164">
     <classes>
       <class name="testcases.TCID164"/>
+    </classes>
+  </test>
+    <test name="TCID165">
+    <classes>
+      <class name="testcases.TCID165"/>
+    </classes>
+  </test>
+      <test name="TCID166">
+    <classes>
+      <class name="testcases.TCID166"/>
+    </classes>
+  </test>
+      <test name="TCID167">
+    <classes>
+      <class name="testcases.TCID167"/>
+    </classes>
+  </test>
+      <test name="TCID168">
+    <classes>
+      <class name="testcases.TCID168"/>
+    </classes>
+  </test>
+      <test name="TCID169">
+    <classes>
+      <class name="testcases.TCID169"/>
+    </classes>
+  </test>
+        <test name="TCID170">
+    <classes>
+      <class name="testcases.TCID170"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

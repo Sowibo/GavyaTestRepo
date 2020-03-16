@@ -8,7 +8,7 @@ import automation.AutomationScript;
 
 public class TCID148 {
 	@Test
-	public  void flatNum() {
+	public  void flatPositiveCase() {
 		AutomationScript.returnobj().launchUrl();
 		AutomationScript.returnobj().login();
 		AutomationScript.returnobj().addProduct();
