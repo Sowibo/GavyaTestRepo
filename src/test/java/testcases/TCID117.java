@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID108 {
+public class TCID117 {
 	@Test
 	public void startTest() {
 		
-		AutomationScript.returnobj().invalidFname();
+		AutomationScript.returnobj().emptyPhn();
 	}
 
 }

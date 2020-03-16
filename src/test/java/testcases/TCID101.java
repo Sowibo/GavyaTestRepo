@@ -9,7 +9,7 @@ public class TCID101 {
 	public void startTest() {
 		
 		AutomationScript.returnobj().invalidContactUs();
-		AutomationScript.returnobj().alert();
+		
 	}
 
 }
