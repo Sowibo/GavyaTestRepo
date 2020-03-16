@@ -1,51 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-14T21:38:04 IST" name="HomePageSuite" finished-at="2020-03-14T21:38:21 IST" duration-ms="17241">
+  <suite started-at="2020-03-16T10:59:25 IST" name="HomePageSuite" finished-at="2020-03-16T11:00:51 IST" duration-ms="85800">
     <groups>
     </groups>
-    <test started-at="2020-03-14T21:38:04 IST" name="BeforeSuite" finished-at="2020-03-14T21:38:04 IST" duration-ms="12">
+    <test started-at="2020-03-16T10:59:25 IST" name="BeforeSuite" finished-at="2020-03-16T10:59:26 IST" duration-ms="19">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-14T21:38:04 IST" name="TCID1" finished-at="2020-03-14T21:38:14 IST" duration-ms="9579">
+    <test started-at="2020-03-16T10:59:26 IST" name="TCID1" finished-at="2020-03-16T11:00:51 IST" duration-ms="85375">
       <class name="testcases.TCID1">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@50de0926]" started-at="2020-03-14T21:38:04 IST" name="startTest" finished-at="2020-03-14T21:38:14 IST" duration-ms="9447" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@50de0926]" started-at="2020-03-16T10:59:26 IST" name="startTest" finished-at="2020-03-16T11:00:51 IST" duration-ms="85298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- testcases.TCID1 -->
     </test> <!-- TCID1 -->
-    <test started-at="2020-03-14T21:38:14 IST" name="TCID2" finished-at="2020-03-14T21:38:14 IST" duration-ms="688">
-      <class name="testcases.TCID2">
-        <test-method signature="addCart()[pri:0, instance:testcases.TCID2@76b10754]" started-at="2020-03-14T21:38:14 IST" name="addCart" finished-at="2020-03-14T21:38:14 IST" duration-ms="685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCart -->
-      </class> <!-- testcases.TCID2 -->
-    </test> <!-- TCID2 -->
-    <test started-at="2020-03-14T21:38:15 IST" name="TCID3" finished-at="2020-03-14T21:38:15 IST" duration-ms="522">
-      <class name="testcases.TCID3">
-        <test-method signature="cartPlus()[pri:0, instance:testcases.TCID3@58a90037]" started-at="2020-03-14T21:38:15 IST" name="cartPlus" finished-at="2020-03-14T21:38:15 IST" duration-ms="520" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cartPlus -->
-      </class> <!-- testcases.TCID3 -->
-    </test> <!-- TCID3 -->
-    <test started-at="2020-03-14T21:38:15 IST" name="TCID16" finished-at="2020-03-14T21:38:21 IST" duration-ms="5778">
-      <class name="testcases.TCID16">
-        <test-method signature="checkout_emp()[pri:0, instance:testcases.TCID16@40f08448]" started-at="2020-03-14T21:38:15 IST" name="checkout_emp" finished-at="2020-03-14T21:38:21 IST" duration-ms="5776" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkout_emp -->
-      </class> <!-- testcases.TCID16 -->
-    </test> <!-- TCID16 -->
-    <test started-at="2020-03-14T21:38:21 IST" name="TCID18" finished-at="2020-03-14T21:38:21 IST" duration-ms="1">
+    <test started-at="2020-03-16T11:00:51 IST" name="TCID7" finished-at="2020-03-16T11:00:51 IST" duration-ms="0">
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-14T21:37:50 IST" name="init" finished-at="2020-03-14T21:38:04 IST" duration-ms="13288" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-16T10:59:11 IST" name="init" finished-at="2020-03-16T10:59:25 IST" duration-ms="14059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-    </test> <!-- TCID18 -->
+    </test> <!-- TCID7 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>

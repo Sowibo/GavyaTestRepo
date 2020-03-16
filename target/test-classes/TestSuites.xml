@@ -17,9 +17,19 @@
       <class name="testcases.TCID2"/>
     </classes>
   </test>
-   <test name="TCID3">
+  <test name="TCID3">
     <classes>
       <class name="testcases.TCID3"/>
+    </classes>
+  </test>
+  <test name="TCID4">
+    <classes>
+      <class name="testcases.TCID4"/>
+    </classes>
+  </test>
+  <test name="TCID7">
+    <classes>
+      <class name="testcases.TCID7"/>
     </classes>
   </test>
   <test name="TCID16">
@@ -27,10 +37,20 @@
       <class name="testcases.TCID16"/>
     </classes>
   </test>
-    <test name="TCID18">
+  <test name="TCID18">
     <classes>
       <class name="testcases.TCID18"/>
     </classes>
   </test>
-
+  <test name="TCID19">
+    <classes>
+      <class name="testcases.TCID19"/>
+    </classes>
+  </test>
+  <test name="TCID720">
+    <classes>
+      <class name="testcases.TCID20"/>
+    </classes>
+  </test>
+   
 </suite> <!-- Suite -->
