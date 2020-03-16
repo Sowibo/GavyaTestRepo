@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HomePageSuite">
+<!-- Test -->
+  <test name="BeforeSuite">
+    <classes>
+      <class name="testcases.BeforeSuites"/>
+    </classes>
+  </test>
+  <test name="TCID1">
+    <classes>
+      <class name="testcases.TCID1"/>
+    </classes>
+  </test>
+  
+  <!-- Athira -->
+    <test name="TCID30">
+    <classes>
+      <class name="testcases.TCID30"/>
+    </classes>
+  </test>
+    <test name="TCID33">
+    <classes>
+      <class name="testcases.TCID33"/>
+    </classes>
+  </test>  
+  
+   <test name="TCID34">
+    <classes>
+      <class name="testcases.TCID34" />
+    </classes>
+  </test> 
+   <test name="TCID36">
+    <classes>
+      <class name="testcases.TCID36"/>
+    </classes>
+  </test> 
+   <test name="TCID35">
+    <classes>
+      <class name="testcases.TCID35"/>
+    </classes>
+  </test> 
+ <test name="TCID37">
+    <classes>
+      <class name="testcases.TCID37"/>
+    </classes>
+  </test> 
+ 
+   <test name="TCID52">
+    <classes>
+      <class name="testcases.TCID52"/>
+    </classes>
+  </test> 
+  <test name="TCID53">
+    <classes>
+      <class name="testcases.TCID53"/>
+    </classes>
+  </test>
+  <test name="TCID54">
+    <classes>
+      <class name="testcases.TCID54"/>
+    </classes>
+  </test>
+  <test name="TCID55">
+    <classes>
+      <class name="testcases.TCID55"/>
+    </classes>
+  </test>
+   <test name="TCID56">
+    <classes>
+      <class name="testcases.TCID56"/>
+    </classes>
+  </test>
+    <test name="TCID57">
+    <classes>
+      <class name="testcases.TCID57"/>
+    </classes>
+  </test>
+    <test name="TCID58">
+    <classes>
+      <class name="testcases.TCID58"/>
+    </classes>
+  </test>
+
+</suite> <!-- Suite -->
