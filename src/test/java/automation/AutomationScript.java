@@ -1,5 +1,7 @@
 package automation;
 
+import static org.testng.Assert.fail;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,15 +28,19 @@ public class AutomationScript extends CustomWebDriver{
 	
 
 	public void logIn(){
-		WebElement settings,accounts,numfield,login,logid,logpass,logbtn;
+		WebElement login,logid,logpass,logbtn,cookie;
+		
 		login=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
+		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+		cookie.click();
 		logid=driver.findElement(By.id("email"));
 		logid.sendKeys("keerthisudev444@gmail.com");		
-		logpass=driver.findElement(By.xpath("password"));
+		logpass=driver.findElement(By.id("password"));
 		logpass.sendKeys("keerthisudev");		
 		logbtn=driver.findElement(By.cssSelector("div.row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > button:nth-child(1)"));
 		logbtn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	}
 	
 //		LOGOUT
@@ -42,7 +48,9 @@ public class AutomationScript extends CustomWebDriver{
 	public void logOut() {
 		WebElement logout;		
 		logout = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		
 		logout.click();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	
 //		SETTINGS
@@ -62,11 +70,27 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	
+	
+	public void clearAccounts() {
+		WebElement fname,lname,pnum;		
+		fname = driver.findElement(By.id("fname"));
+		fname.clear();		
+		lname = driver.findElement(By.id("lname"));
+		lname.clear();		
+		pnum = driver.findElement(By.id("phone"));
+		pnum.clear();	
+	}
+	
+	
 //			FUNCTIONS NEEDED FOR TCID 119 
 //			login,settingsPage,accountsSection
+	
+	
+	
+	
 		
 	public void testPhoneNumber() {
-		WebElement numfield,updatebtn;		
+		WebElement numfield,updatebtn,page;		
 		numfield=driver.findElement(By.xpath("//*[@id=\"phone\"]"));
 		numfield.sendKeys("9999998");	
 		updatebtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
@@ -74,7 +98,24 @@ public class AutomationScript extends CustomWebDriver{
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		numfield.clear();
 		numfield.sendKeys("100000000000");
+//		numfield.sendKeys("1234567891");
 		updatebtn.click();
+		
+		String display_message=numfield.getAttribute("validationMessage");
+		
+		if(display_message.isEmpty()||display_message.equals(null)) {
+			fail("TCID <119> failed: <the mobile number is valid >");
+		}
+		else {
+			System.out.println("tcid 60 success");
+		}
+			
+		
+	}
+	
+	
+	public void alertTest() {
+		
 	}
 	
 	
@@ -91,7 +132,9 @@ public class AutomationScript extends CustomWebDriver{
 		pnum.sendKeys("8137006670");		
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();	
+		driver.switchTo().alert().accept();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	
 	}
 	
 	
