@@ -6,7 +6,7 @@ import automation.AutomationScript;
 
 public class TCID101 {
 	@Test
-	public void startTest() {
+	public void startTest101() {
 		
 		AutomationScript.returnobj().invalidContactUs();
 		

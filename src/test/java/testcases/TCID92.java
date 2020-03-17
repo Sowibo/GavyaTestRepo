@@ -10,7 +10,7 @@ public class TCID92 {
 		
 	
 	
-	AutomationScript.returnobj().login();
+	
 	AutomationScript.returnobj().cart();
 	AutomationScript.returnobj().checkout();
 	}

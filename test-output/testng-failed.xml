@@ -10,4 +10,31 @@
       </class> <!-- testcases.TCID100 -->
     </classes>
   </test> <!-- TCID100(failed) -->
+  <test thread-count="5" name="TCID101(failed)">
+    <classes>
+      <class name="testcases.TCID101">
+        <methods>
+          <include name="startTest101"/>
+        </methods>
+      </class> <!-- testcases.TCID101 -->
+    </classes>
+  </test> <!-- TCID101(failed) -->
+  <test thread-count="5" name="TCID108(failed)">
+    <classes>
+      <class name="testcases.TCID108">
+        <methods>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- testcases.TCID108 -->
+    </classes>
+  </test> <!-- TCID108(failed) -->
+  <test thread-count="5" name="TCID109(failed)">
+    <classes>
+      <class name="testcases.TCID109">
+        <methods>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- testcases.TCID109 -->
+    </classes>
+  </test> <!-- TCID109(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->

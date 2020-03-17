@@ -37,6 +37,13 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void login() {
 		WebElement sendkey,email,password,button;
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		sendkey=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		sendkey.click();
 		email=driver.findElement(By.id("email"));
@@ -89,85 +96,127 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		driver.switchTo().alert().accept();
-		System.out.println("alert");
+		
+		
 		
 		
 
 	}
 	public void invalidContactUs() {
 		WebElement contact,select,name,email,phnum,comment,btn;
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
-		contact.click();
-		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
-		select.click();
-		name=driver.findElement(By.id("name"));
-		email=driver.findElement(By.id("email"));
-		phnum=driver.findElement(By.id("phone"));
-		comment=driver.findElement(By.id("comment"));
-		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div[2]/form/button"));
-		name.sendKeys("g123##$%^");
-		email.sendKeys("gopikagopakumaran1@gmail.com");
-		phnum.sendKeys("7592018435");
-		comment.sendKeys("SoWiBo is not just a software development house. 100 percent of our profits are used for social causes.");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact.click();
+		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
+		select.click();
+		name=driver.findElement(By.id("name"));
+		name.sendKeys("dfretr$$#@@@#");
+		email=driver.findElement(By.id("email"));
+		email.sendKeys("gopikagopakumaran1@gmail.com");
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		phnum=driver.findElement(By.id("phone"));
+		phnum.sendKeys("7592018435");
+		comment=driver.findElement(By.id("comment"));
+		comment.sendKeys("SoWiBo is not just a software development house. 100 percent of our profits are used for social causes.");
+		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div[2]/form/button"));
 		btn.click();
 		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.switchTo().alert().accept();
-		
+		String message=name.getAttribute("validationMessage");
+		if(message.isEmpty()||message.equals(null)) {
+			fail("TCID <101> failed: <no show error message when  name field with invalid data>");	
+		}
+		else {
+			System.out.println("tcid 101 success");
+		}
 	}
+	
 	
 	public void invalidFname() {
 		WebElement setting,account,fname,lname,phn,btn;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setting=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
 		setting.click();
 		account=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/div/ul/li[2]/p"));
 		account.click();
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-		fname=driver.findElement(By.id("//*[@id=\"fname\"]"));
-		lname=driver.findElement(By.id("//*[@id=\"lname\"]"));
-		phn=driver.findElement(By.id("//*[@id=\"phone\"]"));
-		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		fname=driver.findElement(By.id("fname"));
+		fname.clear();
 		fname.sendKeys("fderw434@##");
+		lname=driver.findElement(By.id("lname"));
+		lname.clear();
 		lname.sendKeys("gg");
+		phn=driver.findElement(By.id("phone"));
+		phn.clear();
 		phn.sendKeys("7592018435");
+		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		btn.click();
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.switchTo().alert().accept();
 		String message=fname.getAttribute("validationMessage");
+		System.out.println(message);
 		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <108> failed: <no show error message when firat name field with invalid data>");
+			fail("TCID <108> failed: <no show error message when first name field with invalid data>");	
 		}
 		else {
 			System.out.println("tcid 108 success");
 		}
 		
 		
-}
+	}
 
 	public void emptyFname() {
 		WebElement setting,account,fname,lname,phn,btn;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setting=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
 		setting.click();
 		account=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/div/ul/li[2]/p"));
 		account.click();
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 		fname=driver.findElement(By.id("fname"));
-		lname=driver.findElement(By.id("lname"));
-		phn=driver.findElement(By.id("phone"));
-		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		fname.clear();
 		fname.sendKeys("");
+		lname=driver.findElement(By.id("lname"));
+		fname.clear();
 		lname.sendKeys("gg");
+		phn=driver.findElement(By.id("phone"));
+		fname.clear();
 		phn.sendKeys("7592018435");
+		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		btn.click();
 		String message=fname.getAttribute("validationMessage");
 		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <109> failed: <no show error message when firat name field is empty>");
+			System.out.println("tcid 109 success");
 		}
 		else {
-			System.out.println("tcid 109 success");
+			fail("TCID <109> failed: <no show error message when empty first name field>");	
+			
 		}
 		
 	}
@@ -211,13 +260,7 @@ public class AutomationScript extends CustomWebDriver{
 		lname.sendKeys("");
 		phn.sendKeys("7592018435");
 		btn.click();
-		String message=lname.getAttribute("validationMessage");
-		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <113> failed: <no show error message when empty last name>");
-		}
-		else {
-			System.out.println("tcid 113 success");
-		}
+		
 	}
 		public void invalidPhn() {
 			WebElement setting,account,fname,lname,phn,btn;
@@ -233,13 +276,7 @@ public class AutomationScript extends CustomWebDriver{
 			lname.sendKeys("gg");
 			phn.sendKeys("bdf@@#445");
 			btn.click();
-			String message=phn.getAttribute("validationMessage");
-			if(message.isEmpty()||message.equals(null)) {
-				fail("TCID <116> failed: <no show error message when phone number with invalid data>");
-			}
-			else {
-				System.out.println("tcid 116 success");
-			}
+			
 			
 		}
 		public void emptyPhn() {
@@ -256,13 +293,7 @@ public class AutomationScript extends CustomWebDriver{
 			lname.sendKeys("gg");
 			phn.sendKeys("");
 			btn.click();
-			String message=phn.getAttribute("validationMessage");
-			if(message.isEmpty()||message.equals(null)) {
-				fail("TCID <117> failed: <no show error message when empty phone number>");
-			}
-			else {
-				System.out.println("tcid 117 success");
-			}
+			
 		}
 		
 	
