@@ -7,7 +7,7 @@ import automation.AutomationScript;
 public class TCID19 {
 	@Test
 	public void clearEmp() {
-		AutomationScript.returnobj().clearEmpty();
+	AutomationScript.returnobj().clearcartemp();
 	}
 
 }

@@ -62,8 +62,7 @@ public class AutomationScript extends CustomWebDriver{
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 		minus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/button[1]"));
 		minus.click();
-		
-		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/span"));
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/span"));
 		String element1=element.getText();
 		if(element1.equals("1")) {
 			System.out.println("Success");
@@ -85,12 +84,12 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		
 		checkout.click();
-		driver.switchTo().alert().accept();
+		
 		
 	}
 	public void checkout()  {
 		WebElement checkout;
-		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/p[2]/a"));
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -100,11 +99,6 @@ public class AutomationScript extends CustomWebDriver{
 		checkout.click();
 	}
 
-	public void clearEmpty() {
-		WebElement clear;
-		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
-		clear.click();
-	}
 	public void cart() {
 	    WebElement cart;
 	    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
@@ -113,7 +107,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void cartCheckout() {
 	    WebElement click;
-	    click=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[3]/div/div[2]/div/p[2]/a"));
+	    click=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
 	    click.click();
 	}
 	public void sort() {
@@ -126,11 +120,91 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void relevance() {
-		WebElement relevance = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[1]"));  
-		Select dropdown = new Select(relevance);
-		dropdown.selectByIndex(0); 
-		System.out.println(dropdown);
+		WebElement element;
+		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
+		dropdown.selectByIndex(0);
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[1]"));
+		String element1=element.getText();
+		if(element1.equals("Relevance")) {
+			System.out.println("Sorted By Relevance");
+		}
+		else {
+			fail("TCID <8> failed: Relevance Category is not selected");
+		}
 		
+	}
+	public void lowtohigh() {
+		WebElement element;
+		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
+		dropdown.selectByIndex(1);
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[2]"));
+		String element1=element.getText();
+		if(element1.equals("Price - Low to High")) {
+			System.out.println("Sorted By Low to High");
+		}
+		else {
+			fail("TCID <9> failed: Low to High Category is not selected");
+		}
+		
+	}
+	public void hightolow() {
+		WebElement element;
+		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
+		dropdown.selectByIndex(2);
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[3]"));
+		String element1=element.getText();
+		if(element1.equals("Price - high to Low")) {
+			System.out.println("Sorted By High to Low");
+		}
+		else {
+			fail("TCID <10> failed:  High to Low Category is not selected");
+		}
+		
+	}
+	public void atoz() {
+		WebElement element;
+		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
+		dropdown.selectByIndex(3);
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[4]"));
+		String element1=element.getText();
+		if(element1.equals("Name - A to Z")) {
+			System.out.println("Sorted By A to Z");
+		}
+		else {
+			fail("TCID <10> failed:  A to Z Category is not selected");
+		}
+		
+	}
+	public void ztoa() {
+		WebElement element;
+		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
+		dropdown.selectByIndex(4);
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[5]"));
+		String element1=element.getText();
+		if(element1.equals("Name - Z to A")) {
+			System.out.println("Sorted By Z to A");
+		}
+		else {
+			fail("TCID <10> failed:  Z to A Category is not selected");
+		}
+		
+	}
+	public void clearcartemp() {
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		WebElement clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
+		clear.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.switchTo().alert().accept();
+	}
+	public void clearcart() {
+		
+		WebElement clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
+		clear.click();
 	}
 	
 }  

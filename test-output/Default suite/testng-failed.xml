@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TCID16">
+      <class name="testcases.TCID19">
         <methods>
-          <include name="checkout_emp"/>
+          <include name="clearEmp"/>
         </methods>
-      </class> <!-- testcases.TCID16 -->
+      </class> <!-- testcases.TCID19 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
