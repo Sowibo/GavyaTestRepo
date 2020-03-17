@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -460,5 +461,87 @@ public class AutomationScript extends CustomWebDriver{
 			
 			System.out.println("tcid70 sucess");
 		}
+	}
+	public void conformPassDifferent() {
+		WebElement password,conformpass,btn,element;
+		password=driver.findElement(By.id("password"));
+		conformpass=driver.findElement(By.id("password2"));
+		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		password.sendKeys("veenavava123");
+		conformpass.sendKeys("veenavas");
+		btn.click();
+		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/div/div[2]/div[2]/span[1]"));
+		String elementval = element.getText();
+		if(elementval.equals(" ")) {
+			
+			fail("TCID <71> failed: <no show error message when give different passwords >");
+			
+		}
+		else {
+			
+			System.out.println("tcid71 sucess");
+		}
+	}
+	public void createAccount() {
+		WebElement firstname,lastname,email,phnum,password,conformpass,cookie,refferal,btn,element;
+		firstname=driver.findElement(By.id("fname"));
+		lastname=driver.findElement(By.id("lname"));
+		email=driver.findElement(By.id("email"));
+		phnum=driver.findElement(By.id("phone"));
+		password=driver.findElement(By.id("password"));
+		conformpass=driver.findElement(By.id("password2"));
+		refferal=driver.findElement(By.id("referral"));
+		
+		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		firstname.sendKeys("veena");
+		lastname.sendKeys("vl");
+		email.sendKeys("veena12yu@sowibo.com");
+		phnum.sendKeys("7034994370");
+		password.sendKeys("veenavava123");
+		conformpass.sendKeys("veenavava123");
+		refferal.sendKeys("vgjj123@");
+		
+		btn.click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		driver.switchTo().alert().accept();
+
+	}
+	public void refferalEmpty() {
+		WebElement firstname,lastname,email,phnum,password,conformpass,refferal,btn,element;
+		firstname=driver.findElement(By.id("fname"));
+		lastname=driver.findElement(By.id("lname"));
+		email=driver.findElement(By.id("email"));
+		phnum=driver.findElement(By.id("phone"));
+		password=driver.findElement(By.id("password"));
+		conformpass=driver.findElement(By.id("password2"));
+	    btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
+		firstname.sendKeys("veena");
+		lastname.sendKeys("vl");
+		email.sendKeys("veena12yu@sowibo.com");
+		phnum.sendKeys("7034994370");
+		password.sendKeys("veenavava123");
+		conformpass.sendKeys("veenavava123");
+		btn.click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		driver.switchTo().alert().accept();
+
+		
+	}
+	public void backOption() {
+		WebElement back,cookie;
+		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/a"));
+		back.click();
 	}
 }

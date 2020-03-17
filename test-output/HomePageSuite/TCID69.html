@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>TestNG:  TCID69</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TCID69</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 17 21:22:31 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6154 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TCID59.lastNameCheck()'><b>lastNameCheck</b><br>Test class: testcases.TCID59</td>
+<td><div><pre>java.lang.AssertionError: TCID &lt;59&gt; failed: &lt;no show error message when give last name length as 16&gt;
+	at automation.AutomationScript.lastNameValidation(AutomationScript.java:55)
+	at testcases.TCID59.lastNameCheck(TCID59.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1457551880", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1457551880'><pre>java.lang.AssertionError: TCID &lt;59&gt; failed: &lt;no show error message when give last name length as 16&gt;
+	at org.testng.Assert.fail(Assert.java:97)
+	at automation.AutomationScript.lastNameValidation(AutomationScript.java:55)
+	at testcases.TCID59.lastNameCheck(TCID59.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>testcases.TCID59@71b1176b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TCID67.conformFieldEmpty()'><b>conformFieldEmpty</b><br>Test class: testcases.TCID67</td>
+<td></td>
+<td>4</td>
+<td>testcases.TCID67@bef2d72</td></tr>
+<tr>
+<td title='testcases.TCID61.emailValidation()'><b>emailValidation</b><br>Test class: testcases.TCID61</td>
+<td></td>
+<td>4</td>
+<td>testcases.TCID61@4313f5bc</td></tr>
+<tr>
+<td title='testcases.TCID60.invalidEmailValidation()'><b>invalidEmailValidation</b><br>Test class: testcases.TCID60</td>
+<td></td>
+<td>3</td>
+<td>testcases.TCID60@12e61fe6</td></tr>
+<tr>
+<td title='testcases.TCID66.passwordFieldEmpty()'><b>passwordFieldEmpty</b><br>Test class: testcases.TCID66</td>
+<td></td>
+<td>4</td>
+<td>testcases.TCID66@36c88a32</td></tr>
+<tr>
+<td title='testcases.TCID69.passwordFieldNegative()'><b>passwordFieldNegative</b><br>Test class: testcases.TCID69</td>
+<td></td>
+<td>6</td>
+<td>testcases.TCID69@3d680b5a</td></tr>
+<tr>
+<td title='testcases.TCID68.passwordFieldPositive()'><b>passwordFieldPositive</b><br>Test class: testcases.TCID68</td>
+<td></td>
+<td>11</td>
+<td>testcases.TCID68@49b0b76</td></tr>
+<tr>
+<td title='testcases.TCID63.phoneNumEmpty()'><b>phoneNumEmpty</b><br>Test class: testcases.TCID63</td>
+<td></td>
+<td>3</td>
+<td>testcases.TCID63@20d28811</td></tr>
+<tr>
+<td title='testcases.TCID65.phoneNumNegative()'><b>phoneNumNegative</b><br>Test class: testcases.TCID65</td>
+<td></td>
+<td>5</td>
+<td>testcases.TCID65@460d0a57</td></tr>
+<tr>
+<td title='testcases.TCID64.phoneNumPositive()'><b>phoneNumPositive</b><br>Test class: testcases.TCID64</td>
+<td></td>
+<td>10</td>
+<td>testcases.TCID64@4b14c583</td></tr>
+<tr>
+<td title='testcases.TCID62.phoneNumValidation()'><b>phoneNumValidation</b><br>Test class: testcases.TCID62</td>
+<td></td>
+<td>3</td>
+<td>testcases.TCID62@6e0dec4a</td></tr>
+<tr>
+<td title='testcases.TCID1.startTest()'><b>startTest</b><br>Test class: testcases.TCID1</td>
+<td></td>
+<td>6</td>
+<td>testcases.TCID1@4e91d63f</td></tr>
+</table><p>
+</body>
+</html>
