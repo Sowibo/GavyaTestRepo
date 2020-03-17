@@ -29,8 +29,8 @@ public class TCID119 {
 	public  void test119() {
 //		AutomationScript.returnobj().launchUrl();
 		
-		BeforeSuites.suit().init();
-		AutomationScript.returnobj().logIn();
+//		BeforeSuites.suit().init();
+//		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
 		AutomationScript.returnobj().testPhoneNumber();

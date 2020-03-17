@@ -13,8 +13,6 @@ public class CustomWebDriver {
 	}
 	
 	public void initialize() {
-//		System.setProperty("webdriver.gecko.driver","C:\\Users\\User\\Desktop\\sql\\dependens\\geckodriver\\geckodriver.exe\"");
-		
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\User\\Desktop\\sql\\dependens\\geckodriver\\geckodriver.exe");
 		driver=new FirefoxDriver();
 		

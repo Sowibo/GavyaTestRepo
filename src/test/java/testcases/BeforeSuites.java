@@ -21,5 +21,6 @@ public class BeforeSuites {
 		DbConnection.getInstance().initialisation(url, usr, pass);
 //		njn add cheythath
 		AutomationScript.returnobj().launchUrl();
+		AutomationScript.returnobj().logIn();
 	 }
 }
