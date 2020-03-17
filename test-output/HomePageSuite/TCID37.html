@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 15 21:45:05 IST 2020</td>
+<td>Started on:</td><td>Tue Mar 17 20:38:22 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5692 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3380 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.TCID34.productDecrement()'><b>productDecrement</b><br>Test class: testcases.TCID34</td>
-<td><div><pre>java.lang.AssertionError: TCID 30 failed: Doesnt redirect to the login page
-	at automation.AutomationScript.minusFunction(AutomationScript.java:55)
-	at testcases.TCID34.productDecrement(TCID34.java:11)
+<td title='testcases.TCID36.lower()'><b>lower</b><br>Test class: testcases.TCID36</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: You have reached the minimum units allowed for purchase of this item.: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-26CSK06&apos;, ip: &apos;192.168.15.168&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8736, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 872f2c43-96fc-4ede-bd66-15c0b4caa29b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at automation.AutomationScript.launchUrl(AutomationScript.java:24)
+	at testcases.TCID36.lower(TCID36.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace220165304", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace220165304'><pre>java.lang.AssertionError: TCID 30 failed: Doesnt redirect to the login page
-	at org.testng.Assert.fail(Assert.java:97)
-	at automation.AutomationScript.minusFunction(AutomationScript.java:55)
-	at testcases.TCID34.productDecrement(TCID34.java:11)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1710783020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1710783020'><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: You have reached the minimum units allowed for purchase of this item.: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-26CSK06&apos;, ip: &apos;192.168.15.168&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8736, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 872f2c43-96fc-4ede-bd66-15c0b4caa29b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at automation.AutomationScript.launchUrl(AutomationScript.java:24)
+	at testcases.TCID36.lower(TCID36.java:11)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -114,8 +135,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>testcases.TCID34@71b1176b</td></tr>
+<td>0</td>
+<td>testcases.TCID36@6e0dec4a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -127,18 +148,33 @@ function toggleAllBoxes() {
 <tr>
 <td title='testcases.TCID37.clearClick()'><b>clearClick</b><br>Test class: testcases.TCID37</td>
 <td></td>
+<td>3</td>
+<td>testcases.TCID37@4b14c583</td></tr>
+<tr>
+<td title='testcases.TCID30.newUserCheckout()'><b>newUserCheckout</b><br>Test class: testcases.TCID30</td>
+<td></td>
 <td>5</td>
-<td>testcases.TCID37@4313f5bc</td></tr>
+<td>testcases.TCID30@71b1176b</td></tr>
+<tr>
+<td title='testcases.TCID34.productDecrement()'><b>productDecrement</b><br>Test class: testcases.TCID34</td>
+<td></td>
+<td>7</td>
+<td>testcases.TCID34@4313f5bc</td></tr>
 <tr>
 <td title='testcases.TCID33.productIncrement()'><b>productIncrement</b><br>Test class: testcases.TCID33</td>
 <td></td>
-<td>0</td>
+<td>5</td>
 <td>testcases.TCID33@12e61fe6</td></tr>
 <tr>
 <td title='testcases.TCID1.startTest()'><b>startTest</b><br>Test class: testcases.TCID1</td>
 <td></td>
-<td>10</td>
+<td>8</td>
 <td>testcases.TCID1@4e91d63f</td></tr>
+<tr>
+<td title='testcases.TCID35.upper()'><b>upper</b><br>Test class: testcases.TCID35</td>
+<td></td>
+<td>28</td>
+<td>testcases.TCID35@20d28811</td></tr>
 </table><p>
 </body>
 </html>

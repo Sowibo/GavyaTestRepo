@@ -151,6 +151,59 @@ public class AutomationScript extends CustomWebDriver{
 		clear.click();
 		System.out.println("TCID37 success");
 		}
+
+	public void verifyLabel() {
+		WebElement add,add1,checkout_btn, element;
+		add=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/button"));
+		add1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/button"));
+		add.click();
+		add1.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		checkout_btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout_btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/p"));
+		String value=element.getText();
+		String object="Your cart contain 2 items.";
+		if(value.equals(object)) {
+			System.out.println("TCID 32 success");
+		}
+		else {
+			fail("TCID32 failed: Quantities are different in numbers");
+		}
+
+		
+	}
+	public void loginEmpty() {
+		WebElement login,btn;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		btn=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		btn.click();
+		if(driver.switchTo().alert() != null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID 38 success");
+		}
+		else {
+			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
+		}
+	}
 	
 	
 	public void register() {
