@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-HomePageSuite" class="navigator-link">
-              <span class="suite-name border-failed">HomePageSuite</span>
+              <span class="suite-name border-passed">HomePageSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods, 1 failed,   13 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-HomePageSuite" class="hide-methods failed suite-HomePageSuite"> (hide)</a> <!-- hide-methods failed suite-HomePageSuite -->
-                      <a href="#" panel-name="suite-HomePageSuite" class="show-methods failed suite-HomePageSuite"> (show)</a> <!-- show-methods failed suite-HomePageSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-HomePageSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID19" class="method navigator-link" hash-for-method="clearEmp">clearEmp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-HomePageSuite -->
+                    <span class="method-stats">14 methods,   14 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -142,6 +128,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID18" class="method navigator-link" hash-for-method="checkout_pro">checkout_pro</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID19" class="method navigator-link" hash-for-method="clearEmp">clearEmp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -191,40 +182,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-HomePageSuite" class="panel HomePageSuite">
-          <div class="suite-HomePageSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testcases.TCID19</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="clearEmp">
-                  </a> <!-- clearEmp -->
-                  <span class="method-name">clearEmp</span>
-                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P4MLSHK&apos;, ip: &apos;192.168.15.124&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8544, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7ff63641-5ad4-4a02-b3ca-f9732e16914e
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-	at automation.AutomationScript.clearcartemp(AutomationScript.java:196)
-	at testcases.TCID19.clearEmp(TCID19.java:10)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HomePageSuite-class-failed -->
           <div class="suite-HomePageSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -371,6 +328,21 @@ Session ID: 7ff63641-5ad4-4a02-b3ca-f9732e16914e
                   <a name="cartPlus">
                   </a> <!-- cartPlus -->
                   <span class="method-name">cartPlus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID19</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearEmp">
+                  </a> <!-- clearEmp -->
+                  <span class="method-name">clearEmp</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -588,64 +560,64 @@ data.addRows(14);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkout_pro')
 data.setCell(0, 2, 'testcases.TCID18')
-data.setCell(0, 3, 10252);
+data.setCell(0, 3, 18421);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkout_emp')
-data.setCell(1, 2, 'testcases.TCID16')
-data.setCell(1, 3, 5733);
+data.setCell(1, 1, 'startTest')
+data.setCell(1, 2, 'testcases.TCID1')
+data.setCell(1, 3, 15106);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'startTest')
-data.setCell(2, 2, 'testcases.TCID1')
-data.setCell(2, 3, 5296);
+data.setCell(2, 1, 'checkout_emp')
+data.setCell(2, 2, 'testcases.TCID16')
+data.setCell(2, 3, 6500);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'ztoa')
-data.setCell(3, 2, 'testcases.TCID12')
-data.setCell(3, 3, 5087);
+data.setCell(3, 1, 'clearEmp')
+data.setCell(3, 2, 'testcases.TCID19')
+data.setCell(3, 3, 5525);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addCart')
-data.setCell(4, 2, 'testcases.TCID2')
-data.setCell(4, 3, 1562);
+data.setCell(4, 1, 'ztoa')
+data.setCell(4, 2, 'testcases.TCID12')
+data.setCell(4, 3, 3283);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'clearPro')
-data.setCell(5, 2, 'testcases.TCID20')
-data.setCell(5, 3, 1445);
+data.setCell(5, 1, 'addCart')
+data.setCell(5, 2, 'testcases.TCID2')
+data.setCell(5, 3, 1583);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'cartMinus')
-data.setCell(6, 2, 'testcases.TCID4')
-data.setCell(6, 3, 703);
+data.setCell(6, 1, 'cartPlus')
+data.setCell(6, 2, 'testcases.TCID3')
+data.setCell(6, 3, 1047);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'cartPlus')
-data.setCell(7, 2, 'testcases.TCID3')
-data.setCell(7, 3, 624);
+data.setCell(7, 1, 'cartMinus')
+data.setCell(7, 2, 'testcases.TCID4')
+data.setCell(7, 3, 717);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'highlow')
-data.setCell(8, 2, 'testcases.TCID10')
-data.setCell(8, 3, 562);
+data.setCell(8, 1, 'atoz')
+data.setCell(8, 2, 'testcases.TCID11')
+data.setCell(8, 3, 655);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'atoz')
-data.setCell(9, 2, 'testcases.TCID11')
-data.setCell(9, 3, 546);
+data.setCell(9, 1, 'sort')
+data.setCell(9, 2, 'testcases.TCID7')
+data.setCell(9, 3, 429);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'clearEmp')
-data.setCell(10, 2, 'testcases.TCID19')
-data.setCell(10, 3, 421);
+data.setCell(10, 1, 'lowhigh')
+data.setCell(10, 2, 'testcases.TCID9')
+data.setCell(10, 3, 422);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'lowhigh')
-data.setCell(11, 2, 'testcases.TCID9')
-data.setCell(11, 3, 390);
+data.setCell(11, 1, 'highlow')
+data.setCell(11, 2, 'testcases.TCID10')
+data.setCell(11, 3, 417);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'sort')
-data.setCell(12, 2, 'testcases.TCID7')
-data.setCell(12, 3, 214);
+data.setCell(12, 1, 'clearPro')
+data.setCell(12, 2, 'testcases.TCID20')
+data.setCell(12, 3, 331);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'relevance')
 data.setCell(13, 2, 'testcases.TCID8')
-data.setCell(13, 3, 140);
+data.setCell(13, 3, 168);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-HomePageSuite">
               </div> <!-- times-div-HomePageSuite -->
             </div> <!-- times-div -->
@@ -681,100 +653,98 @@ return data;
               <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">29952 ms</span>
+                <span class="method-start">49615 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID2</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addCart</span>
-                <span class="method-start">36029 ms</span>
+                <span class="method-start">64985 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID3</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">cartPlus</span>
-                <span class="method-start">37919 ms</span>
+                <span class="method-start">66998 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID4</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">cartMinus</span>
-                <span class="method-start">38776 ms</span>
+                <span class="method-start">68361 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID7</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">sort</span>
-                <span class="method-start">39604 ms</span>
+                <span class="method-start">69199 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID8</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">relevance</span>
-                <span class="method-start">39974 ms</span>
+                <span class="method-start">69754 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID9</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">lowhigh</span>
-                <span class="method-start">40224 ms</span>
+                <span class="method-start">70031 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID10</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">highlow</span>
-                <span class="method-start">40755 ms</span>
+                <span class="method-start">70687 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID11</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">atoz</span>
-                <span class="method-start">41525 ms</span>
+                <span class="method-start">71482 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID12</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">ztoa</span>
-                <span class="method-start">42181 ms</span>
+                <span class="method-start">72217 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID16</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkout_emp</span>
-                <span class="method-start">47409 ms</span>
+                <span class="method-start">75607 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID18</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkout_pro</span>
-                <span class="method-start">53204 ms</span>
+                <span class="method-start">82185 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID20</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clearPro</span>
-                <span class="method-start">63619 ms</span>
+                <span class="method-start">100723 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID19</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">clearEmp</span>
-                <span class="method-start">65134 ms</span>
+                <span class="method-start">101114 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

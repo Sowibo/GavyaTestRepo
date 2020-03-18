@@ -206,6 +206,129 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
 		clear.click();
 	}
+	public void lowerLimit() {
+		WebElement lower;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		lower=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[4]/p[3]/span/button[1]"));
+		lower.click();
+		
+	}
+	public void upperLimit() {
+		WebElement plus;
+		for(int i=0;i<10;i++) {
+			try {
+				Thread.sleep(2000);
+			} 
+			catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[5]/p[3]/span/button[2]"));
+			plus.click();
+		}
+			
+	}
+	
+	public void cartPlus() {
+			WebElement cart,plus,element;
+		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+			cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
+			cart.click();
+			plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[2]"));
+			plus.click();
+			element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/span"));
+			String element1=element.getText();
+			if(element1.equals("2")) {
+				System.out.println("Success");
+			}
+			else {
+				fail("TCID <21> failed: Not increased by one");
+			}
+			
+	}
+	
+	public void cartMinus() {
+		WebElement minus,element;
+		minus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[1]"));
+		minus.click();
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/span"));
+		String element1=element.getText();
+		if(element1.equals("1")){
+			System.out.println("Success");
+		}
+		else{
+			fail("TCID <22> failed: Not decreased by one");
+		}
+	}
+	
+	public void lowerCart() {
+		WebElement lower;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		lower=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[1]"));
+		lower.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(driver.switchTo().alert() != null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID 24 success");
+		}
+		else {
+			fail("TCID36 failed: Didnt show alert message while decresing products less than 1");
+		}
+		
+	}
+	public void upperCart() {
+		WebElement plus;
+		for(int i=0;i<10;i++) {
+			try {
+				Thread.sleep(2000);
+			} 
+			catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[2]"));
+			plus.click();
+		}
+			try {
+				Thread.sleep(2000);
+			} 
+			catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(driver.switchTo().alert() != null) {
+				driver.switchTo().alert().accept();
+				System.out.println("TCID 23 success");
+			}
+			else {
+				fail("TCID35 failed: Didnt show alert message while incresing products greater than 10");
+			}
+			
+	}	
+	public void clear() {
+		WebElement clear;
+		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/span"));
+		clear.click();
+	}
+	
 	
 }  
 

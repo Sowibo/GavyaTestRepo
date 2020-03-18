@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  TCID23</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TCID23</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 18 21:53:49 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>25 seconds (25187 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TCID2.addCart()'><b>addCart</b><br>Test class: testcases.TCID2</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID2@71b1176b</td></tr>
+<tr>
+<td title='testcases.TCID11.atoz()'><b>atoz</b><br>Test class: testcases.TCID11</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID11@49b0b76</td></tr>
+<tr>
+<td title='testcases.TCID4.cartMinus()'><b>cartMinus</b><br>Test class: testcases.TCID4</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID4@4313f5bc</td></tr>
+<tr>
+<td title='testcases.TCID3.cartPlus()'><b>cartPlus</b><br>Test class: testcases.TCID3</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID3@12e61fe6</td></tr>
+<tr>
+<td title='testcases.TCID24.cartupper()'><b>cartupper</b><br>Test class: testcases.TCID24</td>
+<td></td>
+<td>4</td>
+<td>testcases.TCID24@76508ed1</td></tr>
+<tr>
+<td title='testcases.TCID23.cartupper()'><b>cartupper</b><br>Test class: testcases.TCID23</td>
+<td></td>
+<td>25</td>
+<td>testcases.TCID23@72f926e6</td></tr>
+<tr>
+<td title='testcases.TCID16.checkout_emp()'><b>checkout_emp</b><br>Test class: testcases.TCID16</td>
+<td></td>
+<td>5</td>
+<td>testcases.TCID16@470f1802</td></tr>
+<tr>
+<td title='testcases.TCID18.checkout_pro()'><b>checkout_pro</b><br>Test class: testcases.TCID18</td>
+<td></td>
+<td>9</td>
+<td>testcases.TCID18@5bd03f44</td></tr>
+<tr>
+<td title='testcases.TCID19.clearEmp()'><b>clearEmp</b><br>Test class: testcases.TCID19</td>
+<td></td>
+<td>5</td>
+<td>testcases.TCID19@7e0b85f9</td></tr>
+<tr>
+<td title='testcases.TCID20.clearPro()'><b>clearPro</b><br>Test class: testcases.TCID20</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID20@353d0772</td></tr>
+<tr>
+<td title='testcases.TCID10.highlow()'><b>highlow</b><br>Test class: testcases.TCID10</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID10@bef2d72</td></tr>
+<tr>
+<td title='testcases.TCID6.lower()'><b>lower</b><br>Test class: testcases.TCID6</td>
+<td></td>
+<td>2</td>
+<td>testcases.TCID6@20d28811</td></tr>
+<tr>
+<td title='testcases.TCID9.lowhigh()'><b>lowhigh</b><br>Test class: testcases.TCID9</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID9@36c88a32</td></tr>
+<tr>
+<td title='testcases.TCID22.minuscart()'><b>minuscart</b><br>Test class: testcases.TCID22</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID22@50a638b5</td></tr>
+<tr>
+<td title='testcases.TCID21.pluscart()'><b>pluscart</b><br>Test class: testcases.TCID21</td>
+<td></td>
+<td>2</td>
+<td>testcases.TCID21@31d7b7bf</td></tr>
+<tr>
+<td title='testcases.TCID8.relevance()'><b>relevance</b><br>Test class: testcases.TCID8</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID8@460d0a57</td></tr>
+<tr>
+<td title='testcases.TCID7.sort()'><b>sort</b><br>Test class: testcases.TCID7</td>
+<td></td>
+<td>0</td>
+<td>testcases.TCID7@4b14c583</td></tr>
+<tr>
+<td title='testcases.TCID1.startTest()'><b>startTest</b><br>Test class: testcases.TCID1</td>
+<td></td>
+<td>12</td>
+<td>testcases.TCID1@4e91d63f</td></tr>
+<tr>
+<td title='testcases.TCID5.upper()'><b>upper</b><br>Test class: testcases.TCID5</td>
+<td></td>
+<td>22</td>
+<td>testcases.TCID5@6e0dec4a</td></tr>
+<tr>
+<td title='testcases.TCID12.ztoa()'><b>ztoa</b><br>Test class: testcases.TCID12</td>
+<td></td>
+<td>2</td>
+<td>testcases.TCID12@3d680b5a</td></tr>
+</table><p>
+</body>
+</html>
