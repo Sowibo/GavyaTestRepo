@@ -5,6 +5,9 @@ import static org.testng.Assert.fail;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -491,7 +494,7 @@ public class AutomationScript extends CustomWebDriver{
 		password=driver.findElement(By.id("password"));
 		conformpass=driver.findElement(By.id("password2"));
 		refferal=driver.findElement(By.id("referral"));
-		
+		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
 		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		firstname.sendKeys("veena");
 		lastname.sendKeys("vl");
@@ -500,7 +503,7 @@ public class AutomationScript extends CustomWebDriver{
 		password.sendKeys("veenavava123");
 		conformpass.sendKeys("veenavava123");
 		refferal.sendKeys("vgjj123@");
-		
+		cookie.click();
 		btn.click();
 		try {
 			Thread.sleep(3000);
@@ -508,8 +511,17 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		 Alert alert = driver.switchTo().alert();
+		 alert.accept();
 
-		driver.switchTo().alert().accept();
+			if(alert.equals(null)) {
+				fail("TCID <73> failed: <alert box is not present here>");
+			}
+			else {
+				System.out.println("tcid 73 success");
+			}   
+		
 
 	}
 	public void refferalEmpty() {
@@ -520,6 +532,7 @@ public class AutomationScript extends CustomWebDriver{
 		phnum=driver.findElement(By.id("phone"));
 		password=driver.findElement(By.id("password"));
 		conformpass=driver.findElement(By.id("password2"));
+		
 	    btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		firstname.sendKeys("veena");
 		lastname.sendKeys("vl");
@@ -527,6 +540,7 @@ public class AutomationScript extends CustomWebDriver{
 		phnum.sendKeys("7034994370");
 		password.sendKeys("veenavava123");
 		conformpass.sendKeys("veenavava123");
+		
 		btn.click();
 		try {
 			Thread.sleep(3000);
@@ -535,8 +549,15 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 
-		driver.switchTo().alert().accept();
+	    Alert alert = driver.switchTo().alert();
+	    alert.accept();
 
+		if(alert.equals(null)) {
+			fail("TCID <73> failed: <alert box is not present here>");
+		}
+		else {
+			System.out.println("tcid 73 success");
+		}
 		
 	}
 	public void backOption() {
@@ -544,4 +565,35 @@ public class AutomationScript extends CustomWebDriver{
 		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/a"));
 		back.click();
 	}
+	public void getData() {
+		Statement st=null;
+		
+		 ResultSet rs;
+		 int count;
+		 
+		 try {
+			 rs= st.executeQuery("SELECT name FROM product");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				 
+				 testLogin(s1);
+				 System.err.println("elements are"+s1);
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
+	 public void testLogin(String str) {
+		  WebElement search,btn;
+		  search=driver.findElement(By.name("search"));
+          search.clear();
+		  search.sendKeys(str);
+
+			
+		 }
 }

@@ -10,6 +10,7 @@ import java.util.Properties;
 
 public class DbConnection {
 	Statement stmt;
+	
 	public static DbConnection getInstance(){
 		return new DbConnection();
 		
