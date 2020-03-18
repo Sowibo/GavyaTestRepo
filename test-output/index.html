@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-HomePageSuite" class="navigator-link">
-              <span class="suite-name border-passed">HomePageSuite</span>
+              <span class="suite-name border-failed">HomePageSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-HomePageSuite" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">19 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">18 methods, 3 failed,   15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-HomePageSuite" class="hide-methods failed suite-HomePageSuite"> (hide)</a> <!-- hide-methods failed suite-HomePageSuite -->
+                      <a href="#" panel-name="suite-HomePageSuite" class="show-methods failed suite-HomePageSuite"> (show)</a> <!-- show-methods failed suite-HomePageSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-HomePageSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID55" class="method navigator-link" hash-for-method="fnameNegative">fnameNegative</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID52" class="method navigator-link" hash-for-method="invalidFname">invalidFname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID56" class="method navigator-link" hash-for-method="invalidLname">invalidLname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-HomePageSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +126,77 @@
                     <div class="method-list-content passed suite-HomePageSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID48" class="method navigator-link" hash-for-method="accountLink">accountLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID49" class="method navigator-link" hash-for-method="back">back</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID37" class="method navigator-link" hash-for-method="clearClick">clearClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID53" class="method navigator-link" hash-for-method="emptyFname">emptyFname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID57" class="method navigator-link" hash-for-method="emptyLname">emptyLname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID38" class="method navigator-link" hash-for-method="emptyLogin">emptyLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID54" class="method navigator-link" hash-for-method="fnamePositive">fnamePositive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID58" class="method navigator-link" hash-for-method="lnamePositive">lnamePositive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID36" class="method navigator-link" hash-for-method="lower">lower</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID30" class="method navigator-link" hash-for-method="newUserCheckout">newUserCheckout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID34" class="method navigator-link" hash-for-method="productDecrement">productDecrement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID33" class="method navigator-link" hash-for-method="productIncrement">productIncrement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID1" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID35" class="method navigator-link" hash-for-method="upper">upper</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID32" class="method navigator-link" hash-for-method="verify">verify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-HomePageSuite -->
@@ -122,6 +211,159 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-HomePageSuite" class="panel HomePageSuite">
+          <div class="suite-HomePageSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TCID56</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidLname">
+                  </a> <!-- invalidLname -->
+                  <span class="method-name">invalidLname</span>
+                  <div class="stack-trace">java.lang.AssertionError: TCID56 failed: Didnt show error message with invalid Last name
+	at automation.AutomationScript.invalidLname(AutomationScript.java:500)
+	at testcases.TCID56.invalidLname(TCID56.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TCID52</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidFname">
+                  </a> <!-- invalidFname -->
+                  <span class="method-name">invalidFname</span>
+                  <div class="stack-trace">java.lang.AssertionError: TCID52 failed: Didnt show error message with invalid first name
+	at automation.AutomationScript.invalidFname(AutomationScript.java:355)
+	at testcases.TCID52.invalidFname(TCID52.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TCID55</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="fnameNegative">
+                  </a> <!-- fnameNegative -->
+                  <span class="method-name">fnameNegative</span>
+                  <div class="stack-trace">java.lang.AssertionError: TCID55 failed: Didnt show error message with negative test case2
+	at automation.AutomationScript.fnameNegativeLength(AutomationScript.java:485)
+	at testcases.TCID55.fnameNegative(TCID55.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID48</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="accountLink">
+                  </a> <!-- accountLink -->
+                  <span class="method-name">accountLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID54</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="fnamePositive">
+                  </a> <!-- fnamePositive -->
+                  <span class="method-name">fnamePositive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID49</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="back">
+                  </a> <!-- back -->
+                  <span class="method-name">back</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID32</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify">
+                  </a> <!-- verify -->
+                  <span class="method-name">verify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID36</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="lower">
+                  </a> <!-- lower -->
+                  <span class="method-name">lower</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
           <div class="suite-HomePageSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -140,14 +382,119 @@
           <div class="suite-HomePageSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.TCID1</span>
+              <span class="class-name">testcases.TCID57</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="startTest">
-                  </a> <!-- startTest -->
-                  <span class="method-name">startTest</span>
+                  <a name="emptyLname">
+                  </a> <!-- emptyLname -->
+                  <span class="method-name">emptyLname</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID30</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="newUserCheckout">
+                  </a> <!-- newUserCheckout -->
+                  <span class="method-name">newUserCheckout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID35</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="upper">
+                  </a> <!-- upper -->
+                  <span class="method-name">upper</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID34</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="productDecrement">
+                  </a> <!-- productDecrement -->
+                  <span class="method-name">productDecrement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID53</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyFname">
+                  </a> <!-- emptyFname -->
+                  <span class="method-name">emptyFname</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID37</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearClick">
+                  </a> <!-- clearClick -->
+                  <span class="method-name">clearClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID33</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="productIncrement">
+                  </a> <!-- productIncrement -->
+                  <span class="method-name">productIncrement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID58</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="lnamePositive">
+                  </a> <!-- lnamePositive -->
+                  <span class="method-name">lnamePositive</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,11 +519,91 @@
       &lt;class name=&quot;testcases.TCID1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TCID1 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID30&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID30&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID30 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID33&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID33&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID33 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID34&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID34&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID34 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID36&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID36&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID36 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID35&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID35&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID35 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID32&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID32&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID32 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID37&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID37&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID37 --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TCID38&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.TCID38&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TCID38 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID48&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID48&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID48 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID49&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID49&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID49 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID52&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID52&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID52 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID53&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID53&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID53 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID54&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID54&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID54 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID55&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID55&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID55 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID56&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID56&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID56 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID57&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID57&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID57 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID58&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID58&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID58 --&gt;
 &lt;/suite&gt; &lt;!-- HomePageSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,7 +621,55 @@
                 <span class="test-name">TCID1 (1 class)</span>
               </li>
               <li>
+                <span class="test-name">TCID30 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID33 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID34 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID36 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID35 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID32 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID37 (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">TCID38 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID48 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID49 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID52 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID53 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID54 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID55 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID56 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID57 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID58 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,20 +695,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'startTest')
-data.setCell(0, 2, 'testcases.TCID1')
-data.setCell(0, 3, 15199);
+data.setCell(0, 1, 'upper')
+data.setCell(0, 2, 'testcases.TCID35')
+data.setCell(0, 3, 28338);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'emptyLogin')
-data.setCell(1, 2, 'testcases.TCID38')
-data.setCell(1, 3, 3121);
+data.setCell(1, 1, 'fnamePositive')
+data.setCell(1, 2, 'testcases.TCID54')
+data.setCell(1, 3, 10343);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'lnamePositive')
+data.setCell(2, 2, 'testcases.TCID58')
+data.setCell(2, 3, 10309);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'productIncrement')
+data.setCell(3, 2, 'testcases.TCID33')
+data.setCell(3, 3, 9601);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'productDecrement')
+data.setCell(4, 2, 'testcases.TCID34')
+data.setCell(4, 3, 9297);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'lower')
+data.setCell(5, 2, 'testcases.TCID36')
+data.setCell(5, 3, 9222);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'clearClick')
+data.setCell(6, 2, 'testcases.TCID37')
+data.setCell(6, 3, 7092);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'startTest')
+data.setCell(7, 2, 'testcases.TCID1')
+data.setCell(7, 3, 6901);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'back')
+data.setCell(8, 2, 'testcases.TCID49')
+data.setCell(8, 3, 6407);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'newUserCheckout')
+data.setCell(9, 2, 'testcases.TCID30')
+data.setCell(9, 3, 6067);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'emptyFname')
+data.setCell(10, 2, 'testcases.TCID53')
+data.setCell(10, 3, 5468);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'fnameNegative')
+data.setCell(11, 2, 'testcases.TCID55')
+data.setCell(11, 3, 5379);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'accountLink')
+data.setCell(12, 2, 'testcases.TCID48')
+data.setCell(12, 3, 4998);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verify')
+data.setCell(13, 2, 'testcases.TCID32')
+data.setCell(13, 3, 4847);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'emptyLogin')
+data.setCell(14, 2, 'testcases.TCID38')
+data.setCell(14, 3, 4551);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'emptyLname')
+data.setCell(15, 2, 'testcases.TCID57')
+data.setCell(15, 3, 4314);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'invalidFname')
+data.setCell(16, 2, 'testcases.TCID52')
+data.setCell(16, 3, 3993);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'invalidLname')
+data.setCell(17, 2, 'testcases.TCID56')
+data.setCell(17, 3, 3016);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-HomePageSuite">
               </div> <!-- times-div-HomePageSuite -->
             </div> <!-- times-div -->
@@ -269,14 +808,132 @@ return data;
               <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">24041 ms</span>
+                <span class="method-start">22430 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID30</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">newUserCheckout</span>
+                <span class="method-start">29889 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID33</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">productIncrement</span>
+                <span class="method-start">36651 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID34</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">productDecrement</span>
+                <span class="method-start">46637 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID36</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">lower</span>
+                <span class="method-start">56331 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID35</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">upper</span>
+                <span class="method-start">65965 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID32</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verify</span>
+                <span class="method-start">94737 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID37</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">clearClick</span>
+                <span class="method-start">99952 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID38</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyLogin</span>
-                <span class="method-start">39363 ms</span>
+                <span class="method-start">107294 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID48</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">accountLink</span>
+                <span class="method-start">112077 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID49</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">back</span>
+                <span class="method-start">117302 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID52</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">invalidFname</span>
+                <span class="method-start">123917 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID53</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">emptyFname</span>
+                <span class="method-start">128579 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID54</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">fnamePositive</span>
+                <span class="method-start">134209 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID55</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">fnameNegative</span>
+                <span class="method-start">144642 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID56</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">invalidLname</span>
+                <span class="method-start">150144 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID57</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">emptyLname</span>
+                <span class="method-start">153287 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID58</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">lnamePositive</span>
+                <span class="method-start">157715 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TCID38(failed)">
+  <test thread-count="5" name="TCID52(failed)">
     <classes>
-      <class name="testcases.TCID38">
+      <class name="testcases.TCID52">
         <methods>
-          <include name="emptyLogin"/>
+          <include name="invalidFname"/>
         </methods>
-      </class> <!-- testcases.TCID38 -->
+      </class> <!-- testcases.TCID52 -->
     </classes>
-  </test> <!-- TCID38(failed) -->
+  </test> <!-- TCID52(failed) -->
+  <test thread-count="5" name="TCID55(failed)">
+    <classes>
+      <class name="testcases.TCID55">
+        <methods>
+          <include name="fnameNegative"/>
+        </methods>
+      </class> <!-- testcases.TCID55 -->
+    </classes>
+  </test> <!-- TCID55(failed) -->
+  <test thread-count="5" name="TCID56(failed)">
+    <classes>
+      <class name="testcases.TCID56">
+        <methods>
+          <include name="invalidLname"/>
+        </methods>
+      </class> <!-- testcases.TCID56 -->
+    </classes>
+  </test> <!-- TCID56(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->

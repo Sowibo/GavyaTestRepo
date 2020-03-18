@@ -4,11 +4,10 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID32 {
+public class TCID48 {
 	@Test
-	public  void verify() {
+	public  void accountLink() {
 		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().checkOut();
-		AutomationScript.returnobj().verifyLabel();
+		AutomationScript.returnobj().createAccount();
 	}
 }
