@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-HomePageSuite" class="navigator-link ">
-                    <span class="test-stats">6 tests</span>
+                    <span class="test-stats">13 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 4 failed,   1 passed</span>
+                    <span class="method-stats">12 methods, 3 failed,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -107,17 +107,12 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID109" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID100" class="method navigator-link" hash-for-method="startTest100">startTest100</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID101" class="method navigator-link" hash-for-method="startTest101">startTest101</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID112" class="method navigator-link" hash-for-method="startTest112">startTest112</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-HomePageSuite -->
@@ -132,6 +127,46 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID1" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID109" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID113" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID116" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID117" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID100" class="method navigator-link" hash-for-method="startTest100">startTest100</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID102" class="method navigator-link" hash-for-method="startTest101">startTest101</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID103" class="method navigator-link" hash-for-method="startTest101">startTest101</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID104" class="method navigator-link" hash-for-method="startTest101">startTest101</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-HomePageSuite -->
@@ -157,26 +192,23 @@
                   <a name="startTest">
                   </a> <!-- startTest -->
                   <span class="method-name">startTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;input id=&quot;fname&quot; class=&quot;login-textfield&quot; name=&quot;f_name&quot; type=&quot;text&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 17076, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
-*** Element info: {Using=xpath, value=/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.login(AutomationScript.java:47)
-	at testcases.TCID108.startTest(TCID108.java:10)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at automation.AutomationScript.invalidFname(AutomationScript.java:303)
+	at testcases.TCID108.startTest(TCID108.java:12)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
@@ -187,68 +219,31 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
           <div class="suite-HomePageSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.TCID109</span>
+              <span class="class-name">testcases.TCID112</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="startTest">
-                  </a> <!-- startTest -->
-                  <span class="method-name">startTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div/div/div/div/div[3]/div/div[1]/div/ul/li[2]/p
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <a name="startTest112">
+                  </a> <!-- startTest112 -->
+                  <span class="method-name">startTest112</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;input id=&quot;lname&quot; class=&quot;login-textfield&quot; name=&quot;l_name&quot; type=&quot;text&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 17076, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
-*** Element info: {Using=xpath, value=/html/body/div/div/div/div/div[3]/div/div[1]/div/ul/li[2]/p}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.emptyFname(AutomationScript.java:200)
-	at testcases.TCID109.startTest(TCID109.java:11)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HomePageSuite-class-failed -->
-          <div class="suite-HomePageSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testcases.TCID100</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="startTest100">
-                  </a> <!-- startTest100 -->
-                  <span class="method-name">startTest100</span>
-                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 17076, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-	at automation.AutomationScript.contactUs(AutomationScript.java:98)
-	at testcases.TCID100.startTest100(TCID100.java:16)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at automation.AutomationScript.invalidLname(AutomationScript.java:381)
+	at testcases.TCID112.startTest112(TCID112.java:12)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
@@ -267,31 +262,121 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
                   <a name="startTest101">
                   </a> <!-- startTest101 -->
                   <span class="method-name">startTest101</span>
-                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Successfully submited: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 17076, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
-*** Element info: {Using=xpath, value=/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at automation.AutomationScript.invalidContactUs(AutomationScript.java:113)
+                  <div class="stack-trace">java.lang.AssertionError: TCID &lt;101&gt; failed: &lt;no show error message when  name field with invalid data&gt;
+	at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:151)
 	at testcases.TCID101.startTest101(TCID101.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 30 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID102</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest101">
+                  </a> <!-- startTest101 -->
+                  <span class="method-name">startTest101</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID103</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest101">
+                  </a> <!-- startTest101 -->
+                  <span class="method-name">startTest101</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID113</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID104</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest101">
+                  </a> <!-- startTest101 -->
+                  <span class="method-name">startTest101</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID109</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID117</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID116</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
           <div class="suite-HomePageSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -303,6 +388,21 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
                   <a name="startTest">
                   </a> <!-- startTest -->
                   <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID100</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest100">
+                  </a> <!-- startTest100 -->
+                  <span class="method-name">startTest100</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -337,6 +437,21 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
       &lt;class name=&quot;testcases.TCID101&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TCID101 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID102&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID102&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID102 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID103&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID103&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID103 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID104&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID104&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID104 --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TCID108&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.TCID108&quot;/&gt;
@@ -347,6 +462,26 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
       &lt;class name=&quot;testcases.TCID109&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TCID109 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID112&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID112&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID112 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID113&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID113&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID113 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID116&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID116&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID116 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID117&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID117&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID117 --&gt;
 &lt;/suite&gt; &lt;!-- HomePageSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -370,10 +505,31 @@ Session ID: b13c063a-a32b-4f51-8ff4-9d4f34d2daa0
                 <span class="test-name">TCID101 (1 class)</span>
               </li>
               <li>
+                <span class="test-name">TCID102 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID103 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID104 (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">TCID108 (1 class)</span>
               </li>
               <li>
                 <span class="test-name">TCID109 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID112 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID113 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID116 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID117 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -399,27 +555,55 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'startTest')
-data.setCell(0, 2, 'testcases.TCID1')
-data.setCell(0, 3, 50278);
+data.setCell(0, 2, 'testcases.TCID108')
+data.setCell(0, 3, 19271);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'startTest100')
-data.setCell(1, 2, 'testcases.TCID100')
-data.setCell(1, 3, 8117);
+data.setCell(1, 1, 'startTest101')
+data.setCell(1, 2, 'testcases.TCID101')
+data.setCell(1, 3, 12288);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'startTest')
-data.setCell(2, 2, 'testcases.TCID109')
-data.setCell(2, 3, 5524);
+data.setCell(2, 1, 'startTest112')
+data.setCell(2, 2, 'testcases.TCID112')
+data.setCell(2, 3, 11715);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'startTest101')
-data.setCell(3, 2, 'testcases.TCID101')
-data.setCell(3, 3, 5052);
+data.setCell(3, 1, 'startTest')
+data.setCell(3, 2, 'testcases.TCID1')
+data.setCell(3, 3, 10804);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'startTest')
-data.setCell(4, 2, 'testcases.TCID108')
-data.setCell(4, 3, 5024);
+data.setCell(4, 1, 'startTest100')
+data.setCell(4, 2, 'testcases.TCID100')
+data.setCell(4, 3, 8589);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'startTest101')
+data.setCell(5, 2, 'testcases.TCID103')
+data.setCell(5, 3, 7821);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'startTest101')
+data.setCell(6, 2, 'testcases.TCID102')
+data.setCell(6, 3, 7276);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'startTest101')
+data.setCell(7, 2, 'testcases.TCID104')
+data.setCell(7, 3, 6931);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'startTest')
+data.setCell(8, 2, 'testcases.TCID116')
+data.setCell(8, 3, 6709);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'startTest')
+data.setCell(9, 2, 'testcases.TCID109')
+data.setCell(9, 3, 6635);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'startTest')
+data.setCell(10, 2, 'testcases.TCID113')
+data.setCell(10, 3, 6488);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'startTest')
+data.setCell(11, 2, 'testcases.TCID117')
+data.setCell(11, 3, 6372);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
@@ -460,16 +644,14 @@ return data;
               <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">16056 ms</span>
+                <span class="method-start">24712 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID100</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">startTest100</span>
-                <span class="method-start">66783 ms</span>
+                <span class="method-start">36514 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -478,7 +660,28 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">startTest101</span>
-                <span class="method-start">75053 ms</span>
+                <span class="method-start">45396 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID102</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest101</span>
+                <span class="method-start">58184 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID103</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest101</span>
+                <span class="method-start">65662 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID104</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest101</span>
+                <span class="method-start">73812 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -487,16 +690,44 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">startTest</span>
-                <span class="method-start">80404 ms</span>
+                <span class="method-start">80944 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID109</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <span class="method-name">startTest</span>
+                <span class="method-start">100866 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID112</div> <!-- chronological-class-name -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">startTest112</span>
+                <span class="method-start">107783 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID113</div> <!-- chronological-class-name -->
+              <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">85482 ms</span>
+                <span class="method-start">119610 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID116</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest</span>
+                <span class="method-start">126167 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID117</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest</span>
+                <span class="method-start">132990 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

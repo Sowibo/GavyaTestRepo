@@ -8,7 +8,7 @@ public class TCID101 {
 	@Test
 	public void startTest101() {
 		
-		AutomationScript.returnobj().invalidContactUs();
+		AutomationScript.returnobj().invalidNameContactUs();
 		
 	}
 

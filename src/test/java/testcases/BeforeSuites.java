@@ -13,6 +13,8 @@ public class BeforeSuites {
 		String url=Settings.getInstance().getProperty("urldb");
 		String usr=Settings.getInstance().getProperty("username");
 		String pass=Settings.getInstance().getProperty("password");
+		String email=Settings.getInstance().getProperty("email");
+		String password=Settings.getInstance().getProperty("pass");
 		DbConnection.getInstance().initialisation(url, usr, pass);
 	 }
 }
