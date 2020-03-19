@@ -14,7 +14,7 @@
   </test>
   
   <!-- Athira -->
-    
+  
     <test name="TCID30">
     <classes>
       <class name="testcases.TCID30"/>
@@ -62,7 +62,23 @@
       <class name="testcases.TCID38"/>
     </classes>
   </test> 
-  
+
+   <test name="TCID43">
+    <classes>
+      <class name="testcases.TCID43"/>
+    </classes>
+  </test> 
+   <test name="TCID46">
+    <classes>
+      <class name="testcases.TCID46"/>
+    </classes>
+  </test>
+  <test name="TCID47">
+    <classes>
+      <class name="testcases.TCID47"/>
+    </classes>
+  </test>
+   
    
     <test name="TCID48">
     <classes>

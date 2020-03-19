@@ -1,281 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="18" passed="15" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-18T18:53:55 IST" name="HomePageSuite" finished-at="2020-03-18T18:56:22 IST" duration-ms="146976">
+  <suite started-at="2020-03-19T19:43:08 IST" name="HomePageSuite" finished-at="2020-03-19T19:43:39 IST" duration-ms="31632">
     <groups>
     </groups>
-    <test started-at="2020-03-18T18:53:55 IST" name="BeforeSuite" finished-at="2020-03-18T18:53:55 IST" duration-ms="92">
+    <test started-at="2020-03-19T19:43:08 IST" name="BeforeSuite" finished-at="2020-03-19T19:43:08 IST" duration-ms="51">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-18T18:53:56 IST" name="TCID1" finished-at="2020-03-18T18:54:03 IST" duration-ms="7093">
+    <test started-at="2020-03-19T19:43:09 IST" name="TCID1" finished-at="2020-03-19T19:43:18 IST" duration-ms="9044">
       <class name="testcases.TCID1">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@4e91d63f]" started-at="2020-03-18T18:53:56 IST" name="startTest" finished-at="2020-03-18T18:54:03 IST" duration-ms="6901" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@4e91d63f]" started-at="2020-03-19T19:43:09 IST" name="startTest" finished-at="2020-03-19T19:43:18 IST" duration-ms="8914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- testcases.TCID1 -->
     </test> <!-- TCID1 -->
-    <test started-at="2020-03-18T18:54:04 IST" name="TCID30" finished-at="2020-03-18T18:54:10 IST" duration-ms="6136">
-      <class name="testcases.TCID30">
-        <test-method signature="newUserCheckout()[pri:0, instance:testcases.TCID30@71b1176b]" started-at="2020-03-18T18:54:04 IST" name="newUserCheckout" finished-at="2020-03-18T18:54:10 IST" duration-ms="6067" status="PASS">
+    <test started-at="2020-03-19T19:43:18 IST" name="TCID43" finished-at="2020-03-19T19:43:21 IST" duration-ms="3222">
+      <class name="testcases.TCID43">
+        <test-method signature="forgotPass()[pri:0, instance:testcases.TCID43@71b1176b]" started-at="2020-03-19T19:43:18 IST" name="forgotPass" finished-at="2020-03-19T19:43:21 IST" duration-ms="3206" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newUserCheckout -->
-      </class> <!-- testcases.TCID30 -->
-    </test> <!-- TCID30 -->
-    <test started-at="2020-03-18T18:54:10 IST" name="TCID33" finished-at="2020-03-18T18:54:20 IST" duration-ms="9650">
-      <class name="testcases.TCID33">
-        <test-method signature="productIncrement()[pri:0, instance:testcases.TCID33@12e61fe6]" started-at="2020-03-18T18:54:10 IST" name="productIncrement" finished-at="2020-03-18T18:54:20 IST" duration-ms="9601" status="PASS">
+        </test-method> <!-- forgotPass -->
+      </class> <!-- testcases.TCID43 -->
+    </test> <!-- TCID43 -->
+    <test started-at="2020-03-19T19:43:21 IST" name="TCID46" finished-at="2020-03-19T19:43:31 IST" duration-ms="9342">
+      <class name="testcases.TCID46">
+        <test-method signature="emptyPass()[pri:0, instance:testcases.TCID46@12e61fe6]" started-at="2020-03-19T19:43:21 IST" name="emptyPass" finished-at="2020-03-19T19:43:31 IST" duration-ms="9328" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productIncrement -->
-      </class> <!-- testcases.TCID33 -->
-    </test> <!-- TCID33 -->
-    <test started-at="2020-03-18T18:54:20 IST" name="TCID34" finished-at="2020-03-18T18:54:30 IST" duration-ms="9351">
-      <class name="testcases.TCID34">
-        <test-method signature="productDecrement()[pri:0, instance:testcases.TCID34@4313f5bc]" started-at="2020-03-18T18:54:20 IST" name="productDecrement" finished-at="2020-03-18T18:54:30 IST" duration-ms="9297" status="PASS">
+        </test-method> <!-- emptyPass -->
+      </class> <!-- testcases.TCID46 -->
+    </test> <!-- TCID46 -->
+    <test started-at="2020-03-19T19:43:31 IST" name="TCID47" finished-at="2020-03-19T19:43:39 IST" duration-ms="8446">
+      <class name="testcases.TCID47">
+        <test-method signature="backLogin()[pri:0, instance:testcases.TCID47@4313f5bc]" started-at="2020-03-19T19:43:31 IST" name="backLogin" finished-at="2020-03-19T19:43:39 IST" duration-ms="8434" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productDecrement -->
-      </class> <!-- testcases.TCID34 -->
-    </test> <!-- TCID34 -->
-    <test started-at="2020-03-18T18:54:30 IST" name="TCID36" finished-at="2020-03-18T18:54:39 IST" duration-ms="9267">
-      <class name="testcases.TCID36">
-        <test-method signature="lower()[pri:0, instance:testcases.TCID36@6e0dec4a]" started-at="2020-03-18T18:54:30 IST" name="lower" finished-at="2020-03-18T18:54:39 IST" duration-ms="9222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lower -->
-      </class> <!-- testcases.TCID36 -->
-    </test> <!-- TCID36 -->
-    <test started-at="2020-03-18T18:54:40 IST" name="TCID35" finished-at="2020-03-18T18:55:08 IST" duration-ms="28365">
-      <class name="testcases.TCID35">
-        <test-method signature="upper()[pri:0, instance:testcases.TCID35@20d28811]" started-at="2020-03-18T18:54:40 IST" name="upper" finished-at="2020-03-18T18:55:08 IST" duration-ms="28338" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- upper -->
-      </class> <!-- testcases.TCID35 -->
-    </test> <!-- TCID35 -->
-    <test started-at="2020-03-18T18:55:08 IST" name="TCID32" finished-at="2020-03-18T18:55:13 IST" duration-ms="4878">
-      <class name="testcases.TCID32">
-        <test-method signature="verify()[pri:0, instance:testcases.TCID32@4b14c583]" started-at="2020-03-18T18:55:08 IST" name="verify" finished-at="2020-03-18T18:55:13 IST" duration-ms="4847" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify -->
-      </class> <!-- testcases.TCID32 -->
-    </test> <!-- TCID32 -->
-    <test started-at="2020-03-18T18:55:14 IST" name="TCID37" finished-at="2020-03-18T18:55:21 IST" duration-ms="7131">
-      <class name="testcases.TCID37">
-        <test-method signature="clearClick()[pri:0, instance:testcases.TCID37@460d0a57]" started-at="2020-03-18T18:55:14 IST" name="clearClick" finished-at="2020-03-18T18:55:21 IST" duration-ms="7092" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clearClick -->
-      </class> <!-- testcases.TCID37 -->
-    </test> <!-- TCID37 -->
-    <test started-at="2020-03-18T18:55:21 IST" name="TCID38" finished-at="2020-03-18T18:55:26 IST" duration-ms="4578">
-      <class name="testcases.TCID38">
-        <test-method signature="emptyLogin()[pri:0, instance:testcases.TCID38@36c88a32]" started-at="2020-03-18T18:55:21 IST" name="emptyLogin" finished-at="2020-03-18T18:55:26 IST" duration-ms="4551" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyLogin -->
-      </class> <!-- testcases.TCID38 -->
-    </test> <!-- TCID38 -->
-    <test started-at="2020-03-18T18:55:26 IST" name="TCID48" finished-at="2020-03-18T18:55:31 IST" duration-ms="5017">
-      <class name="testcases.TCID48">
-        <test-method signature="accountLink()[pri:0, instance:testcases.TCID48@bef2d72]" started-at="2020-03-18T18:55:26 IST" name="accountLink" finished-at="2020-03-18T18:55:31 IST" duration-ms="4998" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountLink -->
-      </class> <!-- testcases.TCID48 -->
-    </test> <!-- TCID48 -->
-    <test started-at="2020-03-18T18:55:31 IST" name="TCID49" finished-at="2020-03-18T18:55:37 IST" duration-ms="6418">
-      <class name="testcases.TCID49">
-        <test-method signature="back()[pri:0, instance:testcases.TCID49@49b0b76]" started-at="2020-03-18T18:55:31 IST" name="back" finished-at="2020-03-18T18:55:37 IST" duration-ms="6407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- back -->
-      </class> <!-- testcases.TCID49 -->
-    </test> <!-- TCID49 -->
-    <test started-at="2020-03-18T18:55:38 IST" name="TCID52" finished-at="2020-03-18T18:55:42 IST" duration-ms="4010">
-      <class name="testcases.TCID52">
-        <test-method signature="invalidFname()[pri:0, instance:testcases.TCID52@3d680b5a]" started-at="2020-03-18T18:55:38 IST" name="invalidFname" finished-at="2020-03-18T18:55:42 IST" duration-ms="3993" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[TCID52 failed: Didnt show error message with invalid first name]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: TCID52 failed: Didnt show error message with invalid first name
-at org.testng.Assert.fail(Assert.java:97)
-at automation.AutomationScript.invalidFname(AutomationScript.java:355)
-at testcases.TCID52.invalidFname(TCID52.java:12)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidFname -->
-      </class> <!-- testcases.TCID52 -->
-    </test> <!-- TCID52 -->
-    <test started-at="2020-03-18T18:55:42 IST" name="TCID53" finished-at="2020-03-18T18:55:48 IST" duration-ms="5477">
-      <class name="testcases.TCID53">
-        <test-method signature="emptyFname()[pri:0, instance:testcases.TCID53@470f1802]" started-at="2020-03-18T18:55:42 IST" name="emptyFname" finished-at="2020-03-18T18:55:48 IST" duration-ms="5468" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyFname -->
-      </class> <!-- testcases.TCID53 -->
-    </test> <!-- TCID53 -->
-    <test started-at="2020-03-18T18:55:48 IST" name="TCID54" finished-at="2020-03-18T18:55:58 IST" duration-ms="10357">
-      <class name="testcases.TCID54">
-        <test-method signature="fnamePositive()[pri:0, instance:testcases.TCID54@5bd03f44]" started-at="2020-03-18T18:55:48 IST" name="fnamePositive" finished-at="2020-03-18T18:55:58 IST" duration-ms="10343" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fnamePositive -->
-      </class> <!-- testcases.TCID54 -->
-    </test> <!-- TCID54 -->
-    <test started-at="2020-03-18T18:55:58 IST" name="TCID55" finished-at="2020-03-18T18:56:04 IST" duration-ms="5396">
-      <class name="testcases.TCID55">
-        <test-method signature="fnameNegative()[pri:0, instance:testcases.TCID55@353d0772]" started-at="2020-03-18T18:55:58 IST" name="fnameNegative" finished-at="2020-03-18T18:56:04 IST" duration-ms="5379" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[TCID55 failed: Didnt show error message with negative test case2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: TCID55 failed: Didnt show error message with negative test case2
-at org.testng.Assert.fail(Assert.java:97)
-at automation.AutomationScript.fnameNegativeLength(AutomationScript.java:485)
-at testcases.TCID55.fnameNegative(TCID55.java:12)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fnameNegative -->
-      </class> <!-- testcases.TCID55 -->
-    </test> <!-- TCID55 -->
-    <test started-at="2020-03-18T18:56:04 IST" name="TCID56" finished-at="2020-03-18T18:56:07 IST" duration-ms="3023">
-      <class name="testcases.TCID56">
-        <test-method signature="invalidLname()[pri:0, instance:testcases.TCID56@7e0b85f9]" started-at="2020-03-18T18:56:04 IST" name="invalidLname" finished-at="2020-03-18T18:56:07 IST" duration-ms="3016" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[TCID56 failed: Didnt show error message with invalid Last name]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: TCID56 failed: Didnt show error message with invalid Last name
-at org.testng.Assert.fail(Assert.java:97)
-at automation.AutomationScript.invalidLname(AutomationScript.java:500)
-at testcases.TCID56.invalidLname(TCID56.java:12)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidLname -->
-      </class> <!-- testcases.TCID56 -->
-    </test> <!-- TCID56 -->
-    <test started-at="2020-03-18T18:56:07 IST" name="TCID57" finished-at="2020-03-18T18:56:11 IST" duration-ms="4330">
-      <class name="testcases.TCID57">
-        <test-method signature="emptyLname()[pri:0, instance:testcases.TCID57@31d7b7bf]" started-at="2020-03-18T18:56:07 IST" name="emptyLname" finished-at="2020-03-18T18:56:11 IST" duration-ms="4314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyLname -->
-      </class> <!-- testcases.TCID57 -->
-    </test> <!-- TCID57 -->
-    <test started-at="2020-03-18T18:56:11 IST" name="TCID58" finished-at="2020-03-18T18:56:22 IST" duration-ms="10319">
-      <class name="testcases.TCID58">
-        <test-method signature="lnamePositive()[pri:0, instance:testcases.TCID58@50a638b5]" started-at="2020-03-18T18:56:11 IST" name="lnamePositive" finished-at="2020-03-18T18:56:22 IST" duration-ms="10309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lnamePositive -->
-      </class> <!-- testcases.TCID58 -->
+        </test-method> <!-- backLogin -->
+      </class> <!-- testcases.TCID47 -->
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@add0edd]" started-at="2020-03-18T18:53:34 IST" name="init" finished-at="2020-03-18T18:53:55 IST" duration-ms="21054" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@add0edd]" started-at="2020-03-19T19:42:52 IST" name="init" finished-at="2020-03-19T19:43:08 IST" duration-ms="15512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-    </test> <!-- TCID58 -->
+    </test> <!-- TCID47 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>

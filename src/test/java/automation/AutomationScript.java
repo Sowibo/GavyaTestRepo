@@ -291,6 +291,93 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
 		}
 	}
+	public void forgotPassword() {
+		WebElement login,link;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		link=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/a"));
+		link.click();
+		String forgotpassword="https://www.greengavya.com/forgotpassword";
+		String url=driver.getCurrentUrl();
+		if(url.equals(forgotpassword)) {
+			System.out.println("TCID43 success");
+		}
+		else {
+			fail("TCID 43 failed: Doesnt redirect to the forgot password page");
+			
+		}
+	}
+	public void emptyForgotPassword() {
+		WebElement login,link,submit;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		link=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/a"));
+		link.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/button"));
+		submit.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(driver.switchTo().alert() != null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID46 success");
+		}
+		else {
+			fail("TCID 46 failed: Doesnt show alert message while submit with empty field");
+			
+		}
+	}
+	public void forgotBackLogin() {
+		WebElement login,link,back;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		link=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/a"));
+		link.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		back=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/a"));
+		back.click();
+		String backurl="https://www.greengavya.com/login";
+		String url=driver.getCurrentUrl();
+		if(url.equals(backurl)) {
+			System.out.println("TCID47 success");
+		}
+		else {
+			fail("TCID47 failed: Doesnt redirect to the login page");
+			
+		}
+	}
 	public void createAccount() {
 		WebElement login,create;
 		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
