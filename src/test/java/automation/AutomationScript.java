@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -37,24 +38,17 @@ public class AutomationScript extends CustomWebDriver{
 		cooki.click();
 	}
 	public void login() {
-		driver.get(Settings.getInstance().getProperty("email"));
-		driver.get(Settings.getInstance().getProperty("password"));
-//		WebElement sendkey,email,password,button;
-//
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		sendkey=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-//		sendkey.click();
-//		email=driver.findElement(By.id("email"));
-//		email.sendKeys("gopikagopakumaran1@gmail.com");
-//		password=driver.findElement(By.id("password"));
-//		password.sendKeys("gopikagg");
-//		button=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
-//		button.click();
+		WebElement login,submit,email,password;
+		driver.get(Settings.getInstance().getProperty("url"));
+		AutomationScript.returnobj().cooki();
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		email=driver.findElement(By.id("email"));
+		email.sendKeys(Settings.getInstance().getProperty("email"));
+		password=driver.findElement(By.id("password"));
+		password.sendKeys(Settings.getInstance().getProperty("pass"));
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
+		submit.click();
 	}
 	public void checkout()  {
 		try {
@@ -90,7 +84,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void validContactUs() {
 		WebElement contact,select,name,email,phnum,comment,btn;
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -110,7 +104,15 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.switchTo().alert().accept();
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID <100> failed: <alert box not present");
+			
+		}
+		else {
+			System.out.println("tcid 100 success");
+		}
 		
 
 	}
@@ -122,7 +124,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -167,7 +169,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -203,7 +205,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -241,7 +243,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -277,7 +279,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -313,7 +315,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
@@ -348,7 +350,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[3]/a"));
+		contact=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[4]/a"));
 		contact.click();
 		select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/select/option[2]"));
 		select.click();
