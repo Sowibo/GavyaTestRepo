@@ -15,6 +15,6 @@ public class CustomWebDriver {
 	public void initialize() {
 		 System.setProperty("webdriver.gecko.driver","C:\\\\Users\\\\sonus\\\\Desktop\\\\selinium\\\\dependency\\\\geckodriver-v0.26.0-win64\\geckodriver.exe");
 		 driver=new FirefoxDriver();
-		
+		 
 	 }
 }

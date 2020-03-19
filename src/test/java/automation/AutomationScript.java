@@ -494,7 +494,7 @@ public class AutomationScript extends CustomWebDriver{
 		password=driver.findElement(By.id("password"));
 		conformpass=driver.findElement(By.id("password2"));
 		refferal=driver.findElement(By.id("referral"));
-		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+//		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
 		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		firstname.sendKeys("veena");
 		lastname.sendKeys("vl");
@@ -503,7 +503,7 @@ public class AutomationScript extends CustomWebDriver{
 		password.sendKeys("veenavava123");
 		conformpass.sendKeys("veenavava123");
 		refferal.sendKeys("vgjj123@");
-		cookie.click();
+//		cookie.click();
 		btn.click();
 		try {
 			Thread.sleep(3000);
@@ -565,35 +565,57 @@ public class AutomationScript extends CustomWebDriver{
 		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/a"));
 		back.click();
 	}
-	public void getData() {
-		Statement st=null;
-		
-		 ResultSet rs;
-		 int count;
+	public void testSearch(String str) {
+		  WebElement search;
+		  String check;
+//		 		
+		  search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
+		  char array[]=new char[str.length()];
+		  search.clear();
+		  
+		  for (int i = 0; i < str.length(); i++) {
+		            
+		            
+				  search.sendKeys(str.charAt(i)+"");
+				  try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				}
+		  check = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input")).getText(); 
+		  System.out.println(str);
+		  System.out.println(check);
+		  if(str.equals(check)) {
+			  System.out.println(str+"element is found");
+		  }
+		  else {
+			  System.out.println(str+"element is not found");
+		  }
 		 
+		
+	}
+	public void emptySearchBar() {
+		 WebElement btn;
+		 btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div/button/i"));
+		 btn.click();
 		 try {
-			 rs= st.executeQuery("SELECT name FROM product");
-			 while(rs.next()) {
-				
-				 String s1=rs.getString(1);
-				 
-				 testLogin(s1);
-				 System.err.println("elements are"+s1);
-				
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			
-			}
-		 catch(SQLException s) {
-				System.err.println("SQL error"+s);
-			}
-			
-	 }
-	 public void testLogin(String str) {
-		  WebElement search,btn;
-		  search=driver.findElement(By.name("search"));
-          search.clear();
-		  search.sendKeys(str);
+		 Alert alert = driver.switchTo().alert();
+		    alert.accept();
 
-			
-		 }
+			if(alert.equals(null)) {
+				fail("TCID <79> failed: <not show error message when search bar is empty>");
+			}
+			else {
+				System.out.println("tcid 79 success");
+			}
+	}
+	 
 }

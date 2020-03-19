@@ -2,21 +2,30 @@ package dbcontroller;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import automation.AutomationScript;
+import webdriver.CustomWebDriver;
 
 public class DbConnection {
 	Statement stmt;
+	static Statement  statement;
 	
 	public static DbConnection getInstance(){
 		return new DbConnection();
 		
 	}
 	public void initialisation(String urldb,String username,String password) {
-		Statement statement;
+//		Statement statement;
 		boolean flag=true;
 		Properties properties=new Properties();
 	    	try {
@@ -39,7 +48,28 @@ public class DbConnection {
 	    	}
 	}
 	
-	
-	
+	//*********************************veena*************************************
+	public void getData() {
+//		Statement st=null;
+		
+		 ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT name FROM product");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().testSearch(s1); 
+
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
 
 }

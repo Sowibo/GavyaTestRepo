@@ -10,4 +10,13 @@
       </class> <!-- testcases.TCID77 -->
     </classes>
   </test> <!-- TCID77(failed) -->
+  <test thread-count="5" name="TCID79(failed)" verbose="0">
+    <classes>
+      <class name="testcases.TCID79">
+        <methods>
+          <include name="emptySearch"/>
+        </methods>
+      </class> <!-- testcases.TCID79 -->
+    </classes>
+  </test> <!-- TCID79(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->
