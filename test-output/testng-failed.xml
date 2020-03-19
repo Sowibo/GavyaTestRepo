@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TCID5(failed)">
+  <test thread-count="5" name="TCID16(failed)">
     <classes>
-      <class name="testcases.TCID5">
+      <class name="testcases.TCID16">
         <methods>
-          <include name="upper"/>
+          <include name="checkout_emp"/>
         </methods>
-      </class> <!-- testcases.TCID5 -->
+      </class> <!-- testcases.TCID16 -->
     </classes>
-  </test> <!-- TCID5(failed) -->
+  </test> <!-- TCID16(failed) -->
+  <test thread-count="5" name="TCID18(failed)">
+    <classes>
+      <class name="testcases.TCID18">
+        <methods>
+          <include name="checkout_pro"/>
+        </methods>
+      </class> <!-- testcases.TCID18 -->
+    </classes>
+  </test> <!-- TCID18(failed) -->
+  <test thread-count="5" name="TCID20(failed)">
+    <classes>
+      <class name="testcases.TCID20">
+        <methods>
+          <include name="clearPro"/>
+        </methods>
+      </class> <!-- testcases.TCID20 -->
+    </classes>
+  </test> <!-- TCID20(failed) -->
+  <test thread-count="5" name="TCID19(failed)">
+    <classes>
+      <class name="testcases.TCID19">
+        <methods>
+          <include name="clearEmp"/>
+        </methods>
+      </class> <!-- testcases.TCID19 -->
+    </classes>
+  </test> <!-- TCID19(failed) -->
+  <test thread-count="5" name="TCID21(failed)">
+    <classes>
+      <class name="testcases.TCID21">
+        <methods>
+          <include name="pluscart"/>
+        </methods>
+      </class> <!-- testcases.TCID21 -->
+    </classes>
+  </test> <!-- TCID21(failed) -->
+  <test thread-count="5" name="TCID22(failed)">
+    <classes>
+      <class name="testcases.TCID22">
+        <methods>
+          <include name="minuscart"/>
+        </methods>
+      </class> <!-- testcases.TCID22 -->
+    </classes>
+  </test> <!-- TCID22(failed) -->
+  <test thread-count="5" name="TCID24(failed)">
+    <classes>
+      <class name="testcases.TCID24">
+        <methods>
+          <include name="cartupper"/>
+        </methods>
+      </class> <!-- testcases.TCID24 -->
+    </classes>
+  </test> <!-- TCID24(failed) -->
+  <test thread-count="5" name="TCID23(failed)">
+    <classes>
+      <class name="testcases.TCID23">
+        <methods>
+          <include name="cartupper"/>
+        </methods>
+      </class> <!-- testcases.TCID23 -->
+    </classes>
+  </test> <!-- TCID23(failed) -->
+  <test thread-count="5" name="TCID25(failed)">
+    <classes>
+      <class name="testcases.TCID25">
+        <methods>
+          <include name="clearCart"/>
+        </methods>
+      </class> <!-- testcases.TCID25 -->
+    </classes>
+  </test> <!-- TCID25(failed) -->
+  <test thread-count="5" name="TCID28(failed)">
+    <classes>
+      <class name="testcases.TCID28">
+        <methods>
+          <include name="continueCart"/>
+        </methods>
+      </class> <!-- testcases.TCID28 -->
+    </classes>
+  </test> <!-- TCID28(failed) -->
+  <test thread-count="5" name="TCID29(failed)">
+    <classes>
+      <class name="testcases.TCID29">
+        <methods>
+          <include name="clearCart"/>
+        </methods>
+      </class> <!-- testcases.TCID29 -->
+    </classes>
+  </test> <!-- TCID29(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->

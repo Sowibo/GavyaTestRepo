@@ -97,6 +97,15 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		checkout.click();
+		String backtohome="https://www.greengavya.com/";
+		String url=driver.getCurrentUrl();
+		if(url.equals(backtohome)) {
+			System.out.println("Success");
+		}
+		else {
+			fail("TCID  failed: Doesnt redirect to the home page");
+			
+		}
 	}
 
 	public void cart() {
@@ -109,6 +118,7 @@ public class AutomationScript extends CustomWebDriver{
 	    WebElement click;
 	    click=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
 	    click.click();
+	    
 	}
 	public void sort() {
 		WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[1]/span/select"));  
@@ -188,6 +198,65 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <10> failed:  Z to A Category is not selected");
 		}
 		
+	}
+	
+	public void pagination() {
+		WebElement one,two,three,four,five;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		one=driver.findElement(By.id("1"));
+		one.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		two=driver.findElement(By.id("2"));
+		two.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		three=driver.findElement(By.id("3"));
+		three.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		four=driver.findElement(By.id("4"));
+		four.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		five=driver.findElement(By.id("5"));
+		five.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		one.click();
+
+
 	}
 	public void clearcartemp() {
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
@@ -329,6 +398,40 @@ public class AutomationScript extends CustomWebDriver{
 		clear.click();
 	}
 	
+	public void continueCart() {
+		WebElement continueshop;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		continueshop=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/button[1]"));
+		continueshop.click();
+		String backtohome="https://www.greengavya.com/";
+		String url=driver.getCurrentUrl();
+		if(url.equals(backtohome)) {
+			System.out.println("TCID success");
+		}
+		else {
+			fail("TCID  failed: Doesnt redirect to the home page");
+			
+		}
+	}
+	public void clearShop() {
+		WebElement clearshop;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		clearshop=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/button[2]"));
+		clearshop.click();
+		
+	}
 	
 }  
 

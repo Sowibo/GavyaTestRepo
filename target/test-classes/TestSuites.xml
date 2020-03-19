@@ -67,6 +67,11 @@
       <class name="testcases.TCID12"/>
     </classes>
   </test>
+  <test name="TCID13">
+    <classes>
+      <class name="testcases.TCID13"/>
+    </classes>
+  </test>
    <test name="TCID16">
     <classes>
       <class name="testcases.TCID16"/>
@@ -112,4 +117,15 @@
       <class name="testcases.TCID25"/>
     </classes>
   </test>
+  <test name="TCID28">
+    <classes>
+      <class name="testcases.TCID28"/>
+    </classes>
+  </test>
+  <test name="TCID29">
+    <classes>
+      <class name="testcases.TCID29"/>
+    </classes>
+  </test>
+  
 </suite> <!-- Suite -->

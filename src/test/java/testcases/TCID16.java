@@ -8,5 +8,6 @@ public class TCID16 {
 	@Test
 	public  void checkout_emp(){
 		AutomationScript.returnobj().checkout_empty();
+		AutomationScript.returnobj().checkout();
 	}
 }
