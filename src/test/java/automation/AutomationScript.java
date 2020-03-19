@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -28,16 +29,20 @@ public class AutomationScript extends CustomWebDriver{
 	
 
 	public void logIn(){
-		WebElement login,logid,logpass,logbtn,cookie;
+		WebElement login,logid,logpass = null,logbtn,cookie;
 		
 		login=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
 		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
 		cookie.click();
 		logid=driver.findElement(By.id("email"));
-		logid.sendKeys("keerthisudev444@gmail.com");		
+		String mail = Settings.getInstance().getProperty("email");
+//		logid.sendKeys("keerthisudev444@gmail.com");		
+		logid.sendKeys(mail);
 		logpass=driver.findElement(By.id("password"));
-		logpass.sendKeys("keerthisudev");		
+		String pass = Settings.getInstance().getProperty("pass");
+		logpass.sendKeys(pass);
+//		logpass.sendKeys("keerthisudev");		
 		logbtn=driver.findElement(By.cssSelector("div.row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > button:nth-child(1)"));
 		logbtn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
@@ -107,7 +112,7 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <119> failed: <the mobile number is valid >");
 		}
 		else {
-			System.out.println("tcid 60 success");
+			System.out.println("TCID 119 success");
 		}
 			
 		
@@ -124,7 +129,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 //			login,settings ,accounts
 	public void testValidData() {		
-		WebElement fname,lname,pnum,updatebtn,alert;		
+		WebElement fname,lname,pnum,updatebtn;		
 		fname = driver.findElement(By.id("fname"));
 		fname.sendKeys("keerthi");		
 		lname = driver.findElement(By.id("lname"));
@@ -133,16 +138,24 @@ public class AutomationScript extends CustomWebDriver{
 		pnum.sendKeys("8137006670");		
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();	
-//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		  driver.switchTo().alert().accept();
+		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID 120 failed:");
+		}
+		else {
+			System.out.println("TCID 120 success");
+		}
 		
-//		driver.switchTo().alert().accept();
-//		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
-		
-//		String btn = updatebtn.getText();
-//		System.out.println(btn);
-	
+
 	}
 	
 	
@@ -151,14 +164,27 @@ public class AutomationScript extends CustomWebDriver{
 	public void checkUpdate() {
 		WebElement fname,lname,pnum,updatebtn;	
 		fname = driver.findElement(By.id("fname"));
+		fname.clear();
 		fname.sendKeys("keerthi");		
 		lname = driver.findElement(By.id("lname"));
+		lname.clear();
 		lname.sendKeys("sudev");		
 		pnum = driver.findElement(By.id("phone"));
+		pnum.clear();
 		pnum.sendKeys("8137006670");		
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();		
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);	
+//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);	
+		
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		
 	}
 	public void checkingUpdate() {
 		
@@ -173,37 +199,33 @@ public class AutomationScript extends CustomWebDriver{
 	}	
 
 	public void currentValidPass() {
-		WebElement chngpass,crntpass,newpass,conpass ;
+		WebElement save_btn,crntpass,newpass,conpass ;
 
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
-		newpass.sendKeys("keerthikeerthi");
+		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
-		conpass.sendKeys("keerthikeerthi");
+		conpass.sendKeys("keerthisudev");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
 		
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID 122 failed:");
+		}
+		else {
+			System.out.println("TCID 122 success");
+		}
 		
-		
-//		
-//		acpage=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[6]"));
-//		String elementval = acpage.getText();
-//		if(elementval.equals(" ")||(elementval.equals(null))) {
-//			fail("TCID <147> failed: <no show error message when flat number field is empty>");
-//		}
-//		else {
-//			System.out.println("TCID147 success");
-//		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		ivide button add cheyyanam
+	
 	}
 
 
@@ -211,7 +233,7 @@ public class AutomationScript extends CustomWebDriver{
 //		login ,settings, changepass
 
 	public void currentInvalidPass() {
-		WebElement crntpass,newpass,conpass;
+		WebElement crntpass,newpass,conpass,save_btn;
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("invalidpass");
 		newpass = driver.findElement(By.id("password"));
@@ -219,6 +241,25 @@ public class AutomationScript extends CustomWebDriver{
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthikeerthi");
 //	ivide button add cheyyanam
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		
+		
+		
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID 123 failed:");
+		}
+		else {
+			System.out.println("TCID 123 success");
+		}
 }
 
 //		FUNCTIONS NEEDED FOR TCID 124

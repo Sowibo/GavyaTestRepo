@@ -7,7 +7,7 @@ import automation.AutomationScript;
 public class TCID144 {
 	@Test
 	public  void test144() {
-//		BeforeSuites.suit().init();  
+		BeforeSuites.suit().init();  
 //		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();

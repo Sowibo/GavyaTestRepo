@@ -8,7 +8,7 @@ public class TCID120 {
 	
 	@Test
 	public  void test120() {
-//		BeforeSuites.suit().init();
+		BeforeSuites.suit().init();
 //		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();

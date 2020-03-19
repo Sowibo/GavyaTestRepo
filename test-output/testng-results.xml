@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-17T21:54:28 IST" name="Default suite" finished-at="2020-03-17T21:55:16 IST" duration-ms="48244">
+  <suite started-at="2020-03-19T20:46:01 IST" name="Default suite" finished-at="2020-03-19T20:46:55 IST" duration-ms="53548">
     <groups>
     </groups>
-    <test started-at="2020-03-17T21:54:28 IST" name="Default test" finished-at="2020-03-17T21:55:16 IST" duration-ms="48244">
-      <class name="testcases.TCID134">
-        <test-method signature="test134()[pri:0, instance:testcases.TCID134@402e37bc]" started-at="2020-03-17T21:54:28 IST" name="test134" finished-at="2020-03-17T21:55:16 IST" duration-ms="48090" status="PASS">
+    <test started-at="2020-03-19T20:46:01 IST" name="Default test" finished-at="2020-03-19T20:46:55 IST" duration-ms="53548">
+      <class name="testcases.TCID123">
+        <test-method signature="test123()[pri:0, instance:testcases.TCID123@402e37bc]" started-at="2020-03-19T20:46:01 IST" name="test123" finished-at="2020-03-19T20:46:55 IST" duration-ms="53402" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test134 -->
-      </class> <!-- testcases.TCID134 -->
+        </test-method> <!-- test123 -->
+      </class> <!-- testcases.TCID123 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
