@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID148 {
 	@Test
-	public  void flatPositiveCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void flatPositivecase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().FlatPositive();
+		AutomationScript.returnobj().flatPositive();
 	}
 		
 	

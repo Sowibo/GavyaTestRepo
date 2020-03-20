@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID166 {
 	@Test
-	public  void PrimaryAddressCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void primaryAddresscase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().PrimaryAddress();
+		AutomationScript.returnobj().primaryAddress();
 		
 	}
 }

@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID161 {
 	@Test
-	public  void PinValidCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void pinInvalidcase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().PinInvalid();
+		AutomationScript.returnobj().pinInvalid();
 		
 	}
 }

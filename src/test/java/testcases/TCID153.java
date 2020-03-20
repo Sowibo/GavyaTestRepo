@@ -8,13 +8,11 @@ import automation.AutomationScript;
 
 public class TCID153 {
 	@Test
-	public  void AreaNegativeCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void areaNegativecase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().AreaNegative();
-		
+		AutomationScript.returnobj().areaNegative();
 	}
 }

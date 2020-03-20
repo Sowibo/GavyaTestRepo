@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID165 {
 	@Test
-	public  void LandEmptyCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void landEmptycase() {
+	
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().LandEmpty();
+		AutomationScript.returnobj().landEmpty();
 		
 	}
 }

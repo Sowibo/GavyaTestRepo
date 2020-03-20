@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID150 {
 	@Test
-	public  void AreaInvalidCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void areaInvalidcase() {
+
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().AreaInvalid();
+		AutomationScript.returnobj().areaInvalid();
 		
 	}
 }

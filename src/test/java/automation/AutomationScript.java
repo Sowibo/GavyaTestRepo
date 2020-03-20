@@ -7,7 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.WatchEvent;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -20,7 +22,7 @@ import webdriver.CustomWebDriver;
 
 
 public class AutomationScript extends CustomWebDriver{
-	WebElement add,check,pCheck,sendkey,email,pswd,btn;;
+
 	public static AutomationScript returnobj() {
 		return new AutomationScript();
 		
@@ -28,40 +30,54 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void launchUrl() {
 		driver.get(Settings.getInstance().getProperty("url"));
+		
 	}
 	
 	//****NEERAJA****
 	
+	public void Cookies() {
+		WebElement cooki;
+		cooki=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+		cooki.click();
+	}
+	
 	public void login() {
-		sendkey=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		sendkey.click();
+		
+		
+		WebElement login,submit,email,password;
+		driver.get(Settings.getInstance().getProperty("url"));
+		AutomationScript.returnobj().Cookies();
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
 		email=driver.findElement(By.id("email"));
-		email.sendKeys("neeraja@sowibo.com");
-		pswd=driver.findElement(By.id("password"));
-		pswd.sendKeys("neerajasnath");
-		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
-		btn.click();
-	}
-	public void addProduct() {
-		add=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
-		add.click();
-	}
-	public void checkOut() {
-		check = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
-		check.click();
+		email.sendKeys(Settings.getInstance().getProperty("email"));
+		password=driver.findElement(By.id("password"));
+		password.sendKeys(Settings.getInstance().getProperty("pass"));
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
+		submit.click();
 		
 	}
-	
-	public void proceedCheck() {
-		WebElement pCheck;
-		pCheck=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div/div/button"));
-		pCheck.click();
-	
-	
+	public void addProduct() {
+		WebElement add;
+		add = driver.findElement(By.className("col-lg-3 col-md-3 col-sm-4 col-xs-6 product-card"));
+		add.click();
 	}
+	
+	public void checkOut() {
+		WebElement checkout;
+		checkout = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout.click();
+	}
+
+	public void proceedCheck() {
+		WebElement proceed;
+		proceed = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div/div/button"));
+		proceed.click();
+	}
+	
 	//flat number filed empty
 	
-	public void FlatEmpty() {
+	public void flatEmpty() {
 			
 		WebElement fullname,mobilenum,area,city,district,pin,landmark,delibtn,element;
 		
@@ -93,7 +109,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[6]"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <147> failed: <no show error message when flat number field is empty>");
 		}
 		else {
@@ -107,7 +123,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	//flat number fileld with input data in positive case
 	
-	public void FlatPositive() {
+	public void flatPositive() {
 		
 		WebElement flatnum,delibtn,element;
 		flatnum=driver.findElement(By.name("house"));
@@ -119,7 +135,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[6]]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID148 sucess 1 test case");
 		}
@@ -138,7 +154,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval1 = element.getText();
 		
-		if(elementval1.equals(" ")) {
+		if(elementval1.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID148 sucess 2 test case");
 		}
@@ -157,7 +173,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval2 = element.getText();
 		
-		if(elementval2.equals(" ")) {
+		if(elementval2.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID148 sucess 3 test case");
 		}
@@ -176,7 +192,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval3 = element.getText();
 		
-		if(elementval3.equals(" ")) {
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID148 sucess 4 test case");
 		}
@@ -189,25 +205,25 @@ public class AutomationScript extends CustomWebDriver{
 
 	//flat number fileld with input data in negative case
 	
-	public void FlatNegative() {
+	public void flatNegative() {
 		
 		WebElement flatnum,delibtn,element;
 		flatnum=driver.findElement(By.name("house"));
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		
 		flatnum.sendKeys("13");
-		btn.click();
+		delibtn.click();
 		
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[6]]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <149> failed: <no show error message when  flat number length is incorrect >");
 		}
 		else {
 			
-			System.out.println("TCID149 sucess test case1");
+			System.out.println("TCID149 sucess 1 test case");
 		}
 		try {
 			Thread.sleep(2000);
@@ -220,19 +236,19 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementvalue1 = element.getText();
 		
-		if(elementvalue1.equals(" ")) {
+		if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <149> failed: <no show error message when flat number length is not correct>");
 		}
 		else {
 			
-			System.out.println("TCID149 sucess test case2");
+			System.out.println("TCID149 sucess 2 test case");
 		}
 		
 	}
 	//Invalid Area
 	
-	public void AreaInvalid() {
+	public void areaInvalid() {
 		WebElement area,delibtn;
 		
 		area=driver.findElement(By.name("area"));
@@ -243,8 +259,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		String message=area.getAttribute("validationMessage");
 		
-		
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <150> failed: <no show error message when area filed with invalid data>");
 			
 		}
@@ -254,7 +269,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	//Area Empty Case
 	
-	public void AreaEmpty() {
+	public void areaEmpty() {
 		
 		WebElement fullname,mobilenum,flatnum,city,district,pin,landmark,delibtn,element;
 		
@@ -286,7 +301,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[8]"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <151> failed: <no show error message when area field is empty>");
 		}
 		else {
@@ -298,7 +313,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Area fileld with input data in positive case
 	
-	public void AreaPositive() {
+	public void areaPositive() {
 		
 		WebElement area,delibtn,element;
 		
@@ -311,7 +326,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[8]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID152 sucess 1 test case");
 		}
@@ -331,7 +346,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval1 = element.getText();
 		
-		if(elementval1.equals(" ")) {
+		if(elementval1.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID152 sucess 2 test case");
 		}
@@ -350,7 +365,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval2 = element.getText();
 		
-		if(elementval2.equals(" ")) {
+		if(elementval2.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID152 sucess 3 test case");
 		}
@@ -369,7 +384,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval3 = element.getText();
 		
-		if(elementval3.equals(" ")) {
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID152 sucess 4 test case");
 		}
@@ -381,7 +396,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Area fileld with input data in negative case4
 	
-	public void AreaNegative() {
+	public void areaNegative() {
 		
 		WebElement area,delibtn,element;
 		
@@ -394,13 +409,13 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[8]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <153> failed: <no show error message when area field length is incorrect >");
 		}
 		else {
 			
-			System.out.println("TCID153 sucess test case1");
+			System.out.println("TCID153 sucess 1 test case");
 		}
 		try {
 			Thread.sleep(2000);
@@ -413,18 +428,18 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementvalue1 = element.getText();
 		
-		if(elementvalue1.equals(" ")) {
+		if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <153> failed: <no show error message when area field is not correct>");
 		}
 		else {
 			
-			System.out.println("TCID153 sucess test case2");
+			System.out.println("TCID153 sucess 2 test case");
 		}
 	}
 	//City Invalid
 
-	public void CityInvalid() {
+	public void cityInvalid() {
 		
 		WebElement city,delibtn;
 		
@@ -436,8 +451,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		String message=city.getAttribute("validationMessage");
 		
-		
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <154> failed: <no show error message when city filed with invalid data>");
 			
 		}
@@ -447,7 +461,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	//City Empty
 	
-	public void CityEmpty() {
+	public void cityEmpty() {
 		
 		WebElement fullname,mobilenum,flatnum,area,district,pinnum,landmark,delibtn,element;
 		
@@ -479,7 +493,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[10]"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <155> failed: <no show error message when city field is empty>");
 		}
 		else {
@@ -491,7 +505,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//City fileld with input data in positive case
 	
-	public void CityPositive() {
+	public void cityPositive() {
 		
 		WebElement city,delibtn,element;
 		
@@ -504,7 +518,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[10]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null)))  {
 			
 			System.out.println("TCID156 sucess 1 test case");
 		}
@@ -524,7 +538,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval1 = element.getText();
 		
-		if(elementval1.equals(" ")) {
+		if(elementval1.equals(" ")||(elementval.equals(null)))  {
 			
 			System.out.println("TCID156 sucess 2 test case");
 		}
@@ -543,7 +557,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval2 = element.getText();
 		
-		if(elementval2.equals(" ")) {
+		if(elementval2.equals(" ")||(elementval.equals(null)))  {
 			
 			System.out.println("TCID156 sucess 3 test case");
 		}
@@ -562,7 +576,7 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn.click();
 		String elementval3 = element.getText();
 		
-		if(elementval3.equals(" ")) {
+		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID156 sucess 4 test case");
 		}
@@ -573,7 +587,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	//City fileld with input data in negative case
 	
-	public void CityNegative() {
+	public void cityNegative() {
 	
 	WebElement city,delibtn,element;
 	
@@ -586,13 +600,13 @@ public class AutomationScript extends CustomWebDriver{
 	element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[10]"));
 	String elementval = element.getText();
 	
-	if(elementval.equals(" ")) {
+	if(elementval.equals(" ")||(elementval.equals(null))) {
 		
 		fail("TCID <157> failed: <no show error message when city field length is incorrect >");
 	}
 	else {
 		
-		System.out.println("TCID157 sucess test case1");
+		System.out.println("TCID157 sucess 1 test case");
 	}
 	try {
 		Thread.sleep(2000);
@@ -605,18 +619,18 @@ public class AutomationScript extends CustomWebDriver{
 	delibtn.click();
 	String elementvalue1 = element.getText();
 	
-	if(elementvalue1.equals(" ")) {
+	if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 		
 		fail("TCID <157> failed: <no show error message when city field length is not correct>");
 	}
 	else {
 		
-		System.out.println("TCID157 sucess test case2");
+		System.out.println("TCID157 sucess 2 test case");
 	}
  }
 	//All options available in district field
 	
-	public void DistrictAvailable() {
+	public void districtAvailable() {
 		WebElement district,delibtn;
 		
 		district=driver.findElement(By.name("district"));
@@ -642,7 +656,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//District field Default
 	
-	public void DistrictDefault() {
+	public void districtDefault() {
 		WebElement district,delibtn;
 		
 		district=driver.findElement(By.name("district"));
@@ -654,7 +668,7 @@ public class AutomationScript extends CustomWebDriver{
 		String message=district.getAttribute("DefaultMessage");
 		
 		
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <160> failed: <no show error message when district field with invalid data>");
 			
 		}
@@ -665,7 +679,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Pin filed is Invalid case
 	
-	public void PinInvalid() {
+	public void pinInvalid() {
 		WebElement pinnum,delibtn;
 		
 		pinnum=driver.findElement(By.name("pin"));
@@ -677,7 +691,7 @@ public class AutomationScript extends CustomWebDriver{
 		String message=pinnum.getAttribute("validationMessage");
 		
 		
-		if(message.isEmpty()) {
+		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <161> failed: <no show error message when pin field with invalid data>");
 			
 		}
@@ -690,7 +704,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Pin filed is empty case
 	
-	public void PinEmpty() {
+	public void pinEmpty() {
 		WebElement fullname,mobilenum,flatnum,area,city,district,landmark,delibtn,element;
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
@@ -719,7 +733,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[13]"));
 		String elementval = element.getText();
 
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <162> failed: <no show error message when pin field is empty>");
 		}
 		else {
@@ -732,7 +746,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Pinfield positive case
 	
-	public void PinPositive() {
+	public void pinPositive() {
 		
 		WebElement pinnum,delibtn,element;
 	
@@ -745,7 +759,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[13]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			System.out.println("TCID163 sucess  test case");
 		}
@@ -757,7 +771,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Pinfield negative case
 	
-	public void PinNegative() {
+	public void pinNegative() {
 		WebElement pinnum,delibtn,element;
 	
 		pinnum=driver.findElement(By.name("pin"));
@@ -769,7 +783,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/p[13]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <164> failed: <no show error message when pin field length is incorrect >");
 		}
@@ -780,7 +794,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Landmark is empty case
 	
-	public void LandEmpty() {
+	public void landEmpty() {
 		WebElement fullname,mobilenum,flatnum,area,city,district,pinnum,delibtn,element;
 		
 		fullname=driver.findElement(By.name("fullname"));
@@ -812,7 +826,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("//*[@id=\"landmark\"]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")) {
+		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <165> failed: <no show error message when landmark field is empty>");
 		}
@@ -825,9 +839,9 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Primary address with empty case
 	
-	public void PrimaryAddress() {
+	public void primaryAddress() {
 		
-		WebElement fullname,mobilenum,flatnum,area,city,district,pinnum,landmark,delibtn,okbtn=null;
+		WebElement fullname,mobilenum,flatnum,area,city,district,pinnum,landmark,delibtn;
 		
 		fullname=driver.findElement(By.name("fullname"));
 		fullname.sendKeys("neerajasnath");
@@ -858,12 +872,15 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
 		
-		okbtn.click();
-	
-	}
+		
+		 Alert okAlert = driver.switchTo().alert();
+		 String alertText = okAlert.getText();
+		 System.out.println("Do you want to set this address as your primary address ? " + alertText);
+		 okAlert.accept();
+		}
 	//Display Cookies
 	
-	public void DisplayCookies() {
+	public void displayCookies() {
 		WebElement cookies;
 		
 		cookies=driver.findElement(By.className("col-lg-10 col-md-10 col-sm-12 col-xs-12"));
@@ -873,7 +890,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Confirm Order
 	
-	public void UseAddress() {
+	public void useAddress() {
 		
 		WebElement useaddress;
 		
@@ -881,7 +898,7 @@ public class AutomationScript extends CustomWebDriver{
 		useaddress.click();
 	}
 	
-	public void ConfirmOrder() {
+	public void confirmOrder() {
 		
 		WebElement conforder;
 		
@@ -892,7 +909,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Change Address
 	
-	public void ChangeAddress() {
+	public void changeAddress() {
 		
 		WebElement changeaddbtn;
 		
@@ -903,7 +920,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	//Change Order
 	
-	public void ChangeOrder() {
+	public void changeOrder() {
 		
 		WebElement changeorderbtn;
 		
@@ -911,4 +928,30 @@ public class AutomationScript extends CustomWebDriver{
 		changeorderbtn.click();
 		
 	}
+	
+	//standard delivery option
+	
+	public void standDelivery() {
+		WebElement standbtn;
+		
+		standbtn=driver.findElement(By.name("deliverytype"));
+		standbtn.click();
+	}
+	
+	//Fast Delivery
+	
+	public void fastDelivery() {
+		WebElement fastbtn;
+		
+		fastbtn=driver.findElement(By.name("deliverytype"));
+		fastbtn.click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

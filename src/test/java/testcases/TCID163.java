@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID163 {
 	@Test
-	public  void PinPositiveCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void pinPositivecase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().PinPositive();
+		AutomationScript.returnobj().pinPositive();
 		
 	}
 }

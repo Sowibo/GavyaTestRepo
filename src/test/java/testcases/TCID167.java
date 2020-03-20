@@ -8,9 +8,9 @@ import automation.AutomationScript;
 
 public class TCID167 {
 	@Test
-	public  void DisplayCookiesCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().DisplayCookies();
+	public  void displayCookiescase() {
+
+		AutomationScript.returnobj().displayCookies();
 		
 	}
 }

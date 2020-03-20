@@ -8,9 +8,8 @@ import automation.AutomationScript;
 
 public class TCID159 {
 	@Test
-	public  void DistrictSelectionCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void districtSelectioncase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();

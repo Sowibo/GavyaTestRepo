@@ -8,13 +8,12 @@ import automation.AutomationScript;
 
 public class TCID160 {
 	@Test
-	public  void DistrictDefaultCase() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void districtDefaultcase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().DistrictDefault();
+		AutomationScript.returnobj().districtDefault();
 		
 	}
 }

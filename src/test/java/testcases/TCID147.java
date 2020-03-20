@@ -8,13 +8,13 @@ import automation.AutomationScript;
 
 public class TCID147 {
 	@Test
-	public  void flatNum() {
-		AutomationScript.returnobj().launchUrl();
-		AutomationScript.returnobj().login();
+	public  void flatEmptycase() {
+		
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheck();
-		AutomationScript.returnobj().FlatEmpty();
+		AutomationScript.returnobj().flatEmpty();
+
 	}		
 	
 }
