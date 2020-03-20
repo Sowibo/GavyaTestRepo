@@ -32,8 +32,33 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	//manuraj
+	public void login() {
+		WebElement login,submit,email,password;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.get(Settings.getInstance().getProperty("url"));
+		AutomationScript.returnobj().cookie();
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		email=driver.findElement(By.id("email"));
+		email.sendKeys(Settings.getInstance().getProperty("email"));
+		password=driver.findElement(By.id("password"));
+		password.sendKeys(Settings.getInstance().getProperty("pass"));
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
+		submit.click();
 	
+	}
 	public void cookie() {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		WebElement cookie;
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
@@ -41,12 +66,19 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void addProduct() {
 		WebElement plus,element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 		plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/button[2]"));
 		plus.click();
 		
 		element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/span"));
 		String element1=element.getText();
+
 		if(element1.equals("2")) {
 			System.out.println("Success");
 		}
@@ -56,10 +88,20 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void minusProduct() {
 		WebElement minus,element,plus;
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/button[2]"));
 		plus.click();
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		minus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/button[1]"));
 		minus.click();
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/span"));
@@ -71,8 +113,15 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <3> failed: Not decreased by one");
 		}
 	}
+	
 	public void checkout_empty() {
 		WebElement checkout,clear;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
 		clear.click();
 		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
@@ -110,17 +159,35 @@ public class AutomationScript extends CustomWebDriver{
 
 	public void cart() {
 	    WebElement cart;
-	    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
 		cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
 		cart.click();
 	}
 	public void cartCheckout() {
 	    WebElement click;
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    click=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
 	    click.click();
 	    
 	}
 	public void sort() {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[1]/span/select"));  
 		Select select = new Select(dropdown);  
 		List<WebElement> options = select.getOptions();
@@ -131,6 +198,12 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void relevance() {
 		WebElement element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
 		dropdown.selectByIndex(0);
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[1]"));
@@ -145,6 +218,12 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void lowtohigh() {
 		WebElement element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
 		dropdown.selectByIndex(1);
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[2]"));
@@ -159,6 +238,12 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void hightolow() {
 		WebElement element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
 		dropdown.selectByIndex(2);
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[3]"));
@@ -173,6 +258,12 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void atoz() {
 		WebElement element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
 		dropdown.selectByIndex(3);
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[4]"));
@@ -187,6 +278,12 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void ztoa() {
 		WebElement element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select")));
 		dropdown.selectByIndex(4);
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[5]"));
@@ -259,8 +356,14 @@ public class AutomationScript extends CustomWebDriver{
 
 	}
 	public void clearcartemp() {
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		
 		WebElement clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		clear.click();
 		try {
 			Thread.sleep(5000);
@@ -273,6 +376,12 @@ public class AutomationScript extends CustomWebDriver{
 	public void clearcart() {
 		
 		WebElement clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		clear.click();
 	}
 	public void lowerLimit() {
@@ -306,7 +415,12 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void cartPlus() {
 			WebElement cart,plus,element;
-		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
 			cart.click();
 			plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[2]"));
@@ -324,6 +438,12 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void cartMinus() {
 		WebElement minus,element;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		minus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/button[1]"));
 		minus.click();
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/span"));
@@ -388,12 +508,18 @@ public class AutomationScript extends CustomWebDriver{
 				System.out.println("TCID 23 success");
 			}
 			else {
-				fail("TCID35 failed: Didnt show alert message while incresing products greater than 10");
+				fail("TCID23 failed: Didnt show alert message while incresing products greater than 10");
 			}
 			
 	}	
 	public void clear() {
 		WebElement clear;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/span"));
 		clear.click();
 	}
@@ -432,6 +558,19 @@ public class AutomationScript extends CustomWebDriver{
 		clearshop.click();
 		
 	}
+	 public void verifyProduct() {
+		 WebElement	element1,element2;
+		 element1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/p[1]"));
+		 String value1=element1.getText().substring(0, 11);
+		 element2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/p[1]"));
+		 String value2=element2.getText();
+		 if(value1.equals(value2)) {
+			 System.out.println(value1+"="+value2);
+		 }
+		 else {
+			 fail("TCID <15> failed: Products are not equal");
+		 }
+	 }
 	
 }  
 

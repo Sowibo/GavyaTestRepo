@@ -4,11 +4,10 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID2 {
+public class TCID15 {
 	@Test
-	public  void addCart() {
-		
-		
-		AutomationScript.returnobj().cart();
+	public void verify() {
+		AutomationScript.returnobj().verifyProduct();
 	}
+
 }
