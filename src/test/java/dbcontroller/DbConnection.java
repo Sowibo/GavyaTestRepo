@@ -71,5 +71,27 @@ public class DbConnection {
 			}
 			
 	 }
+	public void getElement() {
+//		Statement st=null;
+		
+		 ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT first_name FROM element");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().invalidElement(s1); 
+
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
 
 }

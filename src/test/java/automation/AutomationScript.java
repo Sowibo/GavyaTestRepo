@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import com.google.protobuf.Empty;
@@ -565,12 +567,14 @@ public class AutomationScript extends CustomWebDriver{
 		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/a"));
 		back.click();
 	}
+	
+	//search valid element using suggestion
 	public void testSearch(String str) {
 		  WebElement search;
 		  String check;
-//		 		
+		 		
 		  search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
-		  char array[]=new char[str.length()];
+		 
 		  search.clear();
 		  
 		  for (int i = 0; i < str.length(); i++) {
@@ -585,18 +589,88 @@ public class AutomationScript extends CustomWebDriver{
 					}
 				  
 				}
-		  check = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input")).getText(); 
-		  System.out.println(str);
-		  System.out.println(check);
-		  if(str.equals(check)) {
-			  System.out.println(str+"element is found");
-		  }
-		  else {
-			  System.out.println(str+"element is not found");
-		  }
-		 
+		  checkElement(str);
+		  search.clear();
+		  try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+	
+	
+	public void checkElement(String str) {
+		String check;
+		try {
+
+			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+			check = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div[2]/ul/li")).getText();
+
+		     String check1 = check.trim();
+		     
+			 if(str.equals(check1)) {
+				 System.out.println("tcid 77 sucess"+str+"found");
+			 }
+		}
+		
+		catch(Exception e) {
+			 System.out.println(str+"not found");
+			 fail("TCID <77> failed: <products suggestion is not coming for valid products>");
+		 }
 		
 	}
+	
+	//search invalid element using suggestion
+	
+	public void invalidElement(String s1) {
+		 WebElement search;
+		  String check;
+		 		
+		  search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
+		 
+		  search.clear();
+		  
+		  for (int i = 0; i < s1.length(); i++) {
+		            
+		            
+				  search.sendKeys(s1.charAt(i)+"");
+				  try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				}
+		  invalidElementSearch(s1);
+		  search.clear();
+		  try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+	public void invalidElementSearch(String s1) {
+		String check;
+		try {
+
+			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+			check = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div[2]/ul/li")).getText();
+
+			 if(s1!=check) {
+				 System.out.println("tcid 78 sucess"+s1+"not found");
+			 }
+		}
+		catch(Exception e) {
+			 System.out.println(s1+"not show error message it not found");
+			 fail("TCID <78> failed: <not display element not found message>");
+		 }
+	}
+	
+	//search with empty
+	
 	public void emptySearchBar() {
 		 WebElement btn;
 		 btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div/button/i"));

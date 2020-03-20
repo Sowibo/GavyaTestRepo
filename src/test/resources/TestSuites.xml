@@ -7,7 +7,7 @@
       <class name="testcases.BeforeSuites"/>
     </classes>
   </test>
-	<test name="TCID1">
+ <test name="TCID1">
     <classes>
       <class name="testcases.TCID1"/>
     </classes>
@@ -93,10 +93,15 @@
       <class name="testcases.TCID74"/>
     </classes>
   </test>
-	
+ 
   <test name="TCID77">
     <classes>
       <class name="testcases.TCID77"/>
+    </classes>
+  </test>
+  <test name="TCID78">
+    <classes>
+      <class name="testcases.TCID78"/>
     </classes>
   </test>
   <test name="TCID79">

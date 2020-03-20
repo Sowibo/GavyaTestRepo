@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-19T22:12:35 IST" name="HomePageSuite" finished-at="2020-03-19T22:14:28 IST" duration-ms="113693">
+  <suite started-at="2020-03-20T20:12:37 IST" name="HomePageSuite" finished-at="2020-03-20T20:15:13 IST" duration-ms="156771">
     <groups>
     </groups>
-    <test started-at="2020-03-19T22:12:35 IST" name="BeforeSuite" finished-at="2020-03-19T22:12:35 IST" duration-ms="9">
+    <test started-at="2020-03-20T20:12:37 IST" name="BeforeSuite" finished-at="2020-03-20T20:12:37 IST" duration-ms="13">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-19T22:12:35 IST" name="TCID77" finished-at="2020-03-19T22:14:12 IST" duration-ms="96950">
+    <test started-at="2020-03-20T20:12:37 IST" name="TCID77" finished-at="2020-03-20T20:13:39 IST" duration-ms="62418">
       <class name="testcases.TCID77">
-        <test-method signature="search()[pri:0, instance:testcases.TCID77@50de0926]" started-at="2020-03-19T22:12:35 IST" name="search" finished-at="2020-03-19T22:14:12 IST" duration-ms="96896" status="PASS">
+        <test-method signature="search()[pri:0, instance:testcases.TCID77@50de0926]" started-at="2020-03-20T20:12:37 IST" name="search" finished-at="2020-03-20T20:13:39 IST" duration-ms="62376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
       </class> <!-- testcases.TCID77 -->
     </test> <!-- TCID77 -->
-    <test started-at="2020-03-19T22:14:12 IST" name="TCID79" finished-at="2020-03-19T22:14:28 IST" duration-ms="16588">
-      <class name="testcases.TCID79">
-        <test-method signature="emptySearch()[pri:0, instance:testcases.TCID79@76b10754]" started-at="2020-03-19T22:14:12 IST" name="emptySearch" finished-at="2020-03-19T22:14:28 IST" duration-ms="16585" status="PASS">
+    <test started-at="2020-03-20T20:13:39 IST" name="TCID78" finished-at="2020-03-20T20:15:13 IST" duration-ms="93988">
+      <class name="testcases.TCID78">
+        <test-method signature="invalidSearch()[pri:0, instance:testcases.TCID78@76b10754]" started-at="2020-03-20T20:13:39 IST" name="invalidSearch" finished-at="2020-03-20T20:15:13 IST" duration-ms="93985" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptySearch -->
-      </class> <!-- testcases.TCID79 -->
+        </test-method> <!-- invalidSearch -->
+      </class> <!-- testcases.TCID78 -->
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-19T22:12:28 IST" name="init" finished-at="2020-03-19T22:12:35 IST" duration-ms="6425" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-20T20:12:29 IST" name="init" finished-at="2020-03-20T20:12:37 IST" duration-ms="7836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-    </test> <!-- TCID79 -->
+    </test> <!-- TCID78 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>
