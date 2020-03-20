@@ -50,32 +50,246 @@ public class AutomationScript extends CustomWebDriver{
 		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
 		submit.click();
 	}
-	public void checkout()  {
+	
+	
+	public void checkout() {
+		 WebElement cart,checkout,proceedtocheckout;
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		WebElement checkout;
-		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
-		checkout.click();
-	}
-
-	public void cart() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    WebElement cart;
-	    driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+	   
 		cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/button"));
 		cart.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		proceedtocheckout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/button"));
+		proceedtocheckout.click();
+	}
+	
+	public void useAddress() {
+		WebElement address,confirmorder,yourorder;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		address=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div[1]/div/div/button"));
+		address.click();
+		
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		confirmorder=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[4]/a"));
+		confirmorder.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		yourorder=driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div[2]/div/div/div/a"));
+		yourorder.click();
+	}
+	
+	public void cancel() {
+		WebElement cancel;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		cancel=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/span/button"));
+		cancel.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		driver.switchTo().alert().accept();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.switchTo().alert().accept();
 	}
 	
 	
+	public void reorder() {
+		WebElement reorder,continuebtn;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		reorder=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/span[2]/button"));
+		reorder.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		continuebtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[3]/div/div[2]/button"));
+		continuebtn.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String ConfirmReorder ="https://www.greengavya.com/reorder";
+		String url=driver.getCurrentUrl();
+		if(url.equals(ConfirmReorder )) {
+			System.out.println("TCID 92 success");
+			
+		}
+		else {
+			fail("TCID <92> failed:  Doesnt redirect to ConfirmReorder page>");
+			System.out.println("TCID 92 success");
+		}
+	}
+	
+	public void editAddress() {
+		WebElement edit,close;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		edit=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[7]/button[1]"));
+		edit.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		close=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[1]/span"));
+		close.click();
+		
+		String ConfirmReorder ="https://www.greengavya.com/reorder";
+		String url=driver.getCurrentUrl();
+		if(url.equals(ConfirmReorder )) {
+			System.out.println("TCID 93 success");
+			
+		}
+		else {
+			fail("TCID <93> failed:  Doesnt redirect to ConfirmReorder page>");
+			
+		}
+	}
+	
+	public void newAddress() {
+		WebElement newaddress;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		newaddress=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[7]/button[2]"));
+		newaddress.click();
+	}
+	
+	public void confirmReorder() {
+		WebElement confirmorder;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		confirmorder=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[3]/div[2]/button[2]"));
+		confirmorder.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID <95> failed: <alert box not present");
+			
+		}
+		else {
+			System.out.println("tcid 95 success");
+		}
+		
+	}
+	
+	public void back() {
+		WebElement back;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		back=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[3]/div[2]/button[1]"));
+		back.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String myReorder ="https://www.greengavya.com/myorders";
+		String url=driver.getCurrentUrl();
+		if(url.equals(myReorder )) {
+			System.out.println("TCID 96 success");
+			
+		}
+		else {
+			fail("TCID <96> failed:  Doesnt redirect to myReorder page>");
+			
+		}
+		
+	}
 	public void logout() {
 		WebElement logout;
 		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
