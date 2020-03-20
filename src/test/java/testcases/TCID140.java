@@ -4,15 +4,14 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID135 {
+public class TCID140 {
 	@Test
-	public  void test135() {
- 
+	public  void test140() {
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheckOut();
-		AutomationScript.returnobj().useAddress();
+		AutomationScript.returnobj().fullNamePos();
 	}
 
 }

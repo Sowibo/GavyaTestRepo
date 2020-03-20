@@ -33,8 +33,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		login=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
-		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
-		cookie.click();
+		
 		logid=driver.findElement(By.id("email"));
 		String mail = Settings.getInstance().getProperty("email");
 //		logid.sendKeys("keerthisudev444@gmail.com");		
@@ -46,6 +45,15 @@ public class AutomationScript extends CustomWebDriver{
 		logbtn=driver.findElement(By.cssSelector("div.row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > button:nth-child(1)"));
 		logbtn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+	
+	
+	
+	public void cookie() {
+		WebElement cookie;
+		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+		cookie.click();
+		
 	}
 	
 //		LOGOUT
@@ -131,10 +139,13 @@ public class AutomationScript extends CustomWebDriver{
 	public void testValidData() {		
 		WebElement fname,lname,pnum,updatebtn;		
 		fname = driver.findElement(By.id("fname"));
+		fname.clear();
 		fname.sendKeys("keerthi");		
 		lname = driver.findElement(By.id("lname"));
+		lname.clear();
 		lname.sendKeys("sudev");		
 		pnum = driver.findElement(By.id("phone"));
+		pnum.clear();
 		pnum.sendKeys("8137006670");		
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();	
@@ -162,7 +173,7 @@ public class AutomationScript extends CustomWebDriver{
 //			FUNCTIONS NEEDED FOR TCID 121
 //	login,settings, acoount,logout
 	public void checkUpdate() {
-		WebElement fname,lname,pnum,updatebtn;	
+		WebElement fname,lname,pnum,updatebtn,name;	
 		fname = driver.findElement(By.id("fname"));
 		fname.clear();
 		fname.sendKeys("keerthi");		
@@ -175,7 +186,11 @@ public class AutomationScript extends CustomWebDriver{
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();		
 //		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);	
-		
+		logOut();
+		logIn();
+		name = driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/span"));
+		String name_check = name.getText();
+		String full_name = "keerthi";
 		try {
 			 Thread.sleep(2000);
 		 }
@@ -184,7 +199,12 @@ public class AutomationScript extends CustomWebDriver{
 		 }
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-		
+		if(full_name == name_check) {
+			System.out.println("TCID 121 success");
+		}
+		else {
+			fail("TCID 121 failed:name not correct");
+		}
 	}
 	public void checkingUpdate() {
 		
@@ -253,7 +273,10 @@ public class AutomationScript extends CustomWebDriver{
 			 e.printStackTrace();
 		 }
 		Alert alert = driver.switchTo().alert();
+		String al = alert.getText();
+//		System.out.println(al);
 		alert.accept();
+		
 		if(alert.equals(null)) {
 			fail("TCID 123 failed:");
 		}
@@ -263,6 +286,190 @@ public class AutomationScript extends CustomWebDriver{
 }
 
 //		FUNCTIONS NEEDED FOR TCID 124
+	
+//	login,settings,accounts,chngpass 
+	public void currentPassLenPos() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthis");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthisudev");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthisudev");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		crntpass.clear();
+		crntpass.sendKeys("keerthisudev1234");
+		save_btn.click();
+		
+	
+	}
+	
+	
+//	125
+//	login,settings,accounts,chngpass 	
+	public void currentPassLenNeg() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthi");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthisudev");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthisudev");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		crntpass.clear();
+		crntpass.sendKeys("keerthisudev12345");
+		save_btn.click();
+		
+	
+	}
+	
+	
+//	126
+//	login,settings,accounts,chngpass 	
+	public void newPassInvalid() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthi");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("@");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthisudev");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	
+	}
+	
+//	127
+//	login,settings,accounts,chngpass 
+	public void newPasslenPos() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthi");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthis");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthis");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		newpass.clear();
+		newpass.sendKeys("keerthisudev1234");
+		save_btn.click();
+	
+	}
+	
+	
+//	128
+//	login,settings,accounts,chngpass 
+	public void newPasslenNeg() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthisudev");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthi");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthisudev");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		 
+		newpass.clear();
+		newpass.sendKeys("keerthisudev12345");
+		save_btn.click();
+	
+	}
+	
+//	129
+//	login,settings,accounts,chngpass 
+	public void confirmDiff() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthisudev");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthisude");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthis");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		
+	
+	}
+	
+	
+	
+//	130
+//	login,settings,accounts,chngpass 
+	public void conPasslenPos() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthisudev");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthisudev");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthis");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		 
+		conpass.clear();
+		conpass.sendKeys("keerthisudev1234");
+		save_btn.click();
+	
+	}
+	
+	
+//	131
+//	login,settings,accounts,chngpass 
+	public void conPasslenNeg() {
+		WebElement save_btn,crntpass,newpass,conpass ;
+
+		crntpass = driver.findElement(By.id("oldpassword"));
+		crntpass.sendKeys("keerthisudev");
+		newpass = driver.findElement(By.id("password"));
+		newpass.sendKeys("keerthisudev");
+		conpass = driver.findElement(By.id("confirmpassword"));
+		conpass.sendKeys("keerthi");
+		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
+		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		 
+		conpass.clear();
+		conpass.sendKeys("keerthisudev12345");
+		save_btn.click();
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 //		FUNCTIONS NEEDED FOR TCID 132
 //		login,settings,changepass
@@ -450,6 +657,97 @@ public class AutomationScript extends CustomWebDriver{
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();		
 		}
+		
+//	140
+		public void fullNamePos() {
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
+			fname = driver.findElement(By.id("fullname"));
+			fname.sendKeys("kee");			
+			mnum = driver.findElement(By.id("mobile"));
+			mnum.sendKeys("8593026651");			
+			flatnum = driver.findElement(By.id("house"));
+			flatnum.sendKeys("myhome123");		
+			area = driver.findElement(By.id("area"));
+			area.sendKeys("akg nagar peroorkkada");		
+			city =  driver.findElement(By.id("city"));
+			city.sendKeys("Thiruvananthapuram");	
+			district = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/select"));
+			district.sendKeys("Trivandrum");		
+			pin = driver.findElement(By.id("pin"));
+			pin.sendKeys("695020");
+			lmark = driver.findElement(By.id("landmark"));
+			lmark.sendKeys("near hss school");
+			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
+			deliverbtn.click();
+			
+			
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			fname.clear();
+			fname.sendKeys("keerthichithuchithuchithu");
+			deliverbtn.click();
+			
+		}
+		
+		
+		
+		
+//		141
+		public void fullNameNeg() {
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
+			fname = driver.findElement(By.id("fullname"));
+			fname.sendKeys("ke");			
+			mnum = driver.findElement(By.id("mobile"));
+			mnum.sendKeys("8593026651");			
+			flatnum = driver.findElement(By.id("house"));
+			flatnum.sendKeys("myhome123");		
+			area = driver.findElement(By.id("area"));
+			area.sendKeys("akg nagar peroorkkada");		
+			city =  driver.findElement(By.id("city"));
+			city.sendKeys("Thiruvananthapuram");	
+			district = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/select"));
+			district.sendKeys("Trivandrum");		
+			pin = driver.findElement(By.id("pin"));
+			pin.sendKeys("695020");
+			lmark = driver.findElement(By.id("landmark"));
+			lmark.sendKeys("near hss school");
+			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
+			deliverbtn.click();
+			
+			
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			fname.clear();
+			fname.sendKeys("keerthichithuchithuchithuk");
+			deliverbtn.click();
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 //		FUNCTIONS NEEDED FOR TCID 142		

@@ -9,11 +9,11 @@ public class TCID121 {
 	@Test
 	public  void test121() {
 		BeforeSuites.suit().init();
-//		AutomationScript.returnobj().logIn();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
 		AutomationScript.returnobj().checkUpdate();
-		AutomationScript.returnobj().logOut();
-		AutomationScript.returnobj().logIn();
+//		AutomationScript.returnobj().alertAccept120();
+//		AutomationScript.returnobj().logOut();
+//		AutomationScript.returnobj().logIn();
 	}
 }

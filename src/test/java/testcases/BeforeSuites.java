@@ -20,7 +20,9 @@ public class BeforeSuites {
 		String pass=Settings.getInstance().getProperty("password");
 		DbConnection.getInstance().initialisation(url, usr, pass);
 //		njn add cheythath
+		
 		AutomationScript.returnobj().launchUrl();
+		AutomationScript.returnobj().cookie();
 		AutomationScript.returnobj().logIn();
 	 }
 }

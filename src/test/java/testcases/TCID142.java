@@ -8,7 +8,7 @@ public class TCID142 {
 	@Test
 	public  void test142() {
 		
-//		AutomationScript.returnobj().logIn();
+		BeforeSuites.suit().init();
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheckOut();

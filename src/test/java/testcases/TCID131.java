@@ -4,15 +4,14 @@ import org.testng.annotations.Test;
 
 import automation.AutomationScript;
 
-public class TCID132 {
-	
+public class TCID131 {
 	@Test
-	public  void test132() {
+	public  void test131() {
  
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().changePass();
-		AutomationScript.returnobj().currentPassEmpty();
-		
+		AutomationScript.returnobj().conPasslenNeg();
+	
 	}
 }
