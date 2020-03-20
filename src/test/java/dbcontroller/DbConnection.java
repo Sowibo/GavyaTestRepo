@@ -8,15 +8,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+import automation.AutomationScript;
+
 public class DbConnection {
-	Statement stmt;
-	static String s1,s2;
+	static Statement statement;
+	
 	public static DbConnection getInstance(){
 		return new DbConnection();
 		
 	}
 	public void initialisation(String urldb,String username,String password) {
-		Statement statement;
+		
 		boolean flag=true;
 		Properties properties=new Properties();
 	    	try {
@@ -38,6 +40,23 @@ public class DbConnection {
 	    
 	    	}
 	}
+	public void getData() {
+		
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=1");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					String s2=rs.getString(2);
+					AutomationScript.returnobj().testLogin(s1,s2);
+			}
+		}
+			
+			catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
+	
 
 	
 	

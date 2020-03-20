@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ISelect;
 
 import dbcontroller.DbConnection;
 import settings.Settings;
@@ -58,17 +59,23 @@ public class AutomationScript extends CustomWebDriver{
 			System.out.println("TCID30 success");
 		}
 		else {
-			fail("TCID 30 failed: Doesnt redirect to the login page");
+			fail("TCID30 failed: Doesnt redirect to the login page");
 			
 		}
 		
 		}
 	
 	public void plusFunction() {
-		WebElement checkout,plus,quantity;
-		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
-		checkout.click();
-		
+		WebElement checkout_btn, plus,quantity;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		checkout_btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout_btn.click();
 		try {
 			Thread.sleep(2000);
 		} 
@@ -113,11 +120,8 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	public void minusFunction() {
-		WebElement checkout,minus,quantity;
-		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
-		checkout.click();
-		
-			try {
+		WebElement minus,quantity;
+		try {
 				Thread.sleep(2000);
 			} 
 			catch (InterruptedException e) {
@@ -181,7 +185,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID 36 success");
+			System.out.println("TCID36 success");
 		}
 		else {
 			fail("TCID36 failed: Didnt show alert message while decresing products less than 1");
@@ -210,7 +214,7 @@ public class AutomationScript extends CustomWebDriver{
 			}
 			if(driver.switchTo().alert() != null) {
 				driver.switchTo().alert().accept();
-				System.out.println("TCID 35 success");
+				System.out.println("TCID35 success");
 			}
 			else {
 				fail("TCID35 failed: Didnt show alert message while incresing products greater than 10");
@@ -234,7 +238,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value=element.getText();
 		String object="Your cart contain 1 items.";
 		if(value.equals(object)) {
-			System.out.println("TCID 32 success");
+			System.out.println("TCID32 success");
 		}
 		else {
 			fail("TCID32 failed: Quantities are different in numbers");
@@ -285,16 +289,114 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID 38 success");
+			System.out.println("TCID38 success");
 		}
 		else {
 			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
 		}
 	}
+	
+	public void testLogin(String s1,String s2) {
+		WebElement login,email,password,login_btn,element;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email=driver.findElement(By.name("email"));
+		email.sendKeys(s1);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password=driver.findElement(By.name("password"));
+		password.sendKeys(s2);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/span"));
+		String name=element.getText();
+		
+		if(name.equals(" ")) {
+			fail("TCID 43 failed: Doesnt login with valid email and password");
+
+		}
+		else {
+			System.out.println("TCID40 success");
+
+		}
+		
+	}
+	public void loggedCheckout() {
+		WebElement add,checkout,proceed;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		add=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
+		add.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		proceed=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/button"));
+		proceed.click();
+		String address="https://www.greengavya.com/billing";
+		String url=driver.getCurrentUrl();
+		if(url.equals(address)) {
+			System.out.println("TCID31 success");
+		}
+		else {
+			fail("TCID31 failed: Doesnt redirect to the address page");
+			
+		}
+	}
+	public void logout() {
+		WebElement logout;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		logout.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		String back="https://www.greengavya.com/";
+		String url=driver.getCurrentUrl();
+		if(url.equals(back)) {
+			System.out.println("TCID50 success");
+		}
+		else {
+			fail("TCID50 failed: Logout failed");
+			
+		}
+	}
 	public void forgotPassword() {
-		WebElement login,link;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
+		WebElement link;
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -309,22 +411,12 @@ public class AutomationScript extends CustomWebDriver{
 			System.out.println("TCID43 success");
 		}
 		else {
-			fail("TCID 43 failed: Doesnt redirect to the forgot password page");
+			fail("TCID43 failed: Doesnt redirect to the forgot password page");
 			
 		}
 	}
 	public void emptyForgotPassword() {
-		WebElement login,link,submit;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		link=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/a"));
-		link.click();
+		WebElement submit;
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -333,12 +425,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/button"));
 		submit.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
 			System.out.println("TCID46 success");
@@ -349,17 +436,8 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void forgotBackLogin() {
-		WebElement login,link,back;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		link=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/a"));
-		link.click();
+		WebElement back;
+	
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -378,39 +456,15 @@ public class AutomationScript extends CustomWebDriver{
 			
 		}
 	}
-	public void createAccount() {
-		WebElement login,create;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
-		create=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div[2]/a/button"));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		create.click();
-		String create_account="https://www.greengavya.com/register";
-		String url=driver.getCurrentUrl();
-		if(url.equals(create_account)) {
-			System.out.println("TCID48 success");
-		}
-		else {
-			fail("TCID 48 failed: Doesnt redirect to the register page");
-			
-		}
-	}
 	public void backOption() {
-		WebElement login,back;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
-		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/a"));
+		WebElement back;
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[2]/a"));
 		back.click();
 		String backtohome="https://www.greengavya.com/";
 		String url=driver.getCurrentUrl();
@@ -423,6 +477,30 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		
 	}
+	public void createAccount() {
+		WebElement create,login;
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		create=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[1]/div[2]/a/button"));
+		create.click();
+		String create_account="https://www.greengavya.com/register";
+		String url=driver.getCurrentUrl();
+		if(url.equals(create_account)) {
+			System.out.println("TCID48 success");
+		}
+		else {
+			fail("TCID 48 failed: Doesnt redirect to the register page");
+			
+		}
+	}
+	
 	
 	
 	public void register() {
@@ -446,7 +524,15 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void fnameEmpty() {
-		WebElement fname, lname,email,phn,password,confirmpass,refferal,submit;
+		WebElement fname,lname,email,phn,password,confirmpass,refferal,submit,element;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		fname=driver.findElement(By.id("fname"));
+		fname.clear();
 		lname=driver.findElement(By.id("lname"));
 		email=driver.findElement(By.id("email"));
 		phn=driver.findElement(By.id("phone"));
@@ -461,8 +547,8 @@ public class AutomationScript extends CustomWebDriver{
 		confirmpass.sendKeys("athiraathi");
 		refferal.sendKeys("athi123");
 		submit.click();
-		fname=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[1]/div[1]/span"));
-		String value = fname.getText();
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[1]/div[1]/span"));
+		String value = element.getText();
 		
 		if(value.equals(" ")) {
 			fail("TCID53 failed: Didnt show error message with empty first name");
@@ -474,7 +560,21 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void fnamePositiveLength() {
-		WebElement fname,submit,message;
+		WebElement register,fname,submit,message;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		register=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		register.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		fname=driver.findElement(By.id("fname"));
 		submit=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		fname.sendKeys("Ath");
@@ -544,7 +644,21 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void fnameNegativeLength() {
-		WebElement fname,submit,message;
+		WebElement register,fname,submit,message;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		register=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		register.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		fname=driver.findElement(By.id("fname"));
 		submit=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		fname.sendKeys("At");
@@ -576,7 +690,21 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void invalidLname() {
-		WebElement lname,submit;
+		WebElement register,lname,submit;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		register=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		register.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		lname=driver.findElement(By.id("lname"));
 		submit=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		lname.sendKeys("@#$");
@@ -591,7 +719,21 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void lnameEmpty() {
-		WebElement fname,lname,email,phn,password,confirmpass,refferal,submit;
+		WebElement register,fname,email,phn,password,confirmpass,refferal,submit,element;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		register=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		register.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		fname=driver.findElement(By.id("fname"));
 		email=driver.findElement(By.id("email"));
 		phn=driver.findElement(By.id("phone"));
@@ -606,8 +748,8 @@ public class AutomationScript extends CustomWebDriver{
 		confirmpass.sendKeys("athiraathi");
 		refferal.sendKeys("athi123");
 		submit.click();
-		lname=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[1]/div[2]/span"));
-		String value = lname.getText();
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/div[1]/div[2]/span"));
+		String value = element.getText();
 		
 		if(value.equals(" ")) {
 			fail("TCID57 failed: Didnt show error message with empty first name");
@@ -619,7 +761,21 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void lnamePositiveLength() {
-		WebElement lname,submit,message;
+		WebElement register,lname,submit,message;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		register=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		register.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		lname=driver.findElement(By.id("lname"));
 		submit=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
 		lname.sendKeys("A");
@@ -688,9 +844,6 @@ public class AutomationScript extends CustomWebDriver{
 			
 		}
 	}
-	
-	
-		
 }
 	
 	
