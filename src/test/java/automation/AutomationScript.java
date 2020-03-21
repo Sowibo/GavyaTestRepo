@@ -563,9 +563,26 @@ public class AutomationScript extends CustomWebDriver{
 		
 	}
 	public void backOption() {
-		WebElement back,cookie;
+		WebElement back;
 		back=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/a"));
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		back.click();
+		String str="https://www.greengavya.com/login";
+		 String currentURL = driver.getCurrentUrl();
+		 System.out.println("uri="+str);
+		 System.out.println("current url="+currentURL);
+		 if(str.equals(currentURL)) {
+			 System.out.println("tcid 74 sucess back option is working");
+		 }
+		 else {
+			 fail("TCID <74> failed: <back option is not working>"); 
+		 }
 	}
 	
 	//search valid element using suggestion
@@ -691,5 +708,123 @@ public class AutomationScript extends CustomWebDriver{
 				System.out.println("tcid 79 success");
 			}
 	}
-	 
+	
+	// search with click suggestion
+	
+	public void clickOption(String str) {
+		  WebElement search,check;
+		
+		 search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
+		 
+		  search.clear();
+		  
+		  for (int i = 0; i < str.length(); i++) {
+		            
+		            
+				  search.sendKeys(str.charAt(i)+"");
+				  try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				}
+		  
+		  driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div[2]/ul/li")).click();
+		  String currentURL = driver.getCurrentUrl();
+	        String expurl="https://www.greengavya.com/?search="+str;
+	       
+	        if(currentURL.equals(expurl)) {
+	        	System.out.println("tcid 80 success"+str+"go to corresponding page");
+	        }
+	        else {
+	        	fail("TCID <80> failed: <it doesn't go corresponding page when a product click in suggestion>");
+	        }
+		  
+   
+		  search.clear();
+		  try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+	 public void mouseClick(String str) {
+		 WebElement search,searchbutton;
+			
+		 search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
+		 
+		  search.clear();
+		  
+		  for (int i = 0; i < str.length(); i++) {
+		            
+		            
+				  search.sendKeys(str.charAt(i)+"");
+				  try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				}
+		  searchbutton=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div/button/i"));
+		  searchbutton.click();
+		  String currentURL = driver.getCurrentUrl();
+	        String expurl="https://www.greengavya.com/?search="+str;
+	       
+	        
+	        if(currentURL.equals(expurl)) {
+	        	System.out.println("tcid 82 success "+str+" go to corresponding page");
+	        }
+	        else {
+	        	fail("TCID <82> failed: <it doesn't go corresponding page when a product click in search bar>");
+	        }
+		  search.clear();
+		  try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}  
+	 }
+	 //search clear
+	 public void clickClearOption(String str) {
+		 WebElement search,clearOpt;
+			
+		 search=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
+		 
+
+		  for (int i = 0; i < str.length(); i++) {
+		            
+		            
+				  search.sendKeys(str.charAt(i)+"");
+				  try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				  
+				}
+		  clearOpt=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/span"));
+		  clearOpt.click();
+		  try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+		  String content = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input")).getText();
+		 
+		  if(content.isEmpty()||content.equals(null)) {
+			  System.out.println("tcid 83 is sucess "+str+ "is clear");
+		  }
+		  else {
+			  fail("TCID <83> failed: <Search is not clear when clear option click>");
+		  }
+
+	 }
 }

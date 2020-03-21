@@ -93,5 +93,70 @@ public class DbConnection {
 			}
 			
 	 }
+	
+	public void clickElement() {
+//		Statement st=null;
+		
+		 ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT name FROM product");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().clickOption(s1); 
+
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
+	public void clickSearchBtn() {
+
+		ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT name FROM product");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().mouseClick(s1); 
+
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
+	public void searchClear() {
+
+		ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT name FROM product");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().clickClearOption(s1); 
+
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	 }
 
 }
