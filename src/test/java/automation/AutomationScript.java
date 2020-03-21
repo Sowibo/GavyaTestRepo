@@ -16,6 +16,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import dbcontroller.DbConnection;
 import settings.Settings;
@@ -182,12 +183,14 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		else {
 			fail("TCID <92> failed:  Doesnt redirect to ConfirmReorder page>");
-			System.out.println("TCID 92 success");
+			
 		}
 	}
 	
 	public void editAddress() {
-		WebElement edit,close;
+		
+		WebElement edit,name,mobnum,flatno,sreet,city,dis,pin,landmark,cnbtn;
+		Select district;
 		
 		try {
 			Thread.sleep(5000);
@@ -205,8 +208,40 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		
-		close=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[1]/span"));
-		close.click();
+		name=driver.findElement(By.id("name"));
+		name.clear();
+		name.sendKeys("Aswajith");
+		mobnum=driver.findElement(By.id("phone"));
+		mobnum.clear();
+		mobnum.sendKeys("9961565559");
+		flatno=driver.findElement(By.id("house"));
+		flatno.clear();
+		flatno.sendKeys("56XXN");
+		sreet=driver.findElement(By.id("street"));
+		sreet.clear();
+		sreet.sendKeys("Revathi chundavila pothencode");
+		city=driver.findElement(By.id("city"));
+		city.clear();
+		city.sendKeys("Revathi chundavila pothencode");
+		dis=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/select"));
+		dis.click();
+		district=new Select(driver.findElement(By.name("district")));
+		district.selectByVisibleText("kollam");
+		pin=driver.findElement(By.id("pin"));
+		pin.clear();
+		pin.sendKeys("645909");
+		landmark=driver.findElement(By.id("landmark"));
+		landmark.clear();
+		landmark.sendKeys("near at school");
+		cnbtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/input[8]"));
+		cnbtn.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		String ConfirmReorder ="https://www.greengavya.com/reorder";
 		String url=driver.getCurrentUrl();
@@ -221,8 +256,8 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	public void newAddress() {
-		WebElement newaddress;
-		
+		WebElement newaddress,name,mobnum,flatno,sreet,city,dis,pin,landmark,cnbtn;
+		Select district;
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -231,7 +266,91 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		newaddress=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[7]/button[2]"));
 		newaddress.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		name=driver.findElement(By.id("name"));
+		name.clear();
+		name.sendKeys("Gopika");
+		mobnum=driver.findElement(By.id("phone"));
+		mobnum.clear();
+		mobnum.sendKeys("7592018435");
+		flatno=driver.findElement(By.id("house"));
+		flatno.clear();
+		flatno.sendKeys("56BBN");
+		sreet=driver.findElement(By.id("street"));
+		sreet.clear();
+		sreet.sendKeys("chundappana veedu karoor  pothencode");
+		city=driver.findElement(By.id("city"));
+		city.clear();
+		city.sendKeys("chundappana veedu karoor  pothencode");
+		dis=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/select"));
+		dis.click();
+		district=new Select(driver.findElement(By.name("district")));
+		district.selectByVisibleText("Trivandrum");
+		pin=driver.findElement(By.id("pin"));
+		pin.clear();
+		pin.sendKeys("908969");
+		landmark=driver.findElement(By.id("landmark"));
+		landmark.clear();
+		landmark.sendKeys("near at school");
+		cnbtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/input[8]"));
+		cnbtn.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		String ConfirmReorder ="https://www.greengavya.com/reorder";
+		String url=driver.getCurrentUrl();
+		if(url.equals(ConfirmReorder )) {
+			System.out.println("TCID 94 success");
+			
+		}
+		else {
+			fail("TCID <94> failed:  Doesnt redirect to ConfirmReorder page>");
+			
+		}
 	}
+	
+	
+	
+	public void reorder1() {
+		WebElement reorder,continuebtn;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		reorder=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/span[2]/button"));
+		reorder.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		continuebtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[3]/div/div[2]/button"));
+		continuebtn.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
 	
 	public void confirmReorder() {
 		WebElement confirmorder;
@@ -252,6 +371,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		Alert alert=driver.switchTo().alert();
 		alert.accept();
+	
 		if(alert.equals(null)) {
 			fail("TCID <95> failed: <alert box not present");
 			
@@ -278,6 +398,7 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		String myReorder ="https://www.greengavya.com/myorders";
 		String url=driver.getCurrentUrl();
 		if(url.equals(myReorder )) {
@@ -290,10 +411,98 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		
 	}
-	public void logout() {
-		WebElement logout;
-		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
-		logout.click();
+	
+	public void trackOrder() {
+		WebElement track,close;
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		track=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/button"));
+		track.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		close=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div[1]/div/div[1]/span"));
+		close.click();
+		String myReorder ="https://www.greengavya.com/myorders";
+		String url=driver.getCurrentUrl();
+		if(url.equals(myReorder )) {
+			System.out.println("TCID 97 success");
+			
+		}
+		else {
+			fail("TCID <97> failed:  Doesnt redirect to myReorder page>");
+			
+		}
+		
+	}
+	
+	public void invoicePrint() {
+		WebElement invoice,print;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		invoice=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[1]/a"));
+		invoice.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		print=driver.findElement(By.xpath("/html/body/div/div/div/div/div/button[1]"));
+		print.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Alert alert=driver.switchTo().alert();
+		alert.dismiss(); 
+		if(alert.equals(null)) {
+			fail("TCID <98> failed: <alert box not present");
+			
+		}
+		else {
+			System.out.println("tcid 98 success");
+		}
+	}
+	
+	public void invoiceDownload() {
+		WebElement download;
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		download=driver.findElement(By.xpath("/html/body/div/div/div/div/div/button[2]"));
+		download.click();
+		driver.switchTo().alert().getText(); 
+//		if(alert.equals(null)) {
+//			fail("TCID <98> failed: <alert box not present");
+//			
+//		}
+//		else {
+//			System.out.println("tcid 98 success");
+//		}
+		
 	}
 	
 	public void validContactUs() {
@@ -1135,7 +1344,12 @@ public class AutomationScript extends CustomWebDriver{
 		
 	}
 	
-
+	public void logout() {
+		WebElement logout;
+		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		logout.click();
+	}
+	
 	
 		
 			

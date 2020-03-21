@@ -6,7 +6,7 @@ import automation.AutomationScript;
 
 public class TCID93 {
 	@Test
-	public void startTest92() {
+	public void startTest93() {
 	
 		AutomationScript.returnobj().editAddress();
 	}
