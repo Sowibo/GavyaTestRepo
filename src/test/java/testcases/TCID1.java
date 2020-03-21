@@ -9,5 +9,6 @@ public class TCID1 {
 	@Test
 	public  void startTest() {
 		AutomationScript.returnobj().launchUrl();
+		
 	}
 }

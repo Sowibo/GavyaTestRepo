@@ -9,8 +9,8 @@ public class TCID40 {
 	
 	@Test
 	public  void loginValid() {
-	
-		DbConnection.getInstance().getData();
+		AutomationScript.returnobj().launchUrl();
+		DbConnection.getInstance().getValidLogin();
 		
 	}
 }

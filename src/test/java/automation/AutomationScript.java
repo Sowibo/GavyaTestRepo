@@ -273,31 +273,10 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		
 	}
-
-
-	public void loginEmpty() {
-		WebElement login,btn;
-		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
-		login.click();
-		btn=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		btn.click();
-		if(driver.switchTo().alert() != null) {
-			driver.switchTo().alert().accept();
-			System.out.println("TCID38 success");
-		}
-		else {
-			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
-		}
-	}
-	
 	public void testLogin(String s1,String s2) {
 		WebElement login,email,password,login_btn,element;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -328,15 +307,15 @@ public class AutomationScript extends CustomWebDriver{
 		String name=element.getText();
 		
 		if(name.equals(" ")) {
-			fail("TCID 43 failed: Doesnt login with valid email and password");
+			fail("TCID40 failed: Doesnt login with valid email and password");
 
 		}
 		else {
 			System.out.println("TCID40 success");
 
 		}
-		
 	}
+	
 	public void loggedCheckout() {
 		WebElement add,checkout,proceed;
 		try {
@@ -360,6 +339,11 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		proceed=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/button"));
 		proceed.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
 		String address="https://www.greengavya.com/billing";
 		String url=driver.getCurrentUrl();
 		if(url.equals(address)) {
@@ -394,6 +378,176 @@ public class AutomationScript extends CustomWebDriver{
 			
 		}
 	}
+
+	public void loginEmpty() {
+		WebElement login,btn;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		btn=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[2]/button"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		btn.click();
+		if(driver.switchTo().alert() != null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID38 success");
+		}
+		else {
+			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
+		}
+	}
+	public void loginOneEmpty(String s1,String s2) {
+		WebElement login,email,password,login_btn;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password=driver.findElement(By.name("password"));
+		password.sendKeys(s2);
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
+		
+		if(driver.switchTo().alert() !=null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID39 success with first case");
+
+		}
+		else {
+			fail("TCID39 failed: Doesnt show alert box while empty email field");
+
+		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password.clear();
+		email=driver.findElement(By.name("email"));
+		email.sendKeys(s1);
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
+		
+		if(driver.switchTo().alert() !=null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID39 success with second case");
+
+		}
+		else {
+			fail("TCID39 failed: Doesnt show alert box while empty password");
+
+		}
+	}
+	public void invalidLogin(String s1,String s2) {
+		
+		WebElement login,email,password,login_btn,element;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email=driver.findElement(By.name("email"));
+		email.sendKeys(s1);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password=driver.findElement(By.name("password"));
+		password.sendKeys(s2);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/div/p[3]"));
+		String name=element.getText();
+		
+		if(name.equals(" ")) {
+			fail("TCID41 failed: Doesnt show error message in invalid email and password");
+
+		}
+		else {
+			System.out.println("TCID41 success");
+
+		}
+	}
+	
+	public void validOne(String s1,String s2) {
+		
+		WebElement login,email,password,login_btn,element;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email=driver.findElement(By.name("email"));
+		email.sendKeys(s1);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password=driver.findElement(By.name("password"));
+		password.sendKeys(s2);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div[1]/div[2]/div[1]/div/p[3]"));
+		String name=element.getText();
+		
+		if(name.equals(" ")) {
+			fail("TCID42 failed: Doesnt show error message  login with invalid email and valid password");
+
+		}
+		else {
+			System.out.println("TCID42 success");
+
+		}
+	}
+	
+	
+	
 	public void forgotPassword() {
 		WebElement link;
 		
@@ -434,6 +588,69 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID 46 failed: Doesnt show alert message while submit with empty field");
 			
 		}
+	}
+	public void forgotValid(String s1) {
+		WebElement email,submit;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email=driver.findElement(By.xpath("//*[@id=\"email\"]"));
+		email.sendKeys(s1);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/button"));
+		submit.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		if(driver.switchTo().alert()!=null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID44 success");
+		}
+		else {
+			fail("TCID44 failed: Doesnt show alert message while link is send to email");
+			
+		}
+		
+	}
+	public void forgotInvalid(String s1) {
+		WebElement email ,submit;
+		email=driver.findElement(By.xpath("//*[@id=\"email\"]"));
+		email.clear();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email.sendKeys(s1);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/button"));
+		submit.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		if(driver.switchTo().alert()!=null) {
+			driver.switchTo().alert().accept();
+			System.out.println("TCID45 success");
+		}
+		else {
+			fail("TCID45 failed: Doesnt show alert message while enter invalid email");
+			
+		}
+		
 	}
 	public void forgotBackLogin() {
 		WebElement back;

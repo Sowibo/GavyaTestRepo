@@ -40,8 +40,9 @@ public class DbConnection {
 	    
 	    	}
 	}
-	public void getData() {
-		
+	/*------------- Athira-------------   */
+	
+	public void getValidLogin() {
 		ResultSet rs;
 		try {
 				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=1");
@@ -51,14 +52,83 @@ public class DbConnection {
 					AutomationScript.returnobj().testLogin(s1,s2);
 			}
 		}
-			
+		catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
+	
+	
+	public void getEmptyLogin() {
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=1");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					String s2=rs.getString(2);
+					AutomationScript.returnobj().loginOneEmpty(s1, s2);
+			}
+		}
+			catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
+	public void getInvalidLogin() {
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=6");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					String s2=rs.getString(2);
+					AutomationScript.returnobj().invalidLogin(s1, s2);
+			}
+		}
 			catch(SQLException c) {
 				System.err.println("SQL error"+c);
 			}
 		}
 	
-
-	
+	public void getValidOne() {
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=7");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					String s2=rs.getString(2);
+					AutomationScript.returnobj().validOne(s1, s2);
+			}
+		}
+			catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
+	public void getForgotValid() {
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address FROM register WHERE id=3");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					
+					AutomationScript.returnobj().forgotValid(s1);
+			}
+		}
+			catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
+	public void getForgotInvalid() {
+		ResultSet rs;
+		try {
+				 rs= statement.executeQuery("SELECT Email_address FROM register WHERE id=6");
+				 while(rs.next()) {
+				 	String s1=rs.getString(1);
+					
+					AutomationScript.returnobj().forgotInvalid(s1);
+			}
+		}
+			catch(SQLException c) {
+				System.err.println("SQL error"+c);
+			}
+		}
 	
 
 }

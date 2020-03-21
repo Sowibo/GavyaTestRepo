@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TCID40(failed)">
+  <test thread-count="5" name="TCID52(failed)">
     <classes>
-      <class name="testcases.TCID40">
+      <class name="testcases.TCID52">
         <methods>
-          <include name="loginValid"/>
+          <include name="invalidFname"/>
         </methods>
-      </class> <!-- testcases.TCID40 -->
+      </class> <!-- testcases.TCID52 -->
     </classes>
-  </test> <!-- TCID40(failed) -->
-  <test thread-count="5" name="TCID31(failed)">
+  </test> <!-- TCID52(failed) -->
+  <test thread-count="5" name="TCID55(failed)">
     <classes>
-      <class name="testcases.TCID31">
+      <class name="testcases.TCID55">
         <methods>
-          <include name="checkoutLogged"/>
+          <include name="fnameNegative"/>
         </methods>
-      </class> <!-- testcases.TCID31 -->
+      </class> <!-- testcases.TCID55 -->
     </classes>
-  </test> <!-- TCID31(failed) -->
-  <test thread-count="5" name="TCID50(failed)">
+  </test> <!-- TCID55(failed) -->
+  <test thread-count="5" name="TCID56(failed)">
     <classes>
-      <class name="testcases.TCID50">
+      <class name="testcases.TCID56">
         <methods>
-          <include name="logOut"/>
+          <include name="invalidLname"/>
         </methods>
-      </class> <!-- testcases.TCID50 -->
+      </class> <!-- testcases.TCID56 -->
     </classes>
-  </test> <!-- TCID50(failed) -->
+  </test> <!-- TCID56(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->
