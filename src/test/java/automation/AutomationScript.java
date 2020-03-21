@@ -571,6 +571,84 @@ public class AutomationScript extends CustomWebDriver{
 			 fail("TCID <15> failed: Products are not equal");
 		 }
 	 }
+	 
+	public void verifyTotal() {
+		WebElement total1,total2;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		total1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
+		String value1=total1.getText();
+		String value2="64.00";
+		if(value1.equals(value2)) {
+			System.out.println(value1+"="+value2);
+		 }
+		 else {
+			 fail("TCID <17> failed: Total value mismatch");
+		 }
+		AutomationScript.returnobj().cart();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		total2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
+		String value3=total2.getText();
+		String value4="128.00";
+		if(value3.equals(value4)) {
+			System.out.println(value3+"="+value4);
+		 }
+		 else {
+			 fail("TCID <17> failed: Total value ");
+		 }
+		AutomationScript.returnobj().clearcart();
+	}
 	
+	public void verifyCheckTotal() {
+		WebElement total1,total2;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		total1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/table/tbody/tr[3]/td[2]"));
+		String value1=total1.getText();
+		String value2="₹ 64.00";
+		if(value1.equals(value2)) {
+			System.out.println(value1+"="+value2);
+		 }
+		 else {
+			 fail("TCID <28> failed: Total value mismatch");
+		 }
+		AutomationScript.returnobj().continueCart();
+		AutomationScript.returnobj().cart();
+		AutomationScript.returnobj().cartCheckout();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		total2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/table/tbody/tr[3]/td[2]"));
+		String value3=total2.getText();
+		String value4="₹ 128.00";
+		if(value3.equals(value4)) {
+			System.out.println(value3+"="+value4);
+		 }
+		 else {
+			 fail("TCID <28> failed: Total value ");
+		 }
+		
+	
+	}
 }  
 
