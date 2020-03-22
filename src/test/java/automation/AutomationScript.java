@@ -80,7 +80,7 @@ public class AutomationScript extends CustomWebDriver{
 		String element1=element.getText();
 
 		if(element1.equals("2")) {
-			System.out.println("Success");
+			
 		}
 		else {
 			fail("TCID <3> failed: Not increased by one");
@@ -107,7 +107,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[3]/p[3]/span/span"));
 		String element1=element.getText();
 		if(element1.equals("1")) {
-			System.out.println("Success");
+			
 		}
 		else {
 			fail("TCID <3> failed: Not decreased by one");
@@ -146,10 +146,10 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		checkout.click();
-		String backtohome="https://www.greengavya.com/";
+		String home="https://www.greengavya.com/";
 		String url=driver.getCurrentUrl();
-		if(url.equals(backtohome)) {
-			System.out.println("Success");
+		if(url.equals(home)) {
+			
 		}
 		else {
 			fail("TCID  failed: Doesnt redirect to the home page");
@@ -191,10 +191,10 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[1]/span/select"));  
 		Select select = new Select(dropdown);  
 		List<WebElement> options = select.getOptions();
-		for(WebElement we:options)  
-		{  
-		 System.out.println(we.getText());
-		}
+//		for(WebElement we:options)  
+//		{  
+//		 System.out.println(we.getText());
+//		}
 	}
 	public void relevance() {
 		WebElement element;
@@ -209,7 +209,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[1]"));
 		String element1=element.getText();
 		if(element1.equals("Relevance")) {
-			System.out.println("Sorted By Relevance");
+			
 		}
 		else {
 			fail("TCID <8> failed: Relevance Category is not selected");
@@ -229,7 +229,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[2]"));
 		String element1=element.getText();
 		if(element1.equals("Price - Low to High")) {
-			System.out.println("Sorted By Low to High");
+		
 		}
 		else {
 			fail("TCID <9> failed: Low to High Category is not selected");
@@ -249,7 +249,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[3]"));
 		String element1=element.getText();
 		if(element1.equals("Price - high to Low")) {
-			System.out.println("Sorted By High to Low");
+			
 		}
 		else {
 			fail("TCID <10> failed:  High to Low Category is not selected");
@@ -269,7 +269,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[4]"));
 		String element1=element.getText();
 		if(element1.equals("Name - A to Z")) {
-			System.out.println("Sorted By A to Z");
+			
 		}
 		else {
 			fail("TCID <10> failed:  A to Z Category is not selected");
@@ -289,7 +289,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[1]/span/select/option[5]"));
 		String element1=element.getText();
 		if(element1.equals("Name - Z to A")) {
-			System.out.println("Sorted By Z to A");
+			
 		}
 		else {
 			fail("TCID <10> failed:  Z to A Category is not selected");
@@ -428,7 +428,7 @@ public class AutomationScript extends CustomWebDriver{
 			element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/span"));
 			String element1=element.getText();
 			if(element1.equals("2")) {
-				System.out.println("Success");
+				
 			}
 			else {
 				fail("TCID <21> failed: Not increased by one");
@@ -449,7 +449,7 @@ public class AutomationScript extends CustomWebDriver{
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/div/span"));
 		String element1=element.getText();
 		if(element1.equals("1")){
-			System.out.println("Success");
+			
 		}
 		else{
 			fail("TCID <22> failed: Not decreased by one");
@@ -476,7 +476,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID 24 success");
+			
 		}
 		else {
 			fail("TCID36 failed: Didnt show alert message while decresing products less than 1");
@@ -505,7 +505,7 @@ public class AutomationScript extends CustomWebDriver{
 			}
 			if(driver.switchTo().alert() != null) {
 				driver.switchTo().alert().accept();
-				System.out.println("TCID 23 success");
+				
 			}
 			else {
 				fail("TCID23 failed: Didnt show alert message while incresing products greater than 10");
@@ -535,10 +535,10 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		continueshop=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/button[1]"));
 		continueshop.click();
-		String backtohome="https://www.greengavya.com/";
+		String home="https://www.greengavya.com/";
 		String url=driver.getCurrentUrl();
-		if(url.equals(backtohome)) {
-			System.out.println("TCID success");
+		if(url.equals(home)) {
+			
 		}
 		else {
 			fail("TCID  failed: Doesnt redirect to the home page");
@@ -565,7 +565,7 @@ public class AutomationScript extends CustomWebDriver{
 		 element2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/p[1]"));
 		 String value2=element2.getText();
 		 if(value1.equals(value2)) {
-			 System.out.println(value1+"="+value2);
+			
 		 }
 		 else {
 			 fail("TCID <15> failed: Products are not equal");
@@ -585,7 +585,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value1=total1.getText();
 		String value2="64.00";
 		if(value1.equals(value2)) {
-			System.out.println(value1+"="+value2);
+			
 		 }
 		 else {
 			 fail("TCID <17> failed: Total value mismatch");
@@ -602,7 +602,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value3=total2.getText();
 		String value4="128.00";
 		if(value3.equals(value4)) {
-			System.out.println(value3+"="+value4);
+			
 		 }
 		 else {
 			 fail("TCID <17> failed: Total value ");
@@ -623,7 +623,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value1=total1.getText();
 		String value2="₹ 64.00";
 		if(value1.equals(value2)) {
-			System.out.println(value1+"="+value2);
+			
 		 }
 		 else {
 			 fail("TCID <28> failed: Total value mismatch");
@@ -642,7 +642,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value3=total2.getText();
 		String value4="₹ 128.00";
 		if(value3.equals(value4)) {
-			System.out.println(value3+"="+value4);
+			
 		 }
 		 else {
 			 fail("TCID <28> failed: Total value ");

@@ -1,33 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-21T22:03:45 IST" name="HomePageSuite" finished-at="2020-03-21T22:04:19 IST" duration-ms="34125">
+  <suite started-at="2020-03-22T20:54:58 IST" name="HomePageSuite" finished-at="2020-03-22T20:59:27 IST" duration-ms="268914">
     <groups>
     </groups>
-    <test started-at="2020-03-21T22:03:45 IST" name="BeforeSuite" finished-at="2020-03-21T22:03:45 IST" duration-ms="64">
+    <test started-at="2020-03-22T20:54:58 IST" name="BeforeSuite" finished-at="2020-03-22T20:54:58 IST" duration-ms="109">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-21T22:03:46 IST" name="TCID1" finished-at="2020-03-21T22:03:50 IST" duration-ms="4673">
+    <test started-at="2020-03-22T20:54:59 IST" name="TCID1" finished-at="2020-03-22T20:55:01 IST" duration-ms="2686">
       <class name="testcases.TCID1">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@4e91d63f]" started-at="2020-03-21T22:03:46 IST" name="startTest" finished-at="2020-03-21T22:03:50 IST" duration-ms="4457" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@4e91d63f]" started-at="2020-03-22T20:54:59 IST" name="startTest" finished-at="2020-03-22T20:55:01 IST" duration-ms="2468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- testcases.TCID1 -->
     </test> <!-- TCID1 -->
-    <test started-at="2020-03-21T22:03:51 IST" name="TCID27" finished-at="2020-03-21T22:04:19 IST" duration-ms="28493">
-      <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@add0edd]" started-at="2020-03-21T22:03:03 IST" name="init" finished-at="2020-03-21T22:03:45 IST" duration-ms="42398" status="PASS">
+    <test started-at="2020-03-22T20:55:02 IST" name="TCID2" finished-at="2020-03-22T20:55:08 IST" duration-ms="5545">
+      <class name="testcases.TCID2">
+        <test-method signature="addCart()[pri:0, instance:testcases.TCID2@71b1176b]" started-at="2020-03-22T20:55:02 IST" name="addCart" finished-at="2020-03-22T20:55:08 IST" duration-ms="5420" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-      </class> <!-- testcases.BeforeSuites -->
+        </test-method> <!-- addCart -->
+      </class> <!-- testcases.TCID2 -->
+    </test> <!-- TCID2 -->
+    <test started-at="2020-03-22T20:55:09 IST" name="TCID3" finished-at="2020-03-22T20:55:14 IST" duration-ms="5561">
+      <class name="testcases.TCID3">
+        <test-method signature="cartPlus()[pri:0, instance:testcases.TCID3@12e61fe6]" started-at="2020-03-22T20:55:09 IST" name="cartPlus" finished-at="2020-03-22T20:55:14 IST" duration-ms="5421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartPlus -->
+      </class> <!-- testcases.TCID3 -->
+    </test> <!-- TCID3 -->
+    <test started-at="2020-03-22T20:55:15 IST" name="TCID4" finished-at="2020-03-22T20:55:25 IST" duration-ms="10747">
+      <class name="testcases.TCID4">
+        <test-method signature="cartMinus()[pri:0, instance:testcases.TCID4@4313f5bc]" started-at="2020-03-22T20:55:15 IST" name="cartMinus" finished-at="2020-03-22T20:55:25 IST" duration-ms="10653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartMinus -->
+      </class> <!-- testcases.TCID4 -->
+    </test> <!-- TCID4 -->
+    <test started-at="2020-03-22T20:55:26 IST" name="TCID5" finished-at="2020-03-22T20:55:49 IST" duration-ms="23102">
+      <class name="testcases.TCID5">
+        <test-method signature="upper()[pri:0, instance:testcases.TCID5@6e0dec4a]" started-at="2020-03-22T20:55:26 IST" name="upper" finished-at="2020-03-22T20:55:49 IST" duration-ms="23008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upper -->
+      </class> <!-- testcases.TCID5 -->
+    </test> <!-- TCID5 -->
+    <test started-at="2020-03-22T20:55:49 IST" name="TCID6" finished-at="2020-03-22T20:55:52 IST" duration-ms="2375">
+      <class name="testcases.TCID6">
+        <test-method signature="lower()[pri:0, instance:testcases.TCID6@20d28811]" started-at="2020-03-22T20:55:49 IST" name="lower" finished-at="2020-03-22T20:55:52 IST" duration-ms="2312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lower -->
+      </class> <!-- testcases.TCID6 -->
+    </test> <!-- TCID6 -->
+    <test started-at="2020-03-22T20:55:52 IST" name="TCID7" finished-at="2020-03-22T20:55:57 IST" duration-ms="5186">
+      <class name="testcases.TCID7">
+        <test-method signature="sort()[pri:0, instance:testcases.TCID7@4b14c583]" started-at="2020-03-22T20:55:52 IST" name="sort" finished-at="2020-03-22T20:55:57 IST" duration-ms="5139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sort -->
+      </class> <!-- testcases.TCID7 -->
+    </test> <!-- TCID7 -->
+    <test started-at="2020-03-22T20:55:57 IST" name="TCID8" finished-at="2020-03-22T20:56:03 IST" duration-ms="5217">
+      <class name="testcases.TCID8">
+        <test-method signature="relevance()[pri:0, instance:testcases.TCID8@460d0a57]" started-at="2020-03-22T20:55:57 IST" name="relevance" finished-at="2020-03-22T20:56:03 IST" duration-ms="5186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- relevance -->
+      </class> <!-- testcases.TCID8 -->
+    </test> <!-- TCID8 -->
+    <test started-at="2020-03-22T20:56:03 IST" name="TCID9" finished-at="2020-03-22T20:56:08 IST" duration-ms="5530">
+      <class name="testcases.TCID9">
+        <test-method signature="lowhigh()[pri:0, instance:testcases.TCID9@36c88a32]" started-at="2020-03-22T20:56:03 IST" name="lowhigh" finished-at="2020-03-22T20:56:08 IST" duration-ms="5498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lowhigh -->
+      </class> <!-- testcases.TCID9 -->
+    </test> <!-- TCID9 -->
+    <test started-at="2020-03-22T20:56:09 IST" name="TCID10" finished-at="2020-03-22T20:56:14 IST" duration-ms="5514">
+      <class name="testcases.TCID10">
+        <test-method signature="highlow()[pri:0, instance:testcases.TCID10@bef2d72]" started-at="2020-03-22T20:56:09 IST" name="highlow" finished-at="2020-03-22T20:56:14 IST" duration-ms="5467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- highlow -->
+      </class> <!-- testcases.TCID10 -->
+    </test> <!-- TCID10 -->
+    <test started-at="2020-03-22T20:56:15 IST" name="TCID11" finished-at="2020-03-22T20:56:20 IST" duration-ms="5499">
+      <class name="testcases.TCID11">
+        <test-method signature="atoz()[pri:0, instance:testcases.TCID11@49b0b76]" started-at="2020-03-22T20:56:15 IST" name="atoz" finished-at="2020-03-22T20:56:20 IST" duration-ms="5451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atoz -->
+      </class> <!-- testcases.TCID11 -->
+    </test> <!-- TCID11 -->
+    <test started-at="2020-03-22T20:56:21 IST" name="TCID12" finished-at="2020-03-22T20:56:31 IST" duration-ms="10247">
+      <class name="testcases.TCID12">
+        <test-method signature="ztoa()[pri:0, instance:testcases.TCID12@3d680b5a]" started-at="2020-03-22T20:56:21 IST" name="ztoa" finished-at="2020-03-22T20:56:31 IST" duration-ms="10168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ztoa -->
+      </class> <!-- testcases.TCID12 -->
+    </test> <!-- TCID12 -->
+    <test started-at="2020-03-22T20:56:31 IST" name="TCID13" finished-at="2020-03-22T20:56:45 IST" duration-ms="13995">
+      <class name="testcases.TCID13">
+        <test-method signature="page()[pri:0, instance:testcases.TCID13@470f1802]" started-at="2020-03-22T20:56:31 IST" name="page" finished-at="2020-03-22T20:56:45 IST" duration-ms="13964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- page -->
+      </class> <!-- testcases.TCID13 -->
+    </test> <!-- TCID13 -->
+    <test started-at="2020-03-22T20:56:46 IST" name="TCID15" finished-at="2020-03-22T20:56:46 IST" duration-ms="156">
+      <class name="testcases.TCID15">
+        <test-method signature="verify()[pri:0, instance:testcases.TCID15@5bd03f44]" started-at="2020-03-22T20:56:46 IST" name="verify" finished-at="2020-03-22T20:56:46 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify -->
+      </class> <!-- testcases.TCID15 -->
+    </test> <!-- TCID15 -->
+    <test started-at="2020-03-22T20:56:46 IST" name="TCID16" finished-at="2020-03-22T20:57:03 IST" duration-ms="16838">
+      <class name="testcases.TCID16">
+        <test-method signature="checkout_emp()[pri:0, instance:testcases.TCID16@353d0772]" started-at="2020-03-22T20:56:46 IST" name="checkout_emp" finished-at="2020-03-22T20:57:03 IST" duration-ms="16823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout_emp -->
+      </class> <!-- testcases.TCID16 -->
+    </test> <!-- TCID16 -->
+    <test started-at="2020-03-22T20:57:03 IST" name="TCID17" finished-at="2020-03-22T20:57:23 IST" duration-ms="20025">
+      <class name="testcases.TCID17">
+        <test-method signature="verifyTtl()[pri:0, instance:testcases.TCID17@7e0b85f9]" started-at="2020-03-22T20:57:03 IST" name="verifyTtl" finished-at="2020-03-22T20:57:23 IST" duration-ms="20010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTtl -->
+      </class> <!-- testcases.TCID17 -->
+    </test> <!-- TCID17 -->
+    <test started-at="2020-03-22T20:57:24 IST" name="TCID18" finished-at="2020-03-22T20:57:37 IST" duration-ms="13121">
+      <class name="testcases.TCID18">
+        <test-method signature="checkout_pro()[pri:0, instance:testcases.TCID18@31d7b7bf]" started-at="2020-03-22T20:57:24 IST" name="checkout_pro" finished-at="2020-03-22T20:57:37 IST" duration-ms="13089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout_pro -->
+      </class> <!-- testcases.TCID18 -->
+    </test> <!-- TCID18 -->
+    <test started-at="2020-03-22T20:57:37 IST" name="TCID20" finished-at="2020-03-22T20:57:42 IST" duration-ms="5482">
+      <class name="testcases.TCID20">
+        <test-method signature="clearPro()[pri:0, instance:testcases.TCID20@50a638b5]" started-at="2020-03-22T20:57:37 IST" name="clearPro" finished-at="2020-03-22T20:57:42 IST" duration-ms="5452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearPro -->
+      </class> <!-- testcases.TCID20 -->
+    </test> <!-- TCID20 -->
+    <test started-at="2020-03-22T20:57:43 IST" name="TCID19" finished-at="2020-03-22T20:57:53 IST" duration-ms="10465">
+      <class name="testcases.TCID19">
+        <test-method signature="clearEmp()[pri:0, instance:testcases.TCID19@76508ed1]" started-at="2020-03-22T20:57:43 IST" name="clearEmp" finished-at="2020-03-22T20:57:53 IST" duration-ms="10450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearEmp -->
+      </class> <!-- testcases.TCID19 -->
+    </test> <!-- TCID19 -->
+    <test started-at="2020-03-22T20:57:54 IST" name="TCID21" finished-at="2020-03-22T20:58:01 IST" duration-ms="7092">
+      <class name="testcases.TCID21">
+        <test-method signature="pluscart()[pri:0, instance:testcases.TCID21@3daa422a]" started-at="2020-03-22T20:57:54 IST" name="pluscart" finished-at="2020-03-22T20:58:01 IST" duration-ms="7076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pluscart -->
+      </class> <!-- testcases.TCID21 -->
+    </test> <!-- TCID21 -->
+    <test started-at="2020-03-22T20:58:01 IST" name="TCID22" finished-at="2020-03-22T20:58:07 IST" duration-ms="6201">
+      <class name="testcases.TCID22">
+        <test-method signature="minuscart()[pri:0, instance:testcases.TCID22@647e447]" started-at="2020-03-22T20:58:01 IST" name="minuscart" finished-at="2020-03-22T20:58:07 IST" duration-ms="6185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- minuscart -->
+      </class> <!-- testcases.TCID22 -->
+    </test> <!-- TCID22 -->
+    <test started-at="2020-03-22T20:58:07 IST" name="TCID24" finished-at="2020-03-22T20:58:12 IST" duration-ms="4389">
+      <class name="testcases.TCID24">
+        <test-method signature="cartupper()[pri:0, instance:testcases.TCID24@68999068]" started-at="2020-03-22T20:58:07 IST" name="cartupper" finished-at="2020-03-22T20:58:12 IST" duration-ms="4389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartupper -->
+      </class> <!-- testcases.TCID24 -->
+    </test> <!-- TCID24 -->
+    <test started-at="2020-03-22T20:58:12 IST" name="TCID23" finished-at="2020-03-22T20:58:37 IST" duration-ms="25023">
+      <class name="testcases.TCID23">
+        <test-method signature="cartupper()[pri:0, instance:testcases.TCID23@2f7298b]" started-at="2020-03-22T20:58:12 IST" name="cartupper" finished-at="2020-03-22T20:58:37 IST" duration-ms="25023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartupper -->
+      </class> <!-- testcases.TCID23 -->
+    </test> <!-- TCID23 -->
+    <test started-at="2020-03-22T20:58:37 IST" name="TCID25" finished-at="2020-03-22T20:58:42 IST" duration-ms="5405">
+      <class name="testcases.TCID25">
+        <test-method signature="clearCart()[pri:0, instance:testcases.TCID25@7714e963]" started-at="2020-03-22T20:58:37 IST" name="clearCart" finished-at="2020-03-22T20:58:42 IST" duration-ms="5389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCart -->
+      </class> <!-- testcases.TCID25 -->
+    </test> <!-- TCID25 -->
+    <test started-at="2020-03-22T20:58:42 IST" name="TCID27" finished-at="2020-03-22T20:59:10 IST" duration-ms="27726">
       <class name="testcases.TCID27">
-        <test-method signature="verifyttl()[pri:0, instance:testcases.TCID27@71b1176b]" started-at="2020-03-21T22:03:51 IST" name="verifyttl" finished-at="2020-03-21T22:04:19 IST" duration-ms="28468" status="PASS">
+        <test-method signature="verifyttl()[pri:0, instance:testcases.TCID27@1afd44cb]" started-at="2020-03-22T20:58:42 IST" name="verifyttl" finished-at="2020-03-22T20:59:10 IST" duration-ms="27726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyttl -->
       </class> <!-- testcases.TCID27 -->
     </test> <!-- TCID27 -->
+    <test started-at="2020-03-22T20:59:10 IST" name="TCID28" finished-at="2020-03-22T20:59:13 IST" duration-ms="2421">
+      <class name="testcases.TCID28">
+        <test-method signature="continueCart()[pri:0, instance:testcases.TCID28@402bba4f]" started-at="2020-03-22T20:59:10 IST" name="continueCart" finished-at="2020-03-22T20:59:13 IST" duration-ms="2405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueCart -->
+      </class> <!-- testcases.TCID28 -->
+    </test> <!-- TCID28 -->
+    <test started-at="2020-03-22T20:59:13 IST" name="TCID29" finished-at="2020-03-22T20:59:27 IST" duration-ms="13996">
+      <class name="testcases.BeforeSuites">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@add0edd]" started-at="2020-03-22T20:54:04 IST" name="init" finished-at="2020-03-22T20:54:58 IST" duration-ms="54238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- testcases.BeforeSuites -->
+      <class name="testcases.TCID29">
+        <test-method signature="clearCart()[pri:0, instance:testcases.TCID29@441772e]" started-at="2020-03-22T20:59:13 IST" name="clearCart" finished-at="2020-03-22T20:59:27 IST" duration-ms="13996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCart -->
+      </class> <!-- testcases.TCID29 -->
+    </test> <!-- TCID29 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>

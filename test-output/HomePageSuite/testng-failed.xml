@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TCID17(failed)">
+    <classes>
+      <class name="testcases.TCID17">
+        <methods>
+          <include name="verifyTtl"/>
+        </methods>
+      </class> <!-- testcases.TCID17 -->
+    </classes>
+  </test> <!-- TCID17(failed) -->
+  <test thread-count="5" name="TCID24(failed)">
+    <classes>
+      <class name="testcases.TCID24">
+        <methods>
+          <include name="cartupper"/>
+        </methods>
+      </class> <!-- testcases.TCID24 -->
+    </classes>
+  </test> <!-- TCID24(failed) -->
+  <test thread-count="5" name="TCID23(failed)">
+    <classes>
+      <class name="testcases.TCID23">
+        <methods>
+          <include name="cartupper"/>
+        </methods>
+      </class> <!-- testcases.TCID23 -->
+    </classes>
+  </test> <!-- TCID23(failed) -->
+  <test thread-count="5" name="TCID25(failed)">
+    <classes>
+      <class name="testcases.TCID25">
+        <methods>
+          <include name="clearCart"/>
+        </methods>
+      </class> <!-- testcases.TCID25 -->
+    </classes>
+  </test> <!-- TCID25(failed) -->
   <test thread-count="5" name="TCID27(failed)">
     <classes>
       <class name="testcases.TCID27">
