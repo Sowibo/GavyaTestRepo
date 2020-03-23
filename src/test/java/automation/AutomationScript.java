@@ -358,7 +358,14 @@ public class AutomationScript extends CustomWebDriver{
 		crntpass.clear();
 		crntpass.sendKeys("keerthisudev12345");
 		save_btn.click();
-		
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	
 	}
 	
