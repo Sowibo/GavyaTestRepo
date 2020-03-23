@@ -771,6 +771,7 @@ public class AutomationScript extends CustomWebDriver{
 				  
 				}
 		  searchbutton=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/div/button/i"));
+		  
 		  searchbutton.click();
 		  String currentURL = driver.getCurrentUrl();
 	        String expurl="https://www.greengavya.com/?search="+str;
@@ -818,6 +819,7 @@ public class AutomationScript extends CustomWebDriver{
 				e.printStackTrace();
 			} 
 		  String content = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input")).getText();
+		  WebElement dr = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/div[1]/input"));
 		 
 		  if(content.isEmpty()||content.equals(null)) {
 			  System.out.println("tcid 83 is sucess "+str+ "is clear");
@@ -827,4 +829,67 @@ public class AutomationScript extends CustomWebDriver{
 		  }
 
 	 }
+	 public void categoryFruite(){
+			WebElement fruite,select,cookie;
+			String str="Fruits";
+//			cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+//			cookie.click();
+			fruite=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[1]/ul/li[2]"));
+			
+			fruite.click();
+			try {
+				Thread.sleep(8000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/h3"));
+			String elemrentval = select.getText();
+			 System.out.println("element="+elemrentval);
+			if(str!=elemrentval) {
+				 fail("TCID <85> failed: <when click fruite option in category not see fruites page>");
+			}
+	 }
+			public void categoryVegetable(){
+				WebElement vegetable,select,cookie;
+				String str="Vegetables";
+//				cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+//				cookie.click();
+				vegetable=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[1]/ul/li[3]"));
+				
+				vegetable.click();
+				try {
+					Thread.sleep(8000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/h3"));
+				String elemrentval = select.getText();
+				 System.out.println("element="+elemrentval);
+				if(str!=elemrentval) {
+					 fail("TCID <86> failed: <when click vegetable option in category not see vegetable page>");
+				}
+			}
+			public void categoryOtherGroceries(){
+				WebElement groceries,select,cookie;
+				String str="Other Groceries";
+//				cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
+//				cookie.click();
+				groceries=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[1]/ul/li[4]"));
+				
+				groceries.click();
+				try {
+					Thread.sleep(8000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				select=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/h3"));
+				String elemrentval = select.getText();
+				 System.out.println("element="+elemrentval);
+				if(str!=elemrentval) {
+					 fail("TCID <87> failed: <when click OtherGroceries option in category not see OtherGroceries page>");
+				}
+			}
 }
