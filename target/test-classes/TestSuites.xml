@@ -12,7 +12,7 @@
       <class name="testcases.TCID1"/>
     </classes>
   </test>
-    <test name="TCID2">
+<test name="TCID2">
     <classes>
       <class name="testcases.TCID2"/>
     </classes>
@@ -127,7 +127,13 @@
       <class name="testcases.TCID25"/>
     </classes>
   </test>
-   <test name="TCID27">
+
+  <test name="TCID26">
+    <classes>
+      <class name="testcases.TCID26"/>
+    </classes>
+  </test>
+  <test name="TCID27">
     <classes>
       <class name="testcases.TCID27"/>
     </classes>

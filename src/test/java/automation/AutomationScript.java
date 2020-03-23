@@ -610,6 +610,59 @@ public class AutomationScript extends CustomWebDriver{
 		AutomationScript.returnobj().clearcart();
 	}
 	
+	public void verifyQuantity() {
+		WebElement value1,plus,value2,cart1,cart2,quantity1,quantity2,quantity3,quantity4,checkout;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		cart1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[6]/button"));
+		cart1.click();
+		plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div[1]/div[2]/div/button[2]"));
+		plus.click();
+		cart2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[7]/button"));
+		cart2.click();
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		value1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
+		String total=value1.getText();
+		
+		quantity1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div[1]/div[2]/div/span"));
+		String qnty1= quantity1.getText();
+		
+		quantity2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div[2]/div[2]/div/span"));
+		String qnty2= quantity2.getText();
+		
+		checkout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		checkout.click();
+		
+		value2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/div/table/tbody/tr[1]/td[2]"));
+		String total1=value2.getText();
+		
+		quantity3=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr[1]/td[5]/span/span"));
+		String qnty3=quantity3.getText();
+		
+		quantity4=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr[2]/td[5]/span/span"));
+		String qnty4=quantity4.getText();
+		
+		if(total.equals(total1) && qnty1.equals(qnty3) && qnty2.equals(qnty4)) {
+		
+		}
+		else {
+			 fail("TCID <26> failed: Total value mismatch");
+		 }
+		AutomationScript.returnobj().clearShop();
+		AutomationScript.returnobj().checkout();
+	}
+	
 	public void verifyCheckTotal() {
 		WebElement total1,total2;
 		try {
@@ -645,7 +698,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 		 }
 		 else {
-			 fail("TCID <28> failed: Total value ");
+			 fail("TCID <28> failed: Total value mismatch");
 		 }
 		
 	
