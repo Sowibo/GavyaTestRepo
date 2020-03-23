@@ -45,7 +45,7 @@ public class DbConnection {
 	public void getValidLogin() {
 		ResultSet rs;
 		try {
-				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=1");
+				 rs= statement.executeQuery("SELECT Email_address,password FROM register WHERE id=1 OR id=2 OR id=3");
 				 while(rs.next()) {
 				 	String s1=rs.getString(1);
 					String s2=rs.getString(2);
@@ -104,7 +104,7 @@ public class DbConnection {
 	public void getForgotValid() {
 		ResultSet rs;
 		try {
-				 rs= statement.executeQuery("SELECT Email_address FROM register WHERE id=3");
+				 rs= statement.executeQuery("SELECT Email_address FROM register WHERE id=1 OR id=2 OR id=3");
 				 while(rs.next()) {
 				 	String s1=rs.getString(1);
 					

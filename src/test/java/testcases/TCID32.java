@@ -7,7 +7,6 @@ import automation.AutomationScript;
 public class TCID32 {
 	@Test
 	public  void verify() {
-		
 		AutomationScript.returnobj().verifyLabel();
 	}
 }

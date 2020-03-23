@@ -56,7 +56,7 @@ public class AutomationScript extends CustomWebDriver{
 		String login="https://www.greengavya.com/login/billing";
 		String url=driver.getCurrentUrl();
 		if(url.equals(login)) {
-			System.out.println("TCID30 success");
+//			System.out.println("TCID30 success");
 		}
 		else {
 			fail("TCID30 failed: Doesnt redirect to the login page");
@@ -95,7 +95,7 @@ public class AutomationScript extends CustomWebDriver{
 		quantity=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr/td[5]/span/span"));
 		String value=quantity.getText();
 		if(value.equals("2")) {
-		System.out.println("TCID33 success in first click");
+//		System.out.println("TCID33 success in first click");
 		}
 		else {
 			fail("TCID33 failed: Doesnt increased by one");
@@ -111,7 +111,7 @@ public class AutomationScript extends CustomWebDriver{
 		quantity=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr/td[5]/span/span"));
 		String value1=quantity.getText();
 		if(value1.equals("3")) {
-		System.out.println("TCID33 success in second click");
+//		System.out.println("TCID33 success in second click");
 		}
 		else {
 			fail("TCID33 failed: Doesnt increased by 1");
@@ -140,7 +140,7 @@ public class AutomationScript extends CustomWebDriver{
 			quantity=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr/td[5]/span/span"));
 			String value=quantity.getText();
 			if(value.equals("2")) {
-				System.out.println("TCID34 success in first click");
+//				System.out.println("TCID34 success in first click");
 				}
 				else {
 					fail("TCID34 failed: Doesnt decreased by one");
@@ -156,7 +156,7 @@ public class AutomationScript extends CustomWebDriver{
 				quantity=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/table/tbody/tr/td[5]/span/span"));
 				String value1=quantity.getText();
 				if(value1.equals("1")) {
-					System.out.println("TCID34 success in second click");
+//					System.out.println("TCID34 success in second click");
 					}
 					else {
 						fail("TCID34 failed: Doesnt decreased by one");
@@ -185,7 +185,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID36 success");
+//			System.out.println("TCID36 success");
 		}
 		else {
 			fail("TCID36 failed: Didnt show alert message while decresing products less than 1");
@@ -194,6 +194,13 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void upperLimit() {
 		WebElement plus;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for(int i=0;i<10;i++) {
 			try {
 				Thread.sleep(2000);
@@ -214,7 +221,7 @@ public class AutomationScript extends CustomWebDriver{
 			}
 			if(driver.switchTo().alert() != null) {
 				driver.switchTo().alert().accept();
-				System.out.println("TCID35 success");
+//				System.out.println("TCID35 success");
 			}
 			else {
 				fail("TCID35 failed: Didnt show alert message while incresing products greater than 10");
@@ -227,7 +234,7 @@ public class AutomationScript extends CustomWebDriver{
 		checkout_btn.click();
 	}
 	public void verifyLabel() {
-		WebElement element;
+		WebElement element,element1,shopping,add,check;
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -238,14 +245,56 @@ public class AutomationScript extends CustomWebDriver{
 		String value=element.getText();
 		String object="Your cart contain 1 items.";
 		if(value.equals(object)) {
-			System.out.println("TCID32 success");
+//			System.out.println("TCID32 success");
 		}
 		else {
 			fail("TCID32 failed: Quantities are different in numbers");
 		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		shopping=driver.findElement(By.xpath("/html/body/div/div/div/div/nav/div/ul/li[1]/a"));
+		shopping.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		add=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/button"));
+		add.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		check=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[1]/button"));
+		check.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		element1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/p"));
+		String value1=element1.getText();
+		String object1="Your cart contain 2 items.";
+		if(value1.equals(object1)) {
+//			System.out.println("TCID32 success 2");
+		}
+		else {
+			fail("TCID32 failed: Quantities are different in numbers");
+		}
+		
+		
 }
 	public void clear() {
 		WebElement clear,element;
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -261,11 +310,11 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/p[1]"));
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div/p"));
 		String value=element.getText();
-		 String value1="You have no items in your shopping cart.";
+		 String value1="Your cart contain 1 items.";
 		if(value.equals(value1)) {
-			System.out.println("TCID37 success");
+//			System.out.println("TCID37 success");
 		}
 		else {
 			fail("TCID37 failed: product didnt clear from the cart");
@@ -274,7 +323,8 @@ public class AutomationScript extends CustomWebDriver{
 		
 	}
 	public void testLogin(String s1,String s2) {
-		WebElement login,email,password,login_btn,element;
+		WebElement login,email,password,login_btn,element,logout;
+		
 		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
 		try {
@@ -310,21 +360,42 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID40 failed: Doesnt login with valid email and password");
 
 		}
-		else {
-			System.out.println("TCID40 success");
-
-		}
-	}
-	
-	public void loggedCheckout() {
-		WebElement add,checkout,proceed;
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 		}
-		add=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
-		add.click();
+		logout=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
+		logout.click();
+		
+	}
+	
+	public void loggedCheckout() {
+		WebElement login,email,password,login_btn,checkout,proceed;
+		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
+		login.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		email=driver.findElement(By.name("email"));
+		email.sendKeys(Settings.getInstance().getProperty("email"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		password=driver.findElement(By.name("password"));
+		password.sendKeys(Settings.getInstance().getProperty("pass"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
+		login_btn.click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -347,7 +418,7 @@ public class AutomationScript extends CustomWebDriver{
 		String address="https://www.greengavya.com/billing";
 		String url=driver.getCurrentUrl();
 		if(url.equals(address)) {
-			System.out.println("TCID31 success");
+//			System.out.println("TCID31 success");
 		}
 		else {
 			fail("TCID31 failed: Doesnt redirect to the address page");
@@ -371,7 +442,7 @@ public class AutomationScript extends CustomWebDriver{
 		String back="https://www.greengavya.com/";
 		String url=driver.getCurrentUrl();
 		if(url.equals(back)) {
-			System.out.println("TCID50 success");
+//			System.out.println("TCID50 success");
 		}
 		else {
 			fail("TCID50 failed: Logout failed");
@@ -391,9 +462,14 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID38 success");
+//			System.out.println("TCID38 success");
 		}
 		else {
 			fail("TCID38 failed: Dont show any alert box while login with empty email and password");
@@ -417,10 +493,14 @@ public class AutomationScript extends CustomWebDriver{
 		password.sendKeys(s2);
 		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
 		login_btn.click();
-		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
 		if(driver.switchTo().alert() !=null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID39 success with first case");
+//			System.out.println("TCID39 success with first case");
 
 		}
 		else {
@@ -437,12 +517,18 @@ public class AutomationScript extends CustomWebDriver{
 		email.sendKeys(s1);
 		login_btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/div[1]/div[2]/div[2]/button"));
 		login_btn.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
 		
 		if(driver.switchTo().alert() !=null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID39 success with second case");
+//			System.out.println("TCID39 success with second case");
 
 		}
+		
 		else {
 			fail("TCID39 failed: Doesnt show alert box while empty password");
 
@@ -491,10 +577,7 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID41 failed: Doesnt show error message in invalid email and password");
 
 		}
-		else {
-			System.out.println("TCID41 success");
-
-		}
+		
 	}
 	
 	public void validOne(String s1,String s2) {
@@ -540,10 +623,7 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID42 failed: Doesnt show error message  login with invalid email and valid password");
 
 		}
-		else {
-			System.out.println("TCID42 success");
-
-		}
+		
 	}
 	
 	
@@ -562,7 +642,7 @@ public class AutomationScript extends CustomWebDriver{
 		String forgotpassword="https://www.greengavya.com/forgotpassword";
 		String url=driver.getCurrentUrl();
 		if(url.equals(forgotpassword)) {
-			System.out.println("TCID43 success");
+//			System.out.println("TCID43 success");
 		}
 		else {
 			fail("TCID43 failed: Doesnt redirect to the forgot password page");
@@ -579,11 +659,18 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		submit=driver.findElement(By.xpath("/html/body/div/div/div/div[2]/button"));
 		submit.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		if(driver.switchTo().alert() != null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID46 success");
+//			System.out.println("TCID46 success");
 		}
+		
 		else {
 			fail("TCID 46 failed: Doesnt show alert message while submit with empty field");
 			
@@ -612,12 +699,13 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		if(driver.switchTo().alert()!=null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID44 success");
+//			System.out.println("TCID44 success");
 		}
 		else {
 			fail("TCID44 failed: Doesnt show alert message while link is send to email");
 			
 		}
+		email.clear();
 		
 	}
 	public void forgotInvalid(String s1) {
@@ -644,7 +732,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		if(driver.switchTo().alert()!=null) {
 			driver.switchTo().alert().accept();
-			System.out.println("TCID45 success");
+//			System.out.println("TCID45 success");
 		}
 		else {
 			fail("TCID45 failed: Doesnt show alert message while enter invalid email");
@@ -666,7 +754,7 @@ public class AutomationScript extends CustomWebDriver{
 		String backurl="https://www.greengavya.com/login";
 		String url=driver.getCurrentUrl();
 		if(url.equals(backurl)) {
-			System.out.println("TCID47 success");
+//			System.out.println("TCID47 success");
 		}
 		else {
 			fail("TCID47 failed: Doesnt redirect to the login page");
@@ -686,7 +774,7 @@ public class AutomationScript extends CustomWebDriver{
 		String backtohome="https://www.greengavya.com/";
 		String url=driver.getCurrentUrl();
 		if(url.equals(backtohome)) {
-			System.out.println("TCID49 success");
+//			System.out.println("TCID49 success");
 		}
 		else {
 			fail("TCID 49 failed: Doesnt redirect to the home page");
@@ -710,7 +798,7 @@ public class AutomationScript extends CustomWebDriver{
 		String create_account="https://www.greengavya.com/register";
 		String url=driver.getCurrentUrl();
 		if(url.equals(create_account)) {
-			System.out.println("TCID48 success");
+//			System.out.println("TCID48 success");
 		}
 		else {
 			fail("TCID 48 failed: Doesnt redirect to the register page");
@@ -736,9 +824,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()) {
 			fail("TCID52 failed: Didnt show error message with invalid first name");
 		}
-		else {
-			System.out.println("TCID 52 success");
-		}
+		
 	}
 	public void fnameEmpty() {
 		WebElement fname,lname,email,phn,password,confirmpass,refferal,submit,element;
@@ -771,10 +857,7 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID53 failed: Didnt show error message with empty first name");
 			
 		}
-		else {
-			System.out.println("TCID53 success");
-			
-		}
+		
 	}
 	public void fnamePositiveLength() {
 		WebElement register,fname,submit,message;
@@ -800,7 +883,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value1 = message.getText();
 		
 		if(value1.equals(" ")) {
-			System.out.println("TCID54 Success with positive testcase1");
+//			System.out.println("TCID54 Success with positive testcase1");
 		}
 		else {
 			fail("TCID54 failed:Show error message in positive case1");
@@ -818,7 +901,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value2 = message.getText();
 
 		if(value2.equals(" ")) {
-			System.out.println("TCID54 Success with positive testcase2");
+//			System.out.println("TCID54 Success with positive testcase2");
 		}
 		else {
 			fail("TCID54 failed:Show error message in positive case2");
@@ -836,7 +919,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value3 = message.getText();
 
 		if(value3.equals(" ")) {
-			System.out.println("TCID54 Success with positive testcase3");
+//			System.out.println("TCID54 Success with positive testcase3");
 		}
 		else {
 			fail("TCID54 failed:Show error message in positive case3");
@@ -853,7 +936,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value4 = message.getText();
 
 		if(value4.equals(" ")) {
-			System.out.println("TCID54 Success with positive testcase4");
+//			System.out.println("TCID54 Success with positive testcase4");
 		}
 		else {
 			fail("TCID54 failed:Show error message in positive case4");
@@ -885,10 +968,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(value1.equals(" ")) {
 			fail("TCID55 failed: Didnt show error message with negative test case1");
 		}
-		else {
-			
-			System.out.println("TCID55 Success with negative testcase1");
-		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -902,9 +982,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(value2.equals(" ")) {
 			fail("TCID55 failed: Didnt show error message with negative test case2");
 		}
-		else {
-			System.out.println("TCID55 sucess test case2");
-		}
+		
 	}
 	public void invalidLname() {
 		WebElement register,lname,submit;
@@ -931,9 +1009,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()) {
 			fail("TCID56 failed: Didnt show error message with invalid Last name");
 		}
-		else {
-			System.out.println("TCID 56 success");
-		}
+		
 	}
 	public void lnameEmpty() {
 		WebElement register,fname,email,phn,password,confirmpass,refferal,submit,element;
@@ -972,10 +1048,7 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID57 failed: Didnt show error message with empty first name");
 			
 		}
-		else {
-			System.out.println("TCID57 success");
-			
-		}
+		
 	}
 	public void lnamePositiveLength() {
 		WebElement register,lname,submit,message;
@@ -1001,7 +1074,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value1 = message.getText();
 		
 		if(value1.equals(" ")) {
-			System.out.println("TCID58 Success with positive testcase1");
+//			System.out.println("TCID58 Success with positive testcase1");
 		}
 		else {
 			fail("TCID58 failed:Show error message in positive case1");
@@ -1019,7 +1092,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value2 = message.getText();
 
 		if(value2.equals(" ")) {
-			System.out.println("TCID58 Success with positive testcase2");
+//			System.out.println("TCID58 Success with positive testcase2");
 		}
 		else {
 			fail("TCID58 failed:Show error message in positive case2");
@@ -1037,7 +1110,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value3 = message.getText();
 
 		if(value3.equals(" ")) {
-			System.out.println("TCID58 Success with positive testcase3");
+//			System.out.println("TCID58 Success with positive testcase3");
 		}
 		else {
 			fail("TCID58 failed:Show error message in positive case3");
@@ -1054,7 +1127,7 @@ public class AutomationScript extends CustomWebDriver{
 		String value4 = message.getText();
 
 		if(value4.equals(" ")) {
-			System.out.println("TCID58 Success with positive testcase4");
+//			System.out.println("TCID58 Success with positive testcase4");
 		}
 		else {
 			fail("TCID58 failed:Show error message in positive case4");

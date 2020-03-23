@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">29 methods, 3 failed,   26 passed</span>
+                    <span class="method-stats">29 methods, 4 failed,   25 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -113,6 +113,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID56" class="method navigator-link" hash-for-method="invalidLname">invalidLname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID35" class="method navigator-link" hash-for-method="upper">upper</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-HomePageSuite -->
@@ -246,11 +251,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID35" class="method navigator-link" hash-for-method="upper">upper</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID32" class="method navigator-link" hash-for-method="verify">verify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -278,7 +278,7 @@
                   </a> <!-- fnameNegative -->
                   <span class="method-name">fnameNegative</span>
                   <div class="stack-trace">java.lang.AssertionError: TCID55 failed: Didnt show error message with negative test case2
-	at automation.AutomationScript.fnameNegativeLength(AutomationScript.java:903)
+	at automation.AutomationScript.fnameNegativeLength(AutomationScript.java:980)
 	at testcases.TCID55.fnameNegative(TCID55.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 28 stack frames
@@ -299,10 +299,44 @@
                   </a> <!-- invalidFname -->
                   <span class="method-name">invalidFname</span>
                   <div class="stack-trace">java.lang.AssertionError: TCID52 failed: Didnt show error message with invalid first name
-	at automation.AutomationScript.invalidFname(AutomationScript.java:737)
+	at automation.AutomationScript.invalidFname(AutomationScript.java:822)
 	at testcases.TCID52.invalidFname(TCID52.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TCID35</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="upper">
+                  </a> <!-- upper -->
+                  <span class="method-name">upper</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;product-inc-btn&quot;&gt; is not clickable at point (769,540) because another element &lt;div class=&quot;popup&quot;&gt; obscures it
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-26CSK06&apos;, ip: &apos;192.168.15.168&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 16236, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2aa85f9c-90b8-497c-acfd-357310a19589
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at automation.AutomationScript.upperLimit(AutomationScript.java:206)
+	at testcases.TCID35.upper(TCID35.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -320,7 +354,7 @@
                   </a> <!-- invalidLname -->
                   <span class="method-name">invalidLname</span>
                   <div class="stack-trace">java.lang.AssertionError: TCID56 failed: Didnt show error message with invalid Last name
-	at automation.AutomationScript.invalidLname(AutomationScript.java:932)
+	at automation.AutomationScript.invalidLname(AutomationScript.java:1007)
 	at testcases.TCID56.invalidLname(TCID56.java:11)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 28 stack frames
@@ -535,21 +569,6 @@
                   <a name="backLogin">
                   </a> <!-- backLogin -->
                   <span class="method-name">backLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HomePageSuite-class-passed -->
-          <div class="suite-HomePageSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.TCID35</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="upper">
-                  </a> <!-- upper -->
-                  <span class="method-name">upper</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1005,126 +1024,126 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(29);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'upper')
-data.setCell(0, 2, 'testcases.TCID35')
-data.setCell(0, 3, 25028);
+data.setCell(0, 1, 'loginValid')
+data.setCell(0, 2, 'testcases.TCID40')
+data.setCell(0, 3, 52968);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'fnamePositive')
-data.setCell(1, 2, 'testcases.TCID54')
-data.setCell(1, 3, 16578);
+data.setCell(1, 1, 'forgotValid')
+data.setCell(1, 2, 'testcases.TCID44')
+data.setCell(1, 3, 20366);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'startTest')
-data.setCell(2, 2, 'testcases.TCID1')
-data.setCell(2, 3, 15932);
+data.setCell(2, 1, 'fnamePositive')
+data.setCell(2, 2, 'testcases.TCID54')
+data.setCell(2, 3, 16868);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'lnamePositive')
-data.setCell(3, 2, 'testcases.TCID58')
-data.setCell(3, 3, 15442);
+data.setCell(3, 1, 'checkoutLogged')
+data.setCell(3, 2, 'testcases.TCID31')
+data.setCell(3, 3, 16843);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginValid')
-data.setCell(4, 2, 'testcases.TCID40')
-data.setCell(4, 3, 14736);
+data.setCell(4, 1, 'upper')
+data.setCell(4, 2, 'testcases.TCID35')
+data.setCell(4, 3, 16062);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'oneValid')
-data.setCell(5, 2, 'testcases.TCID42')
-data.setCell(5, 3, 14159);
+data.setCell(5, 1, 'lnamePositive')
+data.setCell(5, 2, 'testcases.TCID58')
+data.setCell(5, 3, 14168);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'loginInvalid')
-data.setCell(6, 2, 'testcases.TCID41')
-data.setCell(6, 3, 13022);
+data.setCell(6, 1, 'loginEmpty')
+data.setCell(6, 2, 'testcases.TCID39')
+data.setCell(6, 3, 13524);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'productIncrement')
-data.setCell(7, 2, 'testcases.TCID33')
-data.setCell(7, 3, 12900);
+data.setCell(7, 1, 'oneValid')
+data.setCell(7, 2, 'testcases.TCID42')
+data.setCell(7, 3, 13337);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'checkoutLogged')
-data.setCell(8, 2, 'testcases.TCID31')
-data.setCell(8, 3, 11328);
+data.setCell(8, 1, 'loginInvalid')
+data.setCell(8, 2, 'testcases.TCID41')
+data.setCell(8, 3, 13147);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'fnameNegative')
-data.setCell(9, 2, 'testcases.TCID55')
-data.setCell(9, 3, 11046);
+data.setCell(9, 1, 'productIncrement')
+data.setCell(9, 2, 'testcases.TCID33')
+data.setCell(9, 3, 12012);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'loginEmpty')
-data.setCell(10, 2, 'testcases.TCID39')
-data.setCell(10, 3, 9870);
+data.setCell(10, 1, 'verify')
+data.setCell(10, 2, 'testcases.TCID32')
+data.setCell(10, 3, 11694);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'emptyLname')
-data.setCell(11, 2, 'testcases.TCID57')
-data.setCell(11, 3, 9039);
+data.setCell(11, 1, 'fnameNegative')
+data.setCell(11, 2, 'testcases.TCID55')
+data.setCell(11, 3, 10859);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'invalidLname')
-data.setCell(12, 2, 'testcases.TCID56')
-data.setCell(12, 3, 6825);
+data.setCell(12, 1, 'emptyLname')
+data.setCell(12, 2, 'testcases.TCID57')
+data.setCell(12, 3, 7606);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'productDecrement')
-data.setCell(13, 2, 'testcases.TCID34')
-data.setCell(13, 3, 6711);
+data.setCell(13, 1, 'logOut')
+data.setCell(13, 2, 'testcases.TCID50')
+data.setCell(13, 3, 7508);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'forgotValid')
-data.setCell(14, 2, 'testcases.TCID44')
-data.setCell(14, 3, 6568);
+data.setCell(14, 1, 'productDecrement')
+data.setCell(14, 2, 'testcases.TCID34')
+data.setCell(14, 3, 6796);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'forgotInValid')
-data.setCell(15, 2, 'testcases.TCID45')
-data.setCell(15, 3, 6538);
+data.setCell(15, 1, 'invalidLname')
+data.setCell(15, 2, 'testcases.TCID56')
+data.setCell(15, 3, 6742);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'logOut')
-data.setCell(16, 2, 'testcases.TCID50')
-data.setCell(16, 3, 6337);
+data.setCell(16, 1, 'forgotInValid')
+data.setCell(16, 2, 'testcases.TCID45')
+data.setCell(16, 3, 6508);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'newUserCheckout')
 data.setCell(17, 2, 'testcases.TCID30')
-data.setCell(17, 3, 5761);
+data.setCell(17, 3, 5860);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'lower')
-data.setCell(18, 2, 'testcases.TCID36')
-data.setCell(18, 3, 4591);
+data.setCell(18, 1, 'startTest')
+data.setCell(18, 2, 'testcases.TCID1')
+data.setCell(18, 3, 5346);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'clearClick')
-data.setCell(19, 2, 'testcases.TCID37')
-data.setCell(19, 3, 4347);
+data.setCell(19, 1, 'emptyLogin')
+data.setCell(19, 2, 'testcases.TCID38')
+data.setCell(19, 3, 4868);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'emptyFname')
-data.setCell(20, 2, 'testcases.TCID53')
-data.setCell(20, 3, 3111);
+data.setCell(20, 1, 'clearClick')
+data.setCell(20, 2, 'testcases.TCID37')
+data.setCell(20, 3, 4598);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'accountLink')
-data.setCell(21, 2, 'testcases.TCID48')
-data.setCell(21, 3, 2760);
+data.setCell(21, 1, 'lower')
+data.setCell(21, 2, 'testcases.TCID36')
+data.setCell(21, 3, 4366);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'emptyLogin')
-data.setCell(22, 2, 'testcases.TCID38')
-data.setCell(22, 3, 2519);
+data.setCell(22, 1, 'emptyPass')
+data.setCell(22, 2, 'testcases.TCID46')
+data.setCell(22, 3, 4251);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'back')
-data.setCell(23, 2, 'testcases.TCID49')
-data.setCell(23, 3, 2431);
+data.setCell(23, 1, 'emptyFname')
+data.setCell(23, 2, 'testcases.TCID53')
+data.setCell(23, 3, 3571);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'forgotPass')
-data.setCell(24, 2, 'testcases.TCID43')
-data.setCell(24, 3, 2420);
+data.setCell(24, 1, 'accountLink')
+data.setCell(24, 2, 'testcases.TCID48')
+data.setCell(24, 3, 2723);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'backLogin')
-data.setCell(25, 2, 'testcases.TCID47')
-data.setCell(25, 3, 2386);
+data.setCell(25, 1, 'back')
+data.setCell(25, 2, 'testcases.TCID49')
+data.setCell(25, 3, 2619);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'emptyPass')
-data.setCell(26, 2, 'testcases.TCID46')
-data.setCell(26, 3, 2244);
+data.setCell(26, 1, 'backLogin')
+data.setCell(26, 2, 'testcases.TCID47')
+data.setCell(26, 3, 2480);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'verify')
-data.setCell(27, 2, 'testcases.TCID32')
-data.setCell(27, 3, 2060);
+data.setCell(27, 1, 'forgotPass')
+data.setCell(27, 2, 'testcases.TCID43')
+data.setCell(27, 3, 2421);
 data.setCell(28, 0, 28)
 data.setCell(28, 1, 'invalidFname')
 data.setCell(28, 2, 'testcases.TCID52')
-data.setCell(28, 3, 482);
+data.setCell(28, 3, 631);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-HomePageSuite">
               </div> <!-- times-div-HomePageSuite -->
             </div> <!-- times-div -->
@@ -1160,154 +1179,156 @@ return data;
               <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startTest</span>
-                <span class="method-start">19688 ms</span>
+                <span class="method-start">28068 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID30</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">newUserCheckout</span>
-                <span class="method-start">36585 ms</span>
+                <span class="method-start">36234 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID33</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">productIncrement</span>
-                <span class="method-start">43202 ms</span>
+                <span class="method-start">43018 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID34</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">productDecrement</span>
-                <span class="method-start">56884 ms</span>
+                <span class="method-start">55561 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID36</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">lower</span>
-                <span class="method-start">64435 ms</span>
+                <span class="method-start">63022 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID35</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">upper</span>
-                <span class="method-start">69528 ms</span>
+                <span class="method-start">68034 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID32</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verify</span>
-                <span class="method-start">95149 ms</span>
+                <span class="method-start">85088 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID37</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clearClick</span>
-                <span class="method-start">97789 ms</span>
+                <span class="method-start">98250 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID40</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginValid</span>
-                <span class="method-start">102835 ms</span>
+                <span class="method-start">105787 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID31</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkoutLogged</span>
-                <span class="method-start">118004 ms</span>
+                <span class="method-start">159991 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID50</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logOut</span>
-                <span class="method-start">129804 ms</span>
+                <span class="method-start">177228 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID38</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyLogin</span>
-                <span class="method-start">136540 ms</span>
+                <span class="method-start">185268 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID39</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginEmpty</span>
-                <span class="method-start">139626 ms</span>
+                <span class="method-start">190543 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID41</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginInvalid</span>
-                <span class="method-start">150061 ms</span>
+                <span class="method-start">204457 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID42</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">oneValid</span>
-                <span class="method-start">163459 ms</span>
+                <span class="method-start">217872 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID43</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">forgotPass</span>
-                <span class="method-start">177900 ms</span>
+                <span class="method-start">231651 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID46</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyPass</span>
-                <span class="method-start">180685 ms</span>
+                <span class="method-start">234342 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID44</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">forgotValid</span>
-                <span class="method-start">183259 ms</span>
+                <span class="method-start">238924 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID45</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">forgotInValid</span>
-                <span class="method-start">190052 ms</span>
+                <span class="method-start">259944 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID47</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">backLogin</span>
-                <span class="method-start">196799 ms</span>
+                <span class="method-start">267077 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID49</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">back</span>
-                <span class="method-start">199419 ms</span>
+                <span class="method-start">270268 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID48</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">accountLink</span>
-                <span class="method-start">202409 ms</span>
+                <span class="method-start">280104 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -1316,21 +1337,21 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">invalidFname</span>
-                <span class="method-start">205506 ms</span>
+                <span class="method-start">283116 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID53</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyFname</span>
-                <span class="method-start">206264 ms</span>
+                <span class="method-start">284101 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID54</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">fnamePositive</span>
-                <span class="method-start">209557 ms</span>
+                <span class="method-start">287816 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -1339,7 +1360,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">fnameNegative</span>
-                <span class="method-start">226389 ms</span>
+                <span class="method-start">305139 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -1348,21 +1369,21 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">invalidLname</span>
-                <span class="method-start">237669 ms</span>
+                <span class="method-start">316202 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID57</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">emptyLname</span>
-                <span class="method-start">244655 ms</span>
+                <span class="method-start">323192 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.TCID58</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">lnamePositive</span>
-                <span class="method-start">253796 ms</span>
+                <span class="method-start">330874 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
