@@ -177,7 +177,7 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement fname,lname,pnum,updatebtn,name;	
 		fname = driver.findElement(By.id("fname"));
 		fname.clear();
-		fname.sendKeys("Keerthi");
+		fname.sendKeys("Keerthisudev");
 		String full_name = fname.getText();
 		lname = driver.findElement(By.id("lname"));
 		lname.clear();
@@ -209,12 +209,15 @@ public class AutomationScript extends CustomWebDriver{
 //			System.out.println("NO ALERT IS PRESENT"+a);
 		}
 		
-		if(full_name == name_check ) {
-			fail("TCID 121 failed:name not correct");
+		if(full_name.equals(name_check) || full_name == name_check ){
+			System.out.println(full_name);
+			System.out.println(name_check);
+			System.out.println("TCID 121 success");
+			
 		}
 		else {
+			fail("TCID 121 failed:name not change after login");
 			
-			System.out.println("TCID 121 success");
 		}
 	}
 	public void checkingUpdate() {
@@ -445,6 +448,23 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		Alert alert = driver.switchTo().alert();
+		String alert_text = alert.getText();
+//		System.out.println(alert_text);
+		alert.accept();
+		String text_alert ="Confirm password Incorrect!!";
+		if(alert_text.equals(text_alert)) {
+			fail("TCID 129 failed:confirm password is different");
+		}
+		else {
+			System.out.println("TCID 129 success");
+		}
 	
 	}
 	

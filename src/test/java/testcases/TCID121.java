@@ -12,8 +12,6 @@ public class TCID121 {
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
 		AutomationScript.returnobj().checkUpdate();
-//		AutomationScript.returnobj().alertAccept120();
-//		AutomationScript.returnobj().logOut();
-//		AutomationScript.returnobj().logIn();
+
 	}
 }
