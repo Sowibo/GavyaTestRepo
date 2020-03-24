@@ -14,7 +14,7 @@
     <classes>
       <class name="testcases.TCID108">
         <methods>
-          <include name="startTest"/>
+          <include name="startTest108"/>
         </methods>
       </class> <!-- testcases.TCID108 -->
     </classes>

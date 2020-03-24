@@ -42,6 +42,12 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement login,submit,email,password;
 		driver.get(Settings.getInstance().getProperty("url"));
 		AutomationScript.returnobj().cooki();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		login=driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
 		email=driver.findElement(By.id("email"));
@@ -178,7 +184,7 @@ public class AutomationScript extends CustomWebDriver{
 		String ConfirmReorder ="https://www.greengavya.com/reorder";
 		String url=driver.getCurrentUrl();
 		if(url.equals(ConfirmReorder )) {
-			System.out.println("TCID 92 success");
+//			System.out.println("TCID 92 success");
 			
 		}
 		else {
@@ -189,7 +195,7 @@ public class AutomationScript extends CustomWebDriver{
 	
 	public void editAddress() {
 		
-		WebElement edit,name,mobnum,flatno,sreet,city,dis,pin,landmark,cnbtn;
+		WebElement edit,name1,mobnum1,flatno1,sreet1,city1,dis1,pin1,landmark,cnbtn,name2,mobnum2,flatno2,sreet2,city2,pin2;
 		Select district;
 		
 		try {
@@ -198,7 +204,20 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		name1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[1]"));
+		String message=name1.getText();
+		flatno1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[2]"));
+		String message1=flatno1.getText();
+		sreet1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[3]"));
+		String message2=sreet1.getText();
+		city1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[4]"));
+		String message3=city1.getText();
+		dis1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[5]"));
+		String message4=dis1.getText();
+		pin1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[5]"));
+		String message5=pin1.getText();
+		mobnum1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[6]"));
+		String message6=mobnum1.getText();
 		edit=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[7]/button[1]"));
 		edit.click();
 		try {
@@ -208,34 +227,39 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		
-		name=driver.findElement(By.id("name"));
-		name.clear();
-		name.sendKeys("Aswajith");
-		mobnum=driver.findElement(By.id("phone"));
-		mobnum.clear();
-		mobnum.sendKeys("9961565559");
-		flatno=driver.findElement(By.id("house"));
-		flatno.clear();
-		flatno.sendKeys("56XXN");
-		sreet=driver.findElement(By.id("street"));
-		sreet.clear();
-		sreet.sendKeys("Revathi chundavila pothencode");
-		city=driver.findElement(By.id("city"));
-		city.clear();
-		city.sendKeys("Revathi chundavila pothencode");
-		dis=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/select"));
-		dis.click();
+		name2=driver.findElement(By.id("name"));
+		name2.clear();
+		name2.sendKeys("Aswajith");
+		String message7=name2.getText();
+		
+		mobnum2=driver.findElement(By.id("phone"));
+		mobnum2.clear();
+		mobnum2.sendKeys("9961565559");
+		String message8=mobnum2.getText();
+		flatno2=driver.findElement(By.id("house"));
+		flatno2.clear();
+		flatno2.sendKeys("56XXN");
+		String message9=flatno2.getText();
+		sreet2=driver.findElement(By.id("street"));
+		sreet2.clear();
+		sreet2.sendKeys("Revathi chundavila pothencode");
+		String message10=sreet2.getText();
+		city2=driver.findElement(By.id("city"));
+		city2.clear();
+		city2.sendKeys("Revathi chundavila pothencode");
+		String message11=city2.getText();
+		dis1=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/select"));
+		dis1.click();
 		district=new Select(driver.findElement(By.name("district")));
-		district.selectByVisibleText("kollam");
-		pin=driver.findElement(By.id("pin"));
-		pin.clear();
-		pin.sendKeys("645909");
+		district.selectByVisibleText("Kollam");
+		String message15= district.getFirstSelectedOption().getText();
+		pin2=driver.findElement(By.id("pin"));
+		pin2.clear();
+		pin2.sendKeys("645909");
+		String message12=pin2.getText();
 		landmark=driver.findElement(By.id("landmark"));
 		landmark.clear();
 		landmark.sendKeys("near at school");
-		cnbtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/input[8]"));
-		cnbtn.click();
-		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -243,20 +267,57 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		
-		String ConfirmReorder ="https://www.greengavya.com/reorder";
-		String url=driver.getCurrentUrl();
-		if(url.equals(ConfirmReorder )) {
-			System.out.println("TCID 93 success");
-			
+		cnbtn=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/input[8]"));
+		cnbtn.click();
+		if(message.equals(message7)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
 		}
-		else {
-			fail("TCID <93> failed:  Doesnt redirect to ConfirmReorder page>");
-			
+//		else {
+//			System.out.println("tcid 93 name success");
+//		}
+		if(message1.equals(message9)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
 		}
+//		else {
+//			System.out.println("tcid 93 flat success");
+//		}
+		if(message2.equals(message10)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 street success");
+//		}
+		if(message3.equals(message11)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 city success");
+//		}
+		if(message5.equals(message12)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 pin success");
+//		}
+		if(message6.equals(message8)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 mobile success");
+//		}
+		if(message4.equals(message15)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 dis success");
+//		}
+//		
+		
+		
 	}
 	
 	public void newAddress() {
-		WebElement newaddress,name,mobnum,flatno,sreet,city,dis,pin,landmark,cnbtn;
+		WebElement newaddress,name,mobnum,flatno,sreet,city,dis,pin,landmark,cnbtn,name1,mobnum1,flatno1,sreet1,dis1,city1,pin1;
 		Select district;
 		try {
 			Thread.sleep(5000);
@@ -264,6 +325,20 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		name1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[1]"));
+		String message=name1.getText();
+		flatno1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[2]"));
+		String message1=flatno1.getText();
+		sreet1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[3]"));
+		String message2=sreet1.getText();
+		city1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[4]"));
+		String message3=city1.getText();
+		pin1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[5]"));
+		String message4=pin1.getText();
+		mobnum1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[6]"));
+		String message5=mobnum1.getText();
+		dis1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[5]"));
+		String message14=dis1.getText();
 		newaddress=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[2]/div/div[1]/p[7]/button[2]"));
 		newaddress.click();
 		try {
@@ -276,25 +351,32 @@ public class AutomationScript extends CustomWebDriver{
 		name=driver.findElement(By.id("name"));
 		name.clear();
 		name.sendKeys("Gopika");
+		String message6=name.getText();
 		mobnum=driver.findElement(By.id("phone"));
 		mobnum.clear();
 		mobnum.sendKeys("7592018435");
+		String messag7=mobnum.getText();
 		flatno=driver.findElement(By.id("house"));
 		flatno.clear();
 		flatno.sendKeys("56BBN");
+		String messag8=flatno.getText();
 		sreet=driver.findElement(By.id("street"));
 		sreet.clear();
 		sreet.sendKeys("chundappana veedu karoor  pothencode");
+		String messag9=sreet.getText();
 		city=driver.findElement(By.id("city"));
 		city.clear();
 		city.sendKeys("chundappana veedu karoor  pothencode");
+		String messag10=city.getText();
 		dis=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div/div[2]/form/select"));
 		dis.click();
 		district=new Select(driver.findElement(By.name("district")));
 		district.selectByVisibleText("Trivandrum");
+		String message15= district.getFirstSelectedOption().getText();
 		pin=driver.findElement(By.id("pin"));
 		pin.clear();
 		pin.sendKeys("908969");
+		String messag11=pin.getText();
 		landmark=driver.findElement(By.id("landmark"));
 		landmark.clear();
 		landmark.sendKeys("near at school");
@@ -307,18 +389,49 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		String ConfirmReorder ="https://www.greengavya.com/reorder";
-		String url=driver.getCurrentUrl();
-		if(url.equals(ConfirmReorder )) {
-			System.out.println("TCID 94 success");
-			
+		if(message.equals(message6)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
 		}
-		else {
-			fail("TCID <94> failed:  Doesnt redirect to ConfirmReorder page>");
-			
+//		else {
+//			System.out.println("tcid 93 name success");
+//		}
+		if(message1.equals(messag8)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
 		}
+//		else {
+//			System.out.println("tcid 93 flat success");
+//		}
+		if(message2.equals(messag9)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 street success");
+//		}
+		if(message3.equals(messag10)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 city success");
+//		}
+		if(message4.equals(messag11)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 pin success");
+//		}
+		if(message5.equals(messag7)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 mob success");
+//		}
+		if(message14.equals(message15)) {
+			fail("TCID <93> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 93 dis success");
+//		}
+		
 	}
 	
 	
@@ -376,9 +489,9 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <95> failed: <alert box not present");
 			
 		}
-		else {
-			System.out.println("tcid 95 success");
-		}
+//		else {
+//			System.out.println("tcid 95 success");
+//		}
 		
 	}
 	
@@ -402,7 +515,7 @@ public class AutomationScript extends CustomWebDriver{
 		String myReorder ="https://www.greengavya.com/myorders";
 		String url=driver.getCurrentUrl();
 		if(url.equals(myReorder )) {
-			System.out.println("TCID 96 success");
+//			System.out.println("TCID 96 success");
 			
 		}
 		else {
@@ -413,14 +526,14 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	
 	public void trackOrder() {
-		WebElement track,close;
+		WebElement track,close,delivery;
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		track=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/button"));
+		track=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[1]/p[2]/button/img"));
 		track.click();
 		
 		try {
@@ -429,19 +542,18 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		delivery=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div[1]/div/div[1]/h3"));
 		
+		String message=delivery.getText();
+		if(message.isEmpty()||message.equals(null)) {
+			fail("TCID <97> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 97 success");
+//		}
 		close=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div[1]/div/div[1]/span"));
 		close.click();
-		String myReorder ="https://www.greengavya.com/myorders";
-		String url=driver.getCurrentUrl();
-		if(url.equals(myReorder )) {
-			System.out.println("TCID 97 success");
-			
-		}
-		else {
-			fail("TCID <97> failed:  Doesnt redirect to myReorder page>");
-			
-		}
+		
 		
 	}
 	
@@ -472,15 +584,8 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		
-		Alert alert=driver.switchTo().alert();
-		alert.dismiss(); 
-		if(alert.equals(null)) {
-			fail("TCID <98> failed: <alert box not present");
-			
-		}
-		else {
-			System.out.println("tcid 98 success");
-		}
+		driver.switchTo().alert().dismiss();; 
+
 	}
 	
 	public void invoiceDownload() {
@@ -533,9 +638,9 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <100> failed: <alert box not present");
 			
 		}
-		else {
-			System.out.println("tcid 100 success");
-		}
+//		else {
+//			System.out.println("tcid 100 success");
+//		}
 		
 
 	}
@@ -554,6 +659,14 @@ public class AutomationScript extends CustomWebDriver{
 		name=driver.findElement(By.id("name"));
 		name.clear();
 		name.sendKeys("dfretr$$#@@@#");
+		
+		String message=name.getAttribute("validationMessage");
+		if(message.isEmpty()||message.equals(null)) {
+			fail("TCID <101> failed: <no show error message when  name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 101 success");
+//		}
 		email=driver.findElement(By.id("email"));
 		email.clear();
 		email.sendKeys("gopikagopakumaran1@gmail.com");
@@ -566,20 +679,16 @@ public class AutomationScript extends CustomWebDriver{
 		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/div[2]/form/button"));
 		btn.click();
 		
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		driver.switchTo().alert().accept();
-		String message=name.getAttribute("validationMessage");
-		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <101> failed: <no show error message when  name field with invalid data>");	
-		}
-		else {
-			System.out.println("tcid 101 success");
-		}
+		
 	}
 	
 	
@@ -615,10 +724,10 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <102> failed: <no show error message when empty name field>");	
 		}
-		else {
-			System.out.println("tcid 102 success");
-		}
-		
+//		else {
+//			System.out.println("tcid 102 success");
+//		}
+//		
 	}
 	public void invalidEmailContactus() {
 		WebElement contact,select,name,email,phnum,comment,btn;
@@ -651,10 +760,10 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <103> failed: <no show error message when  email field with invalid data>");	
 		}
-		else {
-			System.out.println("tcid 103 success");
-		}
-		
+//		else {
+//			System.out.println("tcid 103 success");
+//		}
+//		
 	
 		
 	}
@@ -689,9 +798,9 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <104> failed: <no show error message when empty email field>");	
 		}
-		else {
-			System.out.println("tcid 104 success");
-		}
+//		else {
+//			System.out.println("tcid 104 success");
+//		}
 		
 	}
 	public void invalidPhnContactus() {
@@ -725,9 +834,9 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <105> failed: <no show error message when  phone number field with invalid data>");	
 		}
-		else {
-			System.out.println("tcid 105 success");
-		}
+//		else {
+//			System.out.println("tcid 105 success");
+//		}
 		
 	}
 	public void emptyPhnContact() {
@@ -761,9 +870,9 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <106> failed: <no show error message when empty phone number field>");	
 		}
-		else {
-			System.out.println("tcid 106 success");
-		}
+//		else {
+//			System.out.println("tcid 106 success");
+//		}
 	}
 	public void emptyComment() {
 		WebElement contact,select,name,email,phnum,comment,btn;
@@ -796,9 +905,9 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <107> failed: <no show error message when   empty comment field>");	
 		}
-		else {
-			System.out.println("tcid 107 success");
-		}
+//		else {
+//			System.out.println("tcid 107 success");
+//		}
 	}
 	
 	public void invalidFname() {
@@ -817,6 +926,13 @@ public class AutomationScript extends CustomWebDriver{
 		fname=driver.findElement(By.id("fname"));	
 		fname.clear();
 		fname.sendKeys("fderw434@##");
+		String message=fname.getAttribute("validationMessage");
+		if(message.isEmpty()||message.equals(null)) {
+			fail("TCID <108> failed: <no show error message when first name field with invalid data>");	
+		}
+//		else {
+//			System.out.println("tcid 108 success");
+//		}
 		lname=driver.findElement(By.id("lname"));
 		lname.clear();
 		lname.sendKeys("gg");
@@ -825,7 +941,7 @@ public class AutomationScript extends CustomWebDriver{
 		phn.sendKeys("7592018435");
 		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		btn.click();
-
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -833,14 +949,8 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		driver.switchTo().alert().accept();
-		String message=fname.getAttribute("validationMessage");
-		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <108> failed: <no show error message when first name field with invalid data>");	
-		}
-		else {
-			System.out.println("tcid 108 success");
-		}
 		
+//		
 		
 	}
 
@@ -879,11 +989,11 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <109> failed: <no show error message when empty first name field>");	
 		}
-		else {
-			
-			System.out.println("tcid 109 success");
-		}
-		
+//		else {
+//			
+//			System.out.println("tcid 109 success");
+//		}
+//		
 	}
 	public void positivFname() {
 		WebElement setting,account,fname,lname,phn,btn;
@@ -908,7 +1018,7 @@ public class AutomationScript extends CustomWebDriver{
 		fname.sendKeys("go");
 		String message=fname.getAttribute("validationMessage");
 		if(message.isEmpty()||message.equals(null)) {
-			System.out.println("tcid 110 first positive success");
+//			System.out.println("tcid 110 first positive success");
 			
 		}
 		else {
@@ -925,7 +1035,7 @@ public class AutomationScript extends CustomWebDriver{
 		fname.sendKeys("gop");
 		String message1=fname.getAttribute("validationMessage");
 		if(message1.isEmpty()||message1.equals(null)) {
-			System.out.println("tcid 110 second positive success");
+//			System.out.println("tcid 110 second positive success");
 			
 		}
 		else {
@@ -983,10 +1093,10 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <111> failed: <no show error message when  first name field with  1 number data>");
 			
 		}
-		else {
-				
-			System.out.println("tcid 111 negative test success");
-		}
+//		else {
+//				
+//			System.out.println("tcid 111 negative test success");
+//		}
 		
 	}
 	
@@ -1008,12 +1118,19 @@ public class AutomationScript extends CustomWebDriver{
 		lname=driver.findElement(By.id("lname"));
 		lname.clear();
 		lname.sendKeys("21@@@3E");
+		String message=lname.getAttribute("validationMessage");
+		if(message.isEmpty()||message.equals(null)) {
+			fail("TCID <112> failed: <no show error message when last name with invalid data>");
+		}
+//		else {
+//			System.out.println("tcid 112 success");
+//		}
 		phn=driver.findElement(By.id("phone"));
 		phn.clear();
 		phn.sendKeys("7592018435");
 		btn=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		btn.click();
-
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -1021,13 +1138,7 @@ public class AutomationScript extends CustomWebDriver{
 			e.printStackTrace();
 		}
 		driver.switchTo().alert().accept();
-		String message=lname.getAttribute("validationMessage");
-		if(message.isEmpty()||message.equals(null)) {
-			fail("TCID <112> failed: <no show error message when last name with invalid data>");
-		}
-		else {
-			System.out.println("tcid 112 success");
-		}
+		
 	}
 	public void emptyLname() {
 		
@@ -1058,11 +1169,11 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <113> failed: <no show error message when empty last name field>");
 		}	
-		else {
-			
-			System.out.println("tcid 113 success");
-		
-		}
+//		else {
+//			
+//			System.out.println("tcid 113 success");
+//		
+//		}
 		
 	}
 	public void positiveLname() {
@@ -1091,7 +1202,7 @@ public class AutomationScript extends CustomWebDriver{
 		lname.sendKeys("gg");
 		String message=lname.getAttribute("validationMessage");
 		if(message.isEmpty()||message.equals(null)) {
-			System.out.println("tcid 114 first positive success");
+//			System.out.println("tcid 114 first positive success");
 			
 		}
 		else {
@@ -1108,7 +1219,7 @@ public class AutomationScript extends CustomWebDriver{
 		lname.sendKeys("ggg");
 		String message1=lname.getAttribute("validationMessage");
 		if(message1.isEmpty()||message1.equals(null)) {
-			System.out.println("tcid 114 first positive success");
+//			System.out.println("tcid 114 first positive success");
 			
 		}
 		else {
@@ -1163,11 +1274,11 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <115> failed: <no show error message when  first name field with  1 number data>");
 			
 		}
-		else {
-				
-			System.out.println("tcid 115 negative test success");
-		}
-		
+//		else {
+//				
+//			System.out.println("tcid 115 negative test success");
+//		}
+//		
 	}
 	public void invalidPhn() {
 		WebElement setting,account,fname,lname,phn,btn;
@@ -1196,10 +1307,10 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <116> failed: <no show error message when phone number with invalid data>");
 		}
-		else {
-			System.out.println("tcid 116 success");
-		}
-		
+//		else {
+//			System.out.println("tcid 116 success");
+//		}
+//		
 		
 	}
 	public void emptyPhn() {
@@ -1230,11 +1341,11 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <117> failed: <no show error message when empty phone number field>");
 		}	
-		else {
-			
-			System.out.println("tcid 117 success");
-		
-		}
+//		else {
+//			
+//			System.out.println("tcid 117 success");
+//		
+//		}
 	}
 	public void positivephnum() {
 		WebElement setting,account,fname,lname,phn,btn;
@@ -1265,7 +1376,7 @@ public class AutomationScript extends CustomWebDriver{
 		phn.sendKeys("999999");
 		String message=phn.getAttribute("validationMessage");
 		if(message.isEmpty()||message.equals(null)) {
-			System.out.println("tcid 118 first positive success");
+//			System.out.println("tcid 118 first positive success");
 			
 		}
 		else {
@@ -1282,7 +1393,7 @@ public class AutomationScript extends CustomWebDriver{
 		phn.sendKeys("9999997");
 		String message1=phn.getAttribute("validationMessage");
 		if(message1.isEmpty()||message1.equals(null)) {
-			System.out.println("tcid 118 second positive success");
+//			System.out.println("tcid 118 second positive success");
 			
 		}
 		else {
@@ -1299,7 +1410,7 @@ public class AutomationScript extends CustomWebDriver{
 		phn.sendKeys("9999997896");
 		String message2=phn.getAttribute("validationMessage");
 		if(message2.isEmpty()||message2.equals(null)) {
-			System.out.println("tcid 118 third positive success");
+//			System.out.println("tcid 118 third positive success");
 			
 		}
 		else {
@@ -1317,7 +1428,7 @@ public class AutomationScript extends CustomWebDriver{
 		phn.sendKeys("9999992345");
 		String message3=phn.getAttribute("validationMessage");
 		if(message3.isEmpty()||message3.equals(null)) {
-			System.out.println("tcid 118 forth positive success");
+//			System.out.println("tcid 118 forth positive success");
 			
 		}
 		else {

@@ -1,49 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TCID93(failed)">
+  <test thread-count="5" name="TCID101(failed)">
     <classes>
-      <class name="testcases.TCID93">
+      <class name="testcases.TCID101">
         <methods>
-          <include name="startTest93"/>
+          <include name="startTest101"/>
         </methods>
-      </class> <!-- testcases.TCID93 -->
+      </class> <!-- testcases.TCID101 -->
     </classes>
-  </test> <!-- TCID93(failed) -->
-  <test thread-count="5" name="TCID94(failed)">
+  </test> <!-- TCID101(failed) -->
+  <test thread-count="5" name="TCID108(failed)">
     <classes>
-      <class name="testcases.TCID94">
+      <class name="testcases.TCID108">
         <methods>
-          <include name="startTest94"/>
+          <include name="startTest108"/>
         </methods>
-      </class> <!-- testcases.TCID94 -->
+      </class> <!-- testcases.TCID108 -->
     </classes>
-  </test> <!-- TCID94(failed) -->
-  <test thread-count="5" name="TCID96(failed)">
+  </test> <!-- TCID108(failed) -->
+  <test thread-count="5" name="TCID112(failed)">
     <classes>
-      <class name="testcases.TCID96">
+      <class name="testcases.TCID112">
         <methods>
-          <include name="startTest96"/>
+          <include name="startTest112"/>
         </methods>
-      </class> <!-- testcases.TCID96 -->
+      </class> <!-- testcases.TCID112 -->
     </classes>
-  </test> <!-- TCID96(failed) -->
-  <test thread-count="5" name="TCID95(failed)">
-    <classes>
-      <class name="testcases.TCID95">
-        <methods>
-          <include name="startTest95"/>
-        </methods>
-      </class> <!-- testcases.TCID95 -->
-    </classes>
-  </test> <!-- TCID95(failed) -->
-  <test thread-count="5" name="TCID97(failed)">
-    <classes>
-      <class name="testcases.TCID97">
-        <methods>
-          <include name="startTest97"/>
-        </methods>
-      </class> <!-- testcases.TCID97 -->
-    </classes>
-  </test> <!-- TCID97(failed) -->
+  </test> <!-- TCID112(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->

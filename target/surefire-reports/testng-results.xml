@@ -1,31 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="9" failed="3" skipped="0">
+<testng-results ignored="0" total="26" passed="23" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-18T16:23:00 IST" name="HomePageSuite" finished-at="2020-03-18T16:24:56 IST" duration-ms="115753">
+  <suite started-at="2020-03-24T14:09:06 IST" name="HomePageSuite" finished-at="2020-03-24T14:15:04 IST" duration-ms="358088">
     <groups>
     </groups>
-    <test started-at="2020-03-18T16:23:00 IST" name="BeforeSuite" finished-at="2020-03-18T16:23:00 IST" duration-ms="18">
+    <test started-at="2020-03-24T14:09:06 IST" name="BeforeSuite" finished-at="2020-03-24T14:09:06 IST" duration-ms="16">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-18T16:23:01 IST" name="TCID1" finished-at="2020-03-18T16:23:12 IST" duration-ms="11084">
+    <test started-at="2020-03-24T14:09:07 IST" name="TCID1" finished-at="2020-03-24T14:09:09 IST" duration-ms="2480">
       <class name="testcases.TCID1">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@73d4cc9e]" started-at="2020-03-18T16:23:02 IST" name="startTest" finished-at="2020-03-18T16:23:12 IST" duration-ms="10804" status="PASS">
+        <test-method signature="startTest()[pri:0, instance:testcases.TCID1@73d4cc9e]" started-at="2020-03-24T14:09:07 IST" name="startTest" finished-at="2020-03-24T14:09:09 IST" duration-ms="2400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
       </class> <!-- testcases.TCID1 -->
     </test> <!-- TCID1 -->
-    <test started-at="2020-03-18T16:23:13 IST" name="TCID100" finished-at="2020-03-18T16:23:22 IST" duration-ms="8591">
+    <test started-at="2020-03-24T14:09:10 IST" name="TCID92" finished-at="2020-03-24T14:10:13 IST" duration-ms="63270">
+      <class name="testcases.TCID92">
+        <test-method signature="startTest92()[pri:0, instance:testcases.TCID92@17baae6e]" started-at="2020-03-24T14:09:10 IST" name="startTest92" finished-at="2020-03-24T14:10:13 IST" duration-ms="63259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest92 -->
+      </class> <!-- testcases.TCID92 -->
+    </test> <!-- TCID92 -->
+    <test started-at="2020-03-24T14:10:13 IST" name="TCID93" finished-at="2020-03-24T14:10:32 IST" duration-ms="18652">
+      <class name="testcases.TCID93">
+        <test-method signature="startTest93()[pri:0, instance:testcases.TCID93@4b9e255]" started-at="2020-03-24T14:10:13 IST" name="startTest93" finished-at="2020-03-24T14:10:32 IST" duration-ms="18650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest93 -->
+      </class> <!-- testcases.TCID93 -->
+    </test> <!-- TCID93 -->
+    <test started-at="2020-03-24T14:10:33 IST" name="TCID94" finished-at="2020-03-24T14:10:51 IST" duration-ms="18736">
+      <class name="testcases.TCID94">
+        <test-method signature="startTest94()[pri:0, instance:testcases.TCID94@2473b9ce]" started-at="2020-03-24T14:10:33 IST" name="startTest94" finished-at="2020-03-24T14:10:51 IST" duration-ms="18734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest94 -->
+      </class> <!-- testcases.TCID94 -->
+    </test> <!-- TCID94 -->
+    <test started-at="2020-03-24T14:10:52 IST" name="TCID96" finished-at="2020-03-24T14:11:02 IST" duration-ms="10381">
+      <class name="testcases.TCID96">
+        <test-method signature="startTest96()[pri:0, instance:testcases.TCID96@de3a06f]" started-at="2020-03-24T14:10:52 IST" name="startTest96" finished-at="2020-03-24T14:11:02 IST" duration-ms="10378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest96 -->
+      </class> <!-- testcases.TCID96 -->
+    </test> <!-- TCID96 -->
+    <test started-at="2020-03-24T14:11:02 IST" name="TCID95" finished-at="2020-03-24T14:11:28 IST" duration-ms="25943">
+      <class name="testcases.TCID95">
+        <test-method signature="startTest95()[pri:0, instance:testcases.TCID95@3bd94634]" started-at="2020-03-24T14:11:02 IST" name="startTest95" finished-at="2020-03-24T14:11:28 IST" duration-ms="25941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest95 -->
+      </class> <!-- testcases.TCID95 -->
+    </test> <!-- TCID95 -->
+    <test started-at="2020-03-24T14:11:29 IST" name="TCID97" finished-at="2020-03-24T14:11:39 IST" duration-ms="10808">
+      <class name="testcases.TCID97">
+        <test-method signature="startTest97()[pri:0, instance:testcases.TCID97@166fa74d]" started-at="2020-03-24T14:11:29 IST" name="startTest97" finished-at="2020-03-24T14:11:39 IST" duration-ms="10804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest97 -->
+      </class> <!-- testcases.TCID97 -->
+    </test> <!-- TCID97 -->
+    <test started-at="2020-03-24T14:11:40 IST" name="TCID100" finished-at="2020-03-24T14:11:46 IST" duration-ms="6804">
       <class name="testcases.TCID100">
-        <test-method signature="startTest100()[pri:0, instance:testcases.TCID100@17baae6e]" started-at="2020-03-18T16:23:13 IST" name="startTest100" finished-at="2020-03-18T16:23:22 IST" duration-ms="8589" status="PASS">
+        <test-method signature="startTest100()[pri:0, instance:testcases.TCID100@69a10787]" started-at="2020-03-24T14:11:40 IST" name="startTest100" finished-at="2020-03-24T14:11:46 IST" duration-ms="6803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest100 -->
       </class> <!-- testcases.TCID100 -->
     </test> <!-- TCID100 -->
-    <test started-at="2020-03-18T16:23:22 IST" name="TCID101" finished-at="2020-03-18T16:23:35 IST" duration-ms="12330">
+    <test started-at="2020-03-24T14:11:47 IST" name="TCID101" finished-at="2020-03-24T14:11:53 IST" duration-ms="5827">
       <class name="testcases.TCID101">
-        <test-method signature="startTest101()[pri:0, instance:testcases.TCID101@4b9e255]" started-at="2020-03-18T16:23:22 IST" name="startTest101" finished-at="2020-03-18T16:23:35 IST" duration-ms="12288" status="FAIL">
+        <test-method signature="startTest101()[pri:0, instance:testcases.TCID101@365c30cc]" started-at="2020-03-24T14:11:47 IST" name="startTest101" finished-at="2020-03-24T14:11:53 IST" duration-ms="5818" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[TCID <101> failed: <no show error message when  name field with invalid data>]]>
@@ -33,7 +81,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: TCID <101> failed: <no show error message when  name field with invalid data>
 at org.testng.Assert.fail(Assert.java:97)
-at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:151)
+at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:656)
 at testcases.TCID101.startTest101(TCID101.java:11)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -74,66 +122,66 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
         </test-method> <!-- startTest101 -->
       </class> <!-- testcases.TCID101 -->
     </test> <!-- TCID101 -->
-    <test started-at="2020-03-18T16:23:35 IST" name="TCID102" finished-at="2020-03-18T16:23:42 IST" duration-ms="7279">
+    <test started-at="2020-03-24T14:11:53 IST" name="TCID102" finished-at="2020-03-24T14:12:00 IST" duration-ms="6897">
       <class name="testcases.TCID102">
-        <test-method signature="startTest101()[pri:0, instance:testcases.TCID102@5e955596]" started-at="2020-03-18T16:23:35 IST" name="startTest101" finished-at="2020-03-18T16:23:42 IST" duration-ms="7276" status="PASS">
+        <test-method signature="startTest102()[pri:0, instance:testcases.TCID102@4df828d7]" started-at="2020-03-24T14:11:53 IST" name="startTest102" finished-at="2020-03-24T14:12:00 IST" duration-ms="6894" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest101 -->
+        </test-method> <!-- startTest102 -->
       </class> <!-- testcases.TCID102 -->
     </test> <!-- TCID102 -->
-    <test started-at="2020-03-18T16:23:43 IST" name="TCID103" finished-at="2020-03-18T16:23:50 IST" duration-ms="7822">
+    <test started-at="2020-03-24T14:12:00 IST" name="TCID103" finished-at="2020-03-24T14:12:07 IST" duration-ms="6973">
       <class name="testcases.TCID103">
-        <test-method signature="startTest101()[pri:0, instance:testcases.TCID103@71d15f18]" started-at="2020-03-18T16:23:43 IST" name="startTest101" finished-at="2020-03-18T16:23:50 IST" duration-ms="7821" status="PASS">
+        <test-method signature="startTest103()[pri:0, instance:testcases.TCID103@23bb8443]" started-at="2020-03-24T14:12:00 IST" name="startTest103" finished-at="2020-03-24T14:12:07 IST" duration-ms="6970" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest101 -->
+        </test-method> <!-- startTest103 -->
       </class> <!-- testcases.TCID103 -->
     </test> <!-- TCID103 -->
-    <test started-at="2020-03-18T16:23:51 IST" name="TCID104" finished-at="2020-03-18T16:23:58 IST" duration-ms="6935">
+    <test started-at="2020-03-24T14:12:08 IST" name="TCID104" finished-at="2020-03-24T14:12:15 IST" duration-ms="7126">
       <class name="testcases.TCID104">
-        <test-method signature="startTest101()[pri:0, instance:testcases.TCID104@2df32bf7]" started-at="2020-03-18T16:23:51 IST" name="startTest101" finished-at="2020-03-18T16:23:58 IST" duration-ms="6931" status="PASS">
+        <test-method signature="startTest104()[pri:0, instance:testcases.TCID104@25359ed8]" started-at="2020-03-24T14:12:08 IST" name="startTest104" finished-at="2020-03-24T14:12:15 IST" duration-ms="7121" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest101 -->
+        </test-method> <!-- startTest104 -->
       </class> <!-- testcases.TCID104 -->
     </test> <!-- TCID104 -->
-    <test started-at="2020-03-18T16:23:58 IST" name="TCID108" finished-at="2020-03-18T16:24:17 IST" duration-ms="19283">
+    <test started-at="2020-03-24T14:12:15 IST" name="TCID105" finished-at="2020-03-24T14:12:22 IST" duration-ms="6860">
+      <class name="testcases.TCID105">
+        <test-method signature="startTest105()[pri:0, instance:testcases.TCID105@314c508a]" started-at="2020-03-24T14:12:15 IST" name="startTest105" finished-at="2020-03-24T14:12:22 IST" duration-ms="6858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest105 -->
+      </class> <!-- testcases.TCID105 -->
+    </test> <!-- TCID105 -->
+    <test started-at="2020-03-24T14:12:22 IST" name="TCID106" finished-at="2020-03-24T14:12:29 IST" duration-ms="6770">
+      <class name="testcases.TCID106">
+        <test-method signature="startTest106()[pri:0, instance:testcases.TCID106@49e202ad]" started-at="2020-03-24T14:12:22 IST" name="startTest106" finished-at="2020-03-24T14:12:29 IST" duration-ms="6769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest106 -->
+      </class> <!-- testcases.TCID106 -->
+    </test> <!-- TCID106 -->
+    <test started-at="2020-03-24T14:12:29 IST" name="TCID107" finished-at="2020-03-24T14:12:36 IST" duration-ms="6536">
+      <class name="testcases.TCID107">
+        <test-method signature="startTest106()[pri:0, instance:testcases.TCID107@27c6e487]" started-at="2020-03-24T14:12:29 IST" name="startTest106" finished-at="2020-03-24T14:12:36 IST" duration-ms="6534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest106 -->
+      </class> <!-- testcases.TCID107 -->
+    </test> <!-- TCID107 -->
+    <test started-at="2020-03-24T14:12:36 IST" name="TCID108" finished-at="2020-03-24T14:12:42 IST" duration-ms="6181">
       <class name="testcases.TCID108">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID108@70a9f84e]" started-at="2020-03-18T16:23:58 IST" name="startTest" finished-at="2020-03-18T16:24:17 IST" duration-ms="19271" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method signature="startTest108()[pri:0, instance:testcases.TCID108@516be40f]" started-at="2020-03-24T14:12:36 IST" name="startTest108" finished-at="2020-03-24T14:12:42 IST" duration-ms="6178" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The element reference of <input id="fname" class="login-textfield" name="f_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf]]>
+              <![CDATA[TCID <108> failed: <no show error message when first name field with invalid data>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="fname" class="login-textfield" name="f_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-at automation.AutomationScript.invalidFname(AutomationScript.java:303)
-at testcases.TCID108.startTest(TCID108.java:12)
+              <![CDATA[java.lang.AssertionError: TCID <108> failed: <no show error message when first name field with invalid data>
+at org.testng.Assert.fail(Assert.java:97)
+at automation.AutomationScript.invalidFname(AutomationScript.java:922)
+at testcases.TCID108.startTest108(TCID108.java:11)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -167,55 +215,47 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
+        </test-method> <!-- startTest108 -->
       </class> <!-- testcases.TCID108 -->
     </test> <!-- TCID108 -->
-    <test started-at="2020-03-18T16:24:18 IST" name="TCID109" finished-at="2020-03-18T16:24:24 IST" duration-ms="6637">
+    <test started-at="2020-03-24T14:12:42 IST" name="TCID109" finished-at="2020-03-24T14:12:54 IST" duration-ms="11594">
       <class name="testcases.TCID109">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID109@45afc369]" started-at="2020-03-18T16:24:18 IST" name="startTest" finished-at="2020-03-18T16:24:24 IST" duration-ms="6635" status="PASS">
+        <test-method signature="startTest109()[pri:0, instance:testcases.TCID109@23a5fd2]" started-at="2020-03-24T14:12:42 IST" name="startTest109" finished-at="2020-03-24T14:12:54 IST" duration-ms="11592" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
+        </test-method> <!-- startTest109 -->
       </class> <!-- testcases.TCID109 -->
     </test> <!-- TCID109 -->
-    <test started-at="2020-03-18T16:24:25 IST" name="TCID112" finished-at="2020-03-18T16:24:36 IST" duration-ms="11719">
+    <test started-at="2020-03-24T14:12:54 IST" name="TCID110" finished-at="2020-03-24T14:13:16 IST" duration-ms="21565">
+      <class name="testcases.TCID110">
+        <test-method signature="startTest110()[pri:0, instance:testcases.TCID110@ba8d91c]" started-at="2020-03-24T14:12:54 IST" name="startTest110" finished-at="2020-03-24T14:13:16 IST" duration-ms="21558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest110 -->
+      </class> <!-- testcases.TCID110 -->
+    </test> <!-- TCID110 -->
+    <test started-at="2020-03-24T14:13:16 IST" name="TCID111" finished-at="2020-03-24T14:13:27 IST" duration-ms="11488">
+      <class name="testcases.TCID111">
+        <test-method signature="startTest111()[pri:0, instance:testcases.TCID111@58c1c010]" started-at="2020-03-24T14:13:16 IST" name="startTest111" finished-at="2020-03-24T14:13:27 IST" duration-ms="11486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest111 -->
+      </class> <!-- testcases.TCID111 -->
+    </test> <!-- TCID111 -->
+    <test started-at="2020-03-24T14:13:27 IST" name="TCID112" finished-at="2020-03-24T14:13:33 IST" duration-ms="5838">
       <class name="testcases.TCID112">
-        <test-method signature="startTest112()[pri:0, instance:testcases.TCID112@2bbaf4f0]" started-at="2020-03-18T16:24:25 IST" name="startTest112" finished-at="2020-03-18T16:24:36 IST" duration-ms="11715" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method signature="startTest112()[pri:0, instance:testcases.TCID112@6591f517]" started-at="2020-03-24T14:13:27 IST" name="startTest112" finished-at="2020-03-24T14:13:33 IST" duration-ms="5836" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The element reference of <input id="lname" class="login-textfield" name="l_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf]]>
+              <![CDATA[TCID <112> failed: <no show error message when last name with invalid data>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="lname" class="login-textfield" name="l_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-at automation.AutomationScript.invalidLname(AutomationScript.java:381)
+              <![CDATA[java.lang.AssertionError: TCID <112> failed: <no show error message when last name with invalid data>
+at org.testng.Assert.fail(Assert.java:97)
+at automation.AutomationScript.invalidLname(AutomationScript.java:1114)
 at testcases.TCID112.startTest112(TCID112.java:12)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -250,41 +290,65 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest112 -->
       </class> <!-- testcases.TCID112 -->
     </test> <!-- TCID112 -->
-    <test started-at="2020-03-18T16:24:36 IST" name="TCID113" finished-at="2020-03-18T16:24:43 IST" duration-ms="6490">
+    <test started-at="2020-03-24T14:13:33 IST" name="TCID113" finished-at="2020-03-24T14:13:40 IST" duration-ms="6379">
       <class name="testcases.TCID113">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID113@701fc37a]" started-at="2020-03-18T16:24:36 IST" name="startTest" finished-at="2020-03-18T16:24:43 IST" duration-ms="6488" status="PASS">
+        <test-method signature="startTest113()[pri:0, instance:testcases.TCID113@351d0846]" started-at="2020-03-24T14:13:33 IST" name="startTest113" finished-at="2020-03-24T14:13:40 IST" duration-ms="6378" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
+        </test-method> <!-- startTest113 -->
       </class> <!-- testcases.TCID113 -->
     </test> <!-- TCID113 -->
-    <test started-at="2020-03-18T16:24:43 IST" name="TCID116" finished-at="2020-03-18T16:24:50 IST" duration-ms="6717">
-      <class name="testcases.TCID116">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID116@4df828d7]" started-at="2020-03-18T16:24:43 IST" name="startTest" finished-at="2020-03-18T16:24:50 IST" duration-ms="6709" status="PASS">
+    <test started-at="2020-03-24T14:13:40 IST" name="TCID114" finished-at="2020-03-24T14:14:02 IST" duration-ms="21826">
+      <class name="testcases.TCID114">
+        <test-method signature="startTest114()[pri:0, instance:testcases.TCID114@6b53e23f]" started-at="2020-03-24T14:13:40 IST" name="startTest114" finished-at="2020-03-24T14:14:02 IST" duration-ms="21823" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
+        </test-method> <!-- startTest114 -->
+      </class> <!-- testcases.TCID114 -->
+    </test> <!-- TCID114 -->
+    <test started-at="2020-03-24T14:14:02 IST" name="TCID115" finished-at="2020-03-24T14:14:13 IST" duration-ms="11668">
+      <class name="testcases.TCID115">
+        <test-method signature="startTest114()[pri:0, instance:testcases.TCID115@971d0d8]" started-at="2020-03-24T14:14:02 IST" name="startTest114" finished-at="2020-03-24T14:14:13 IST" duration-ms="11666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest114 -->
+      </class> <!-- testcases.TCID115 -->
+    </test> <!-- TCID115 -->
+    <test started-at="2020-03-24T14:14:13 IST" name="TCID116" finished-at="2020-03-24T14:14:20 IST" duration-ms="6357">
+      <class name="testcases.TCID116">
+        <test-method signature="startTest116()[pri:0, instance:testcases.TCID116@6279cee3]" started-at="2020-03-24T14:14:13 IST" name="startTest116" finished-at="2020-03-24T14:14:20 IST" duration-ms="6356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest116 -->
       </class> <!-- testcases.TCID116 -->
     </test> <!-- TCID116 -->
-    <test started-at="2020-03-18T16:24:50 IST" name="TCID117" finished-at="2020-03-18T16:24:56 IST" duration-ms="6373">
+    <test started-at="2020-03-24T14:14:20 IST" name="TCID117" finished-at="2020-03-24T14:14:26 IST" duration-ms="6276">
+      <class name="testcases.TCID117">
+        <test-method signature="startTest117()[pri:0, instance:testcases.TCID117@4d826d77]" started-at="2020-03-24T14:14:20 IST" name="startTest117" finished-at="2020-03-24T14:14:26 IST" duration-ms="6272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest117 -->
+      </class> <!-- testcases.TCID117 -->
+    </test> <!-- TCID117 -->
+    <test started-at="2020-03-24T14:14:26 IST" name="TCID118" finished-at="2020-03-24T14:15:04 IST" duration-ms="37749">
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@365185bd]" started-at="2020-03-18T16:22:37 IST" name="init" finished-at="2020-03-18T16:23:00 IST" duration-ms="23607" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@365185bd]" started-at="2020-03-24T14:08:04 IST" name="init" finished-at="2020-03-24T14:09:06 IST" duration-ms="61720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-      <class name="testcases.TCID117">
-        <test-method signature="startTest()[pri:0, instance:testcases.TCID117@3ffcd140]" started-at="2020-03-18T16:24:50 IST" name="startTest" finished-at="2020-03-18T16:24:56 IST" duration-ms="6372" status="PASS">
+      <class name="testcases.TCID118">
+        <test-method signature="startTest118()[pri:0, instance:testcases.TCID118@2357d90a]" started-at="2020-03-24T14:14:26 IST" name="startTest118" finished-at="2020-03-24T14:15:04 IST" duration-ms="37748" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
-      </class> <!-- testcases.TCID117 -->
-    </test> <!-- TCID117 -->
+        </test-method> <!-- startTest118 -->
+      </class> <!-- testcases.TCID118 -->
+    </test> <!-- TCID118 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>

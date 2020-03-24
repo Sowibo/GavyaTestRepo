@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="111.028" tests="12" errors="0" skipped="0" failures="3">
+<testsuite name="TestSuite" time="350.905" tests="26" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.2+8"/>
@@ -24,7 +24,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Sowibo\Desktop\Workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf13427172492820648585.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Sowibo\Desktop\Workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf10467827786687681682.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-13.0.2/bin/server;C:/Program Files/Java/jdk-13.0.2/bin;C:\Program Files (x86)\Intel\TXE Components\iCLS\;C:\Program Files\Intel\TXE Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\TXE Components\DAL\;C:\Program Files (x86)\Intel\TXE Components\DAL\;C:\Program Files\Intel\TXE Components\IPT\;C:\Program Files (x86)\Intel\TXE Components\IPT\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Sowibo\AppData\Local\Microsoft\WindowsApps;;C:\Eclipse\eclipse;;."/>
     <property name="jdk.debug" value="release"/>
@@ -55,70 +55,48 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="startTest" classname="testcases.TCID1" time="10.826"/>
-  <testcase name="startTest100" classname="testcases.TCID100" time="8.59"/>
-  <testcase name="startTest101" classname="testcases.TCID101" time="12.332">
+  <testcase name="startTest" classname="testcases.TCID1" time="2.411"/>
+  <testcase name="startTest92" classname="testcases.TCID92" time="63.276"/>
+  <testcase name="startTest93" classname="testcases.TCID93" time="18.652"/>
+  <testcase name="startTest94" classname="testcases.TCID94" time="18.733"/>
+  <testcase name="startTest96" classname="testcases.TCID96" time="10.383"/>
+  <testcase name="startTest95" classname="testcases.TCID95" time="25.942"/>
+  <testcase name="startTest97" classname="testcases.TCID97" time="10.804"/>
+  <testcase name="startTest100" classname="testcases.TCID100" time="6.804"/>
+  <testcase name="startTest101" classname="testcases.TCID101" time="5.831">
     <failure message="TCID &lt;101&gt; failed: &lt;no show error message when  name field with invalid data&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: TCID <101> failed: <no show error message when  name field with invalid data>
 	at org.testng.Assert.fail(Assert.java:97)
-	at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:151)
+	at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:656)
 	at testcases.TCID101.startTest101(TCID101.java:11)
 ]]></failure>
   </testcase>
-  <testcase name="startTest101" classname="testcases.TCID102" time="7.282"/>
-  <testcase name="startTest101" classname="testcases.TCID103" time="7.828"/>
-  <testcase name="startTest101" classname="testcases.TCID104" time="6.947"/>
-  <testcase name="startTest" classname="testcases.TCID108" time="19.281">
-    <failure message="The element reference of &lt;input id=&quot;fname&quot; class=&quot;login-textfield&quot; name=&quot;f_name&quot; type=&quot;text&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="fname" class="login-textfield" name="f_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-	at automation.AutomationScript.invalidFname(AutomationScript.java:303)
-	at testcases.TCID108.startTest(TCID108.java:12)
+  <testcase name="startTest102" classname="testcases.TCID102" time="6.896"/>
+  <testcase name="startTest103" classname="testcases.TCID103" time="6.971"/>
+  <testcase name="startTest104" classname="testcases.TCID104" time="7.126"/>
+  <testcase name="startTest105" classname="testcases.TCID105" time="6.862"/>
+  <testcase name="startTest106" classname="testcases.TCID106" time="6.769"/>
+  <testcase name="startTest106" classname="testcases.TCID107" time="6.537"/>
+  <testcase name="startTest108" classname="testcases.TCID108" time="6.179">
+    <failure message="TCID &lt;108&gt; failed: &lt;no show error message when first name field with invalid data&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: TCID <108> failed: <no show error message when first name field with invalid data>
+	at org.testng.Assert.fail(Assert.java:97)
+	at automation.AutomationScript.invalidFname(AutomationScript.java:922)
+	at testcases.TCID108.startTest108(TCID108.java:11)
 ]]></failure>
   </testcase>
-  <testcase name="startTest" classname="testcases.TCID109" time="6.635"/>
-  <testcase name="startTest112" classname="testcases.TCID112" time="11.718">
-    <failure message="The element reference of &lt;input id=&quot;lname&quot; class=&quot;login-textfield&quot; name=&quot;l_name&quot; type=&quot;text&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-3GBAJJR&apos;, ip: &apos;192.168.225.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="lname" class="login-textfield" name="l_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-	at automation.AutomationScript.invalidLname(AutomationScript.java:381)
+  <testcase name="startTest109" classname="testcases.TCID109" time="11.594"/>
+  <testcase name="startTest110" classname="testcases.TCID110" time="21.559"/>
+  <testcase name="startTest111" classname="testcases.TCID111" time="11.486"/>
+  <testcase name="startTest112" classname="testcases.TCID112" time="5.837">
+    <failure message="TCID &lt;112&gt; failed: &lt;no show error message when last name with invalid data&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: TCID <112> failed: <no show error message when last name with invalid data>
+	at org.testng.Assert.fail(Assert.java:97)
+	at automation.AutomationScript.invalidLname(AutomationScript.java:1114)
 	at testcases.TCID112.startTest112(TCID112.java:12)
 ]]></failure>
   </testcase>
-  <testcase name="startTest" classname="testcases.TCID113" time="6.495"/>
-  <testcase name="startTest" classname="testcases.TCID116" time="6.71"/>
-  <testcase name="startTest" classname="testcases.TCID117" time="6.384"/>
+  <testcase name="startTest113" classname="testcases.TCID113" time="6.378"/>
+  <testcase name="startTest114" classname="testcases.TCID114" time="21.825"/>
+  <testcase name="startTest114" classname="testcases.TCID115" time="11.667"/>
+  <testcase name="startTest116" classname="testcases.TCID116" time="6.36"/>
+  <testcase name="startTest117" classname="testcases.TCID117" time="6.276"/>
+  <testcase name="startTest118" classname="testcases.TCID118" time="37.747"/>
 </testsuite>

@@ -1,58 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 142.471 sec <<< FAILURE! - in TestSuite
-startTest101(testcases.TCID101)  Time elapsed: 12.332 sec  <<< FAILURE!
+Tests run: 26, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 422.838 sec <<< FAILURE! - in TestSuite
+startTest101(testcases.TCID101)  Time elapsed: 5.831 sec  <<< FAILURE!
 java.lang.AssertionError: TCID <101> failed: <no show error message when  name field with invalid data>
 	at org.testng.Assert.fail(Assert.java:97)
-	at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:151)
+	at automation.AutomationScript.invalidNameContactUs(AutomationScript.java:656)
 	at testcases.TCID101.startTest101(TCID101.java:11)
 
-startTest(testcases.TCID108)  Time elapsed: 19.281 sec  <<< FAILURE!
-org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="fname" class="login-textfield" name="f_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-	at automation.AutomationScript.invalidFname(AutomationScript.java:303)
-	at testcases.TCID108.startTest(TCID108.java:12)
+startTest108(testcases.TCID108)  Time elapsed: 6.179 sec  <<< FAILURE!
+java.lang.AssertionError: TCID <108> failed: <no show error message when first name field with invalid data>
+	at org.testng.Assert.fail(Assert.java:97)
+	at automation.AutomationScript.invalidFname(AutomationScript.java:922)
+	at testcases.TCID108.startTest108(TCID108.java:11)
 
-startTest112(testcases.TCID112)  Time elapsed: 11.718 sec  <<< FAILURE!
-org.openqa.selenium.StaleElementReferenceException: The element reference of <input id="lname" class="login-textfield" name="l_name" type="text"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3GBAJJR', ip: '192.168.225.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200309095159, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 5744, moz:profile: C:\Users\Sowibo\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1a5429cb-0ff6-473d-a2c5-ee96d9b7ffdf
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
-	at automation.AutomationScript.invalidLname(AutomationScript.java:381)
+startTest112(testcases.TCID112)  Time elapsed: 5.837 sec  <<< FAILURE!
+java.lang.AssertionError: TCID <112> failed: <no show error message when last name with invalid data>
+	at org.testng.Assert.fail(Assert.java:97)
+	at automation.AutomationScript.invalidLname(AutomationScript.java:1114)
 	at testcases.TCID112.startTest112(TCID112.java:12)
 
