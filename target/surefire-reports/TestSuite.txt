@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 103.977 sec <<< FAILURE! - in TestSuite
-clickFruite(testcases.TCID85)  Time elapsed: 90.017 sec  <<< FAILURE!
-java.lang.AssertionError: TCID <85> failed: <when click fruite option in category not see fruites page>
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 92.641 sec <<< FAILURE! - in TestSuite
+clickOtherGrocerices(testcases.TCID87)  Time elapsed: 81.236 sec  <<< FAILURE!
+java.lang.AssertionError: TCID <87> failed: <when click OtherGroceries option in category not see OtherGroceries page>
 	at org.testng.Assert.fail(Assert.java:97)
-	at automation.AutomationScript.categoryFruite(AutomationScript.java:850)
-	at testcases.TCID85.clickFruite(TCID85.java:12)
+	at automation.AutomationScript.categoryOtherGroceries(AutomationScript.java:910)
+	at testcases.TCID87.clickOtherGrocerices(TCID87.java:11)
 

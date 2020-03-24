@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-03-23T20:14:35 IST" name="HomePageSuite" finished-at="2020-03-23T20:16:06 IST" duration-ms="90220">
+  <suite started-at="2020-03-24T20:15:15 IST" name="HomePageSuite" finished-at="2020-03-24T20:16:36 IST" duration-ms="81353">
     <groups>
     </groups>
-    <test started-at="2020-03-23T20:14:35 IST" name="BeforeSuite" finished-at="2020-03-23T20:14:35 IST" duration-ms="19">
+    <test started-at="2020-03-24T20:15:15 IST" name="BeforeSuite" finished-at="2020-03-24T20:15:15 IST" duration-ms="10">
     </test> <!-- BeforeSuite -->
-    <test started-at="2020-03-23T20:14:36 IST" name="TCID85" finished-at="2020-03-23T20:16:06 IST" duration-ms="90067">
-      <class name="testcases.TCID85">
-        <test-method signature="clickFruite()[pri:0, instance:testcases.TCID85@50de0926]" started-at="2020-03-23T20:14:36 IST" name="clickFruite" finished-at="2020-03-23T20:16:06 IST" duration-ms="89979" status="FAIL">
+    <test started-at="2020-03-24T20:15:15 IST" name="TCID87" finished-at="2020-03-24T20:16:36 IST" duration-ms="81274">
+      <class name="testcases.TCID87">
+        <test-method signature="clickOtherGrocerices()[pri:0, instance:testcases.TCID87@50de0926]" started-at="2020-03-24T20:15:15 IST" name="clickOtherGrocerices" finished-at="2020-03-24T20:16:36 IST" duration-ms="81209" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[TCID <85> failed: <when click fruite option in category not see fruites page>]]>
+              <![CDATA[TCID <87> failed: <when click OtherGroceries option in category not see OtherGroceries page>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: TCID <85> failed: <when click fruite option in category not see fruites page>
+              <![CDATA[java.lang.AssertionError: TCID <87> failed: <when click OtherGroceries option in category not see OtherGroceries page>
 at org.testng.Assert.fail(Assert.java:97)
-at automation.AutomationScript.categoryFruite(AutomationScript.java:850)
-at testcases.TCID85.clickFruite(TCID85.java:12)
+at automation.AutomationScript.categoryOtherGroceries(AutomationScript.java:910)
+at testcases.TCID87.clickOtherGrocerices(TCID87.java:11)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,14 +55,14 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickFruite -->
-      </class> <!-- testcases.TCID85 -->
+        </test-method> <!-- clickOtherGrocerices -->
+      </class> <!-- testcases.TCID87 -->
       <class name="testcases.BeforeSuites">
-        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-23T20:14:23 IST" name="init" finished-at="2020-03-23T20:14:35 IST" duration-ms="12396" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.BeforeSuites@4d1b0d2a]" started-at="2020-03-24T20:15:05 IST" name="init" finished-at="2020-03-24T20:15:15 IST" duration-ms="10223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- testcases.BeforeSuites -->
-    </test> <!-- TCID85 -->
+    </test> <!-- TCID87 -->
   </suite> <!-- HomePageSuite -->
 </testng-results>
