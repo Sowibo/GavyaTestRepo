@@ -59,18 +59,12 @@ public class AutomationScript extends CustomWebDriver{
 				
 				fail("TCID <59> failed: <no show error message when give last name length as 16>");
 			}
-			else {
-				
-				System.out.println("tcid59 sucess");
-			}
-
-		
-		
+			
 	}
  
 	
 	public void invalidEmail() {
-		WebElement email,cookie,btn;
+		WebElement email,btn;
 		email=driver.findElement(By.id("email"));
 
 		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
@@ -86,9 +80,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			
 		}
-		else {
-			System.out.println("tcid 60 success");
-		}
+		
 		
 
 	}
@@ -114,11 +106,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <61> failed: <no show error message when email field is empty>");
 		}
-		else {
-			
-			
-			System.out.println("tcid61 success");
-		}
+		
 	}
 	public void phoneNumberValid() {
 		WebElement phnum,btn;
@@ -132,9 +120,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <62> failed: <no show error message when phone number with invalid data>");
 		}
-		else {
-			System.out.println("TCID 62 success");
-		}
+		
 	}
 	public void phoneNumberEmpty() {
 		WebElement firstname,lastname,email,password,conformpass,refferal,btn,phnumelement;
@@ -159,29 +145,22 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <63> failed: <no show error message when phone number field is empty>");
 			
 		}
-		else {
-			System.out.println("tcid63 sucess");
-			
-		}
+		
 	}
 	public void phoneLengthPositive() {
 		WebElement phnum,btn,cookie,element;
 		phnum=driver.findElement(By.id("phone"));
 		btn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div[3]/form/button"));
-
 		phnum.sendKeys("703499");
 		btn.click();
 		element=driver.findElement(By.xpath("/html/body/div/div/div/div[3]/form/div/span[2]"));
 		String elementval = element.getText();
 		
-		if(elementval.equals(" ")||(elementval.equals(null))) {
+		if(!elementval.equals(" ")) {
 			
-			System.out.println("tcid64 sucess 1 test case");
-		}
-		else {
 			fail("TCID <64> failed: <show error message when phone number with positive case>");
-			
 		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -194,14 +173,11 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval1 = element.getText();
 		
-		if(elementval1.equals(" ")||(elementval.equals(null))) {
+		if(!elementval.equals(" ")) {
 			
-			System.out.println("tcid64 sucess 2 test case");
-		}
-		else {
 			fail("TCID <64> failed: <show error message when phone number with positive case>");
-			
 		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -213,14 +189,11 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval2 = element.getText();
 		
-		if(elementval2.equals(" ")||(elementval.equals(null))) {
+		if(!elementval.equals(" ")) {
 			
-			System.out.println("tcid64 sucess 3 test case");
-		}
-		else {
 			fail("TCID <64> failed: <show error message when phone number with positive case>");
-			
 		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -232,14 +205,11 @@ public class AutomationScript extends CustomWebDriver{
 		btn.click();
 		String elementval3 = element.getText();
 		
-		if(elementval3.equals(" ")||(elementval.equals(null))) {
+		if(!elementval.equals(" ")) {
 			
-			System.out.println("tcid64 sucess 4 test case");
-		}
-		else {
 			fail("TCID <64> failed: <show error message when phone number with positive case>");
-			
 		}
+		
 	}
 	public void phoneLengthNegative() {
 		WebElement phnum,btn,cookie,element;
@@ -254,10 +224,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <65> failed: <no show error message when  phone number length is incorrect >");
 		}
-		else {
-			
-			System.out.println("tcid65 sucess test case1");
-		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -273,10 +240,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <65> failed: <no show error message when phone number length is not correct>");
 		}
-		else {
-			
-			System.out.println("tcid65 sucess test case2");
-		}
+		
 	}
 	public void passwordEmpty() {
 		WebElement firstname,lastname,email,phnum,conformpass,refferal,btn,element;
@@ -829,6 +793,32 @@ public class AutomationScript extends CustomWebDriver{
 		  }
 
 	 }
+	 
+	 public void findCategory(String s1) {
+			String fruite,vegetable,groceries;
+			boolean frtflag=false,vegflag=false,groflag=false;
+			fruite=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[1]/ul/li[2]")).getText();
+			vegetable=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[1]/ul/li[3]")).getText();
+			groceries=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[4]/div/div[1]/ul/li[4]")).getText();
+			System.out.println("From db="+s1);
+			if(fruite.equals(s1)) {
+				frtflag=true;
+				System.out.println("fruit are equal");
+			}
+			else if (vegetable.equals(s1)) {
+				vegflag=true;
+				System.out.println("vege are equal");
+			}
+			else if (groceries.equals(s1)) {
+				groflag=true;
+				System.out.println("gro are equal");
+			}
+			else {
+				fail("TCID <84> failed: <All categories are not available>");
+			}
+		}
+	 
+	 
 	 public void categoryFruite(){
 			WebElement fruite,select,cookie;
 			String str="Fruits";
@@ -859,8 +849,7 @@ public class AutomationScript extends CustomWebDriver{
 	 public void categoryVegetable(){
 				WebElement vegetable,select,cookie;
 				String str="Vegetables";
-//				cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
-//				cookie.click();
+
 				try {
 					Thread.sleep(4000);
 				} catch (InterruptedException e) {
@@ -886,8 +875,7 @@ public class AutomationScript extends CustomWebDriver{
 	 public void categoryOtherGroceries(){
 				WebElement groceries,select,cookie;
 				String str="Other Groceries";
-//				cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
-//				cookie.click();
+
 				try {
 					Thread.sleep(4000);
 				} catch (InterruptedException e) {
@@ -915,9 +903,6 @@ public class AutomationScript extends CustomWebDriver{
 		   WebElement cookie,email_field,pass_field,login,loginbtn,myorder,shoppingbtn;
 			String email=Settings.getInstance().getProperty("email_id");
 			String pass=Settings.getInstance().getProperty("passlogin");
-			
-//			cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
-//			cookie.click();
 			login=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 			login.click();
 			email_field=driver.findElement(By.id("email"));
@@ -947,11 +932,12 @@ public class AutomationScript extends CustomWebDriver{
 			} 
 			shoppingbtn.click();
 			String currenturl=driver.getCurrentUrl();
-//			System.out.println("cururl="+currenturl);
+
 			String url="https://www.greengavya.com/";
-//			System.out.println("url="+url);
+
 			if(!currenturl.equals(url)) {
 				 fail("TCID <88> failed: <Continue shopping is note done when click continue button>");
 			}
 	}
+	
 }

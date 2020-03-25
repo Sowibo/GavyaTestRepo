@@ -7,7 +7,7 @@
       <class name="testcases.BeforeSuites"/>
     </classes>
  </test>
-<test name="TCID1">
+ <test name="TCID1">
     <classes>
       <class name="testcases.TCID1"/>
     </classes>
@@ -125,6 +125,11 @@
       <class name="testcases.TCID83"/>
     </classes>
   </test>
+ <test name="TCID84">
+    <classes>
+      <class name="testcases.TCID84"/>
+    </classes>
+  </test>
   <test name="TCID85">
     <classes>
       <class name="testcases.TCID85"/>
@@ -145,5 +150,6 @@
       <class name="testcases.TCID88"/>
     </classes>
   </test>
+ 
   
 </suite> <!-- Suite -->

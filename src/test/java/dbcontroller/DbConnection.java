@@ -158,5 +158,25 @@ public class DbConnection {
 			}
 			
 	 }
+	public void categoryDb() {
+		ResultSet rs;
+		
+		 
+		 try {
+			 rs= statement.executeQuery("SELECT category_name FROM category");
+			 while(rs.next()) {
+				
+				 String s1=rs.getString(1);
+				AutomationScript.returnobj().findCategory(s1); 
+				
 
+				
+			}
+			
+			}
+		 catch(SQLException s) {
+				System.err.println("SQL error"+s);
+			}
+			
+	}
 }

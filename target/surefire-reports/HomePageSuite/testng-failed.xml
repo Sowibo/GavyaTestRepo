@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomePageSuite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="TCID87(failed)" verbose="0">
+  <test thread-count="5" name="TCID59(failed)" verbose="0">
     <classes>
-      <class name="testcases.TCID87">
+      <class name="testcases.TCID59">
         <methods>
-          <include name="clickOtherGrocerices"/>
+          <include name="lastNameCheck"/>
         </methods>
-      </class> <!-- testcases.TCID87 -->
+      </class> <!-- testcases.TCID59 -->
     </classes>
-  </test> <!-- TCID87(failed) -->
+  </test> <!-- TCID59(failed) -->
 </suite> <!-- Failed suite [HomePageSuite] -->

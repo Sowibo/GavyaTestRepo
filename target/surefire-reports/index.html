@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-HomePageSuite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">9 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,54 @@
                     <div class="method-list-content failed suite-HomePageSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID87" class="method navigator-link" hash-for-method="clickOtherGrocerices">clickOtherGrocerices</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID59" class="method navigator-link" hash-for-method="lastNameCheck">lastNameCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-HomePageSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-HomePageSuite" class="hide-methods passed suite-HomePageSuite"> (hide)</a> <!-- hide-methods passed suite-HomePageSuite -->
+                      <a href="#" panel-name="suite-HomePageSuite" class="show-methods passed suite-HomePageSuite"> (show)</a> <!-- show-methods passed suite-HomePageSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-HomePageSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID61" class="method navigator-link" hash-for-method="emailValidation">emailValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID60" class="method navigator-link" hash-for-method="invalidEmailValidation">invalidEmailValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID63" class="method navigator-link" hash-for-method="phoneNumEmpty">phoneNumEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID65" class="method navigator-link" hash-for-method="phoneNumNegative">phoneNumNegative</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID64" class="method navigator-link" hash-for-method="phoneNumPositive">phoneNumPositive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID62" class="method navigator-link" hash-for-method="phoneNumValidation">phoneNumValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HomePageSuite" title="testcases.TCID1" class="method navigator-link" hash-for-method="startTest">startTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-HomePageSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,17 +164,17 @@
           <div class="suite-HomePageSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.TCID87</span>
+              <span class="class-name">testcases.TCID59</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clickOtherGrocerices">
-                  </a> <!-- clickOtherGrocerices -->
-                  <span class="method-name">clickOtherGrocerices</span>
-                  <div class="stack-trace">java.lang.AssertionError: TCID &lt;87&gt; failed: &lt;when click OtherGroceries option in category not see OtherGroceries page&gt;
-	at automation.AutomationScript.categoryOtherGroceries(AutomationScript.java:910)
-	at testcases.TCID87.clickOtherGrocerices(TCID87.java:11)
+                  <a name="lastNameCheck">
+                  </a> <!-- lastNameCheck -->
+                  <span class="method-name">lastNameCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: TCID &lt;59&gt; failed: &lt;no show error message when give last name length as 16&gt;
+	at automation.AutomationScript.lastNameValidation(AutomationScript.java:60)
+	at testcases.TCID59.lastNameCheck(TCID59.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
@@ -138,6 +182,111 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-HomePageSuite-class-failed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="startTest">
+                  </a> <!-- startTest -->
+                  <span class="method-name">startTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID65</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="phoneNumNegative">
+                  </a> <!-- phoneNumNegative -->
+                  <span class="method-name">phoneNumNegative</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID60</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidEmailValidation">
+                  </a> <!-- invalidEmailValidation -->
+                  <span class="method-name">invalidEmailValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID61</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emailValidation">
+                  </a> <!-- emailValidation -->
+                  <span class="method-name">emailValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID64</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="phoneNumPositive">
+                  </a> <!-- phoneNumPositive -->
+                  <span class="method-name">phoneNumPositive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID62</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="phoneNumValidation">
+                  </a> <!-- phoneNumValidation -->
+                  <span class="method-name">phoneNumValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
+          <div class="suite-HomePageSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TCID63</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="phoneNumEmpty">
+                  </a> <!-- phoneNumEmpty -->
+                  <span class="method-name">phoneNumEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomePageSuite-class-passed -->
         </div> <!-- panel HomePageSuite -->
         <div panel-name="test-xml-HomePageSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -153,11 +302,46 @@
       &lt;class name=&quot;testcases.BeforeSuites&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- BeforeSuite --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;TCID87&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID1&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.TCID87&quot;/&gt;
+      &lt;class name=&quot;testcases.TCID1&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TCID87 --&gt;
+  &lt;/test&gt; &lt;!-- TCID1 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID59&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID59&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID59 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID60&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID60&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID60 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID61&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID61&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID61 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID62&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID62&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID62 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID63&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID63&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID63 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID64&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID64&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID64 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TCID65&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.TCID65&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TCID65 --&gt;
 &lt;/suite&gt; &lt;!-- HomePageSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +356,28 @@
                 <span class="test-name">BeforeSuite (1 class)</span>
               </li>
               <li>
-                <span class="test-name">TCID87 (1 class)</span>
+                <span class="test-name">TCID1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID59 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID60 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID61 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID62 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID63 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID64 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TCID65 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,11 +403,39 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clickOtherGrocerices')
-data.setCell(0, 2, 'testcases.TCID87')
-data.setCell(0, 3, 81209);
+data.setCell(0, 1, 'startTest')
+data.setCell(0, 2, 'testcases.TCID1')
+data.setCell(0, 3, 37967);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'phoneNumPositive')
+data.setCell(1, 2, 'testcases.TCID64')
+data.setCell(1, 3, 12896);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'emailValidation')
+data.setCell(2, 2, 'testcases.TCID61')
+data.setCell(2, 3, 11412);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'phoneNumNegative')
+data.setCell(3, 2, 'testcases.TCID65')
+data.setCell(3, 3, 10250);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'lastNameCheck')
+data.setCell(4, 2, 'testcases.TCID59')
+data.setCell(4, 3, 6997);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'invalidEmailValidation')
+data.setCell(5, 2, 'testcases.TCID60')
+data.setCell(5, 3, 5585);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'phoneNumEmpty')
+data.setCell(6, 2, 'testcases.TCID63')
+data.setCell(6, 3, 4621);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'phoneNumValidation')
+data.setCell(7, 2, 'testcases.TCID62')
+data.setCell(7, 3, 3299);
 window.suiteTableData['HomePageSuite']= { tableData: data, tableDiv: 'times-div-HomePageSuite'}
 return data;
 }
@@ -240,12 +473,61 @@ return data;
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TCID87</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.TCID1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">startTest</span>
+                <span class="method-start">6724 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID59</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">clickOtherGrocerices</span>
-                <span class="method-start">10338 ms</span>
+                <span class="method-name">lastNameCheck</span>
+                <span class="method-start">44790 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID60</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">invalidEmailValidation</span>
+                <span class="method-start">51897 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID61</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">emailValidation</span>
+                <span class="method-start">57557 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID62</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">phoneNumValidation</span>
+                <span class="method-start">69023 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID63</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">phoneNumEmpty</span>
+                <span class="method-start">72405 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID64</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">phoneNumPositive</span>
+                <span class="method-start">77051 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TCID65</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">phoneNumNegative</span>
+                <span class="method-start">89962 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
