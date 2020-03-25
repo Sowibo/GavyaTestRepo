@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +23,7 @@ import settings.Settings;
 import webdriver.CustomWebDriver;
 
 public class AutomationScript extends CustomWebDriver{
-	
+	int s=77;
 	
 	public static AutomationScript returnobj() {
 		return new AutomationScript();
@@ -72,11 +73,11 @@ public class AutomationScript extends CustomWebDriver{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+		
 		plus=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/button[2]"));
 		plus.click();
 		
-		element=driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/span"));
+		element=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[2]/p[3]/span/span"));
 		String element1=element.getText();
 
 		if(element1.equals("2")) {
@@ -156,7 +157,141 @@ public class AutomationScript extends CustomWebDriver{
 			
 		}
 	}
-
+	public void cartAll() {
+		WebElement one,two,three,four,five;
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	    List<WebElement> cart1=driver.findElements(By.className("product-addtocart-btn"));
+	    ListIterator<WebElement>product1=cart1.listIterator();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    while(product1.hasNext()) {
+	    	WebElement pro=product1.next();
+	    	pro.click();
+	    	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    two=driver.findElement(By.id("2"));
+	    two.click();
+	    List<WebElement> cart2=driver.findElements(By.className("product-addtocart-btn"));
+	    ListIterator<WebElement>product2=cart2.listIterator();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    while(product2.hasNext()) {
+	    	WebElement pro1=product2.next();
+	    	pro1.click();
+	    	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    three=driver.findElement(By.id("3"));
+	    three.click();
+	    List<WebElement> cart3=driver.findElements(By.className("product-addtocart-btn"));
+	    ListIterator<WebElement>product3=cart3.listIterator();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    while(product3.hasNext()) {
+	    	WebElement pro2=product3.next();
+	    	pro2.click();
+	    	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    four=driver.findElement(By.id("4"));
+	    four.click();
+	    List<WebElement> cart4=driver.findElements(By.className("product-addtocart-btn"));
+	    ListIterator<WebElement>product4=cart4.listIterator();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    while(product4.hasNext()) {
+	    	WebElement pro3=product4.next();
+	    	pro3.click();
+	    	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    five=driver.findElement(By.id("5"));
+	    five.click();
+	    List<WebElement> cart5=driver.findElements(By.className("product-addtocart-btn"));
+	    ListIterator<WebElement>product5=cart5.listIterator();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    while(product5.hasNext()) {
+	    	WebElement pro4=product5.next();
+	    	pro4.click();
+	    	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	    one=driver.findElement(By.id("1"));
+	    one.click();
+	    AutomationScript.returnobj().clearcart();
+	}
 	public void cart() {
 	    WebElement cart;
 	    try {
@@ -698,10 +833,80 @@ public class AutomationScript extends CustomWebDriver{
 			
 		 }
 		 else {
-			 fail("TCID <28> failed: Total value mismatch");
+			 fail("TCID <27> failed: Total value mismatch");
 		 }
-		
-	
 	}
+		
+      public void verifyProducts() {
+    	  WebElement one,two,three,four,five;
+    	  try {
+  			Thread.sleep(2000);
+  		} 
+  		catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	  List<WebElement> product=driver.findElements(By.className("product-qty"));
+    	  int a=product.size();
+    	 
+    	  try {
+  			Thread.sleep(2000);
+  		} 
+  		catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	  two=driver.findElement(By.id("2"));
+    	  two.click();
+    	  List<WebElement> product1=driver.findElements(By.className("product-qty"));
+    	  int b=product1.size();
+    	 
+    	  try {
+  			Thread.sleep(2000);
+  		} 
+  		catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	  three=driver.findElement(By.id("3"));
+    	  three.click();
+    	  List<WebElement> product2=driver.findElements(By.className("product-qty"));
+    	  int c=product2.size(); 
+    	  try {
+  			Thread.sleep(2000);
+  		} 
+  		catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	  four=driver.findElement(By.id("4"));
+    	  four.click();
+    	  List<WebElement> product3=driver.findElements(By.className("product-qty"));
+    	  int d=product3.size();
+    	  
+    	  try {
+  			Thread.sleep(2000);
+  		} 
+  		catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	  five=driver.findElement(By.id("5"));
+    	  five.click();
+    	  List<WebElement> product4=driver.findElements(By.className("product-qty"));
+    	  int e=product4.size();
+    	 
+    	  int total=a+b+c+d+e;
+    	 
+    	  if(total==s) {
+    		  
+    	  }
+    	  else {
+    		  fail("TCID <14> failed: Total value mismatch");
+    	  }
+    	  one=driver.findElement(By.id("1"));
+    	  one.click();
+      }
+	
 }  
 
