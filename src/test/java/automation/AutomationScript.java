@@ -11,6 +11,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,7 @@ import settings.Settings;
 import webdriver.CustomWebDriver;
 
 public class AutomationScript extends CustomWebDriver{
-	int s=77;
+	
 	
 	public static AutomationScript returnobj() {
 		return new AutomationScript();
@@ -158,7 +159,8 @@ public class AutomationScript extends CustomWebDriver{
 		}
 	}
 	public void cartAll() {
-		WebElement one,two,three,four,five;
+		
+		WebElement one,two,three,four,five,clear;
 	    try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -168,121 +170,76 @@ public class AutomationScript extends CustomWebDriver{
 	    
 	    List<WebElement> cart1=driver.findElements(By.className("product-addtocart-btn"));
 	    ListIterator<WebElement>product1=cart1.listIterator();
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    while(product1.hasNext()) {
 	    	WebElement pro=product1.next();
 	    	pro.click();
 	    	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    two=driver.findElement(By.id("2"));
 	    two.click();
 	    List<WebElement> cart2=driver.findElements(By.className("product-addtocart-btn"));
 	    ListIterator<WebElement>product2=cart2.listIterator();
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    while(product2.hasNext()) {
 	    	WebElement pro1=product2.next();
 	    	pro1.click();
 	    	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    three=driver.findElement(By.id("3"));
 	    three.click();
 	    List<WebElement> cart3=driver.findElements(By.className("product-addtocart-btn"));
 	    ListIterator<WebElement>product3=cart3.listIterator();
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    while(product3.hasNext()) {
 	    	WebElement pro2=product3.next();
 	    	pro2.click();
 	    	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    four=driver.findElement(By.id("4"));
 	    four.click();
 	    List<WebElement> cart4=driver.findElements(By.className("product-addtocart-btn"));
 	    ListIterator<WebElement>product4=cart4.listIterator();
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    while(product4.hasNext()) {
 	    	WebElement pro3=product4.next();
 	    	pro3.click();
 	    	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	   
 	    five=driver.findElement(By.id("5"));
 	    five.click();
 	    List<WebElement> cart5=driver.findElements(By.className("product-addtocart-btn"));
 	    ListIterator<WebElement>product5=cart5.listIterator();
-	    try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	   
 	    while(product5.hasNext()) {
 	    	WebElement pro4=product5.next();
 	    	pro4.click();
 	    	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -290,7 +247,16 @@ public class AutomationScript extends CustomWebDriver{
 	    }
 	    one=driver.findElement(By.id("1"));
 	    one.click();
-	    AutomationScript.returnobj().clearcart();
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(938,3500)");
+	    clear=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[3]/div[2]/span"));
+	    clear.click();
+	    try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void cart() {
 	    WebElement cart;
@@ -353,6 +319,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 	public void lowtohigh() {
 		WebElement element;
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -694,9 +661,18 @@ public class AutomationScript extends CustomWebDriver{
 		
 	}
 	 public void verifyProduct() {
-		 WebElement	element1,element2;
+		 WebElement	element1,element2,cart;
+		 try {
+	  			Thread.sleep(2000);
+	  		} 
+	  		catch (InterruptedException e) {
+	  			// TODO Auto-generated catch block
+	  			e.printStackTrace();
+	  		}
 		 element1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/p[1]"));
 		 String value1=element1.getText().substring(0, 11);
+		 cart=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[2]/div[2]/div[1]/button"));
+		 cart.click();
 		 element2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[1]/div/div[2]/p[1]"));
 		 String value2=element2.getText();
 		 if(value1.equals(value2)) {
@@ -838,6 +814,7 @@ public class AutomationScript extends CustomWebDriver{
 	}
 		
       public void verifyProducts() {
+    	  int s=77;
     	  WebElement one,two,three,four,five;
     	  try {
   			Thread.sleep(2000);
@@ -848,7 +825,7 @@ public class AutomationScript extends CustomWebDriver{
   		}
     	  List<WebElement> product=driver.findElements(By.className("product-qty"));
     	  int a=product.size();
-    	 
+    	  
     	  try {
   			Thread.sleep(2000);
   		} 
@@ -907,6 +884,7 @@ public class AutomationScript extends CustomWebDriver{
     	  one=driver.findElement(By.id("1"));
     	  one.click();
       }
+     
 	
 }  
 
