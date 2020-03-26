@@ -12,7 +12,8 @@
       <class name="testcases.TCID1"/>
     </classes>
  </test>
- <test name="TCID59">
+ 
+  <test name="TCID59">
     <classes>
       <class name="testcases.TCID59"/>
     </classes>
@@ -114,7 +115,6 @@
       <class name="testcases.TCID80"/>
     </classes>
   </test>
- 
   <test name="TCID82">
     <classes>
       <class name="testcases.TCID82"/>
@@ -130,26 +130,26 @@
       <class name="testcases.TCID84"/>
     </classes>
   </test>
-  <test name="TCID85">
+ 
+<test name="TCID85">
     <classes>
       <class name="testcases.TCID85"/>
     </classes>
   </test>
   <test name="TCID86">
     <classes>
-      <class name="testcases.TCID85"/>
+      <class name="testcases.TCID86"/>
     </classes>
   </test>
   <test name="TCID87">
     <classes>
-      <class name="testcases.TCID85"/>
+      <class name="testcases.TCID87"/>
     </classes>
   </test>
- <test name="TCID88">
+  <test name="TCID88">
     <classes>
       <class name="testcases.TCID88"/>
     </classes>
   </test>
- 
   
 </suite> <!-- Suite -->
