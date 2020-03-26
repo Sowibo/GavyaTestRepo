@@ -112,14 +112,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <147> failed: <no show error message when flat number field is empty>");
 		}
-		else {
 			
-			
-			System.out.println("TCID147 success");
-		}
-		
-		
-		
 	}
 	//flat number fileld with input data in positive case
 	
@@ -137,11 +130,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID148 sucess 1 test case");
-		}
-		else {
 			fail("TCID <148> failed: <show error message when flat number with positive case>");
-			
 		}
 		try {
 			Thread.sleep(2000);
@@ -156,9 +145,6 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval1.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID148 sucess 2 test case");
-		}
-		else {
 			fail("TCID <148> failed: <show error message when flat number with positive case>");
 			
 		}
@@ -175,12 +161,9 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval2.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID148 sucess 3 test case");
-		}
-		else {
 			fail("TCID <148> failed: <show error message when flat number with positive case>");
-			
 		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -194,9 +177,6 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID148 sucess 4 test case");
-		}
-		else {
 			fail("TCID <148> failed: <show error message when flat number with positive case>");
 			
 		}
@@ -221,10 +201,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <149> failed: <no show error message when  flat number length is incorrect >");
 		}
-		else {
-			
-			System.out.println("TCID149 sucess 1 test case");
-		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -239,10 +216,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <149> failed: <no show error message when flat number length is not correct>");
-		}
-		else {
-			
-			System.out.println("TCID149 sucess 2 test case");
 		}
 		
 	}
@@ -262,9 +235,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <150> failed: <no show error message when area filed with invalid data>");
 			
-		}
-		else {
-			System.out.println("TCID150 success");
 		}
 	}
 	//Area Empty Case
@@ -304,11 +274,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <151> failed: <no show error message when area field is empty>");
 		}
-		else {
-			
-			
-			System.out.println("TCID151 success");
-		}
 	}
 	
 	//Area fileld with input data in positive case
@@ -328,12 +293,9 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID152 sucess 1 test case");
-		}
-		else {
 			fail("TCID <152> failed: <show error message when area field with positive case>");
-			
 		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -348,11 +310,8 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval1.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID152 sucess 2 test case");
-		}
-		else {
 			fail("TCID <152> failed: <show error message when area field with positive case>");
-			
+		
 		}
 		try {
 			Thread.sleep(2000);
@@ -367,9 +326,6 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval2.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID152 sucess 3 test case");
-		}
-		else {
 			fail("TCID <152> failed: <show error message when area field with positive case>");
 			
 		}
@@ -386,12 +342,9 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID152 sucess 4 test case");
-		}
-		else {
-			fail("TCID <152> failed: <show error message when area field with positive case>");
-			
-		}
+		fail("TCID <152> failed: <show error message when area field with positive case>");
+		}	
+		
 	}
 	
 	//Area fileld with input data in negative case4
@@ -413,10 +366,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <153> failed: <no show error message when area field length is incorrect >");
 		}
-		else {
-			
-			System.out.println("TCID153 sucess 1 test case");
-		}
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -432,10 +382,7 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <153> failed: <no show error message when area field is not correct>");
 		}
-		else {
-			
-			System.out.println("TCID153 sucess 2 test case");
-		}
+		
 	}
 	//City Invalid
 
@@ -454,9 +401,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <154> failed: <no show error message when city filed with invalid data>");
 			
-		}
-		else {
-			System.out.println("TCID154 success");
 		}
 	}
 	//City Empty
@@ -496,12 +440,7 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <155> failed: <no show error message when city field is empty>");
 		}
-		else {
-			
-			
-			System.out.println("TCID155 success");
-		}
-	}
+	}	
 	
 	//City fileld with input data in positive case
 	
@@ -520,11 +459,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval.equals(" ")||(elementval.equals(null)))  {
 			
-			System.out.println("TCID156 sucess 1 test case");
-		}
-		else {
 			fail("TCID <156> failed: <show error message when city field with positive case>");
-			
 		}
 		try {
 			Thread.sleep(2000);
@@ -540,11 +475,8 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval1.equals(" ")||(elementval.equals(null)))  {
 			
-			System.out.println("TCID156 sucess 2 test case");
-		}
-		else {
 			fail("TCID <156> failed: <show error message when city field with positive case>");
-			
+
 		}
 		try {
 			Thread.sleep(2000);
@@ -559,11 +491,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval2.equals(" ")||(elementval.equals(null)))  {
 			
-			System.out.println("TCID156 sucess 3 test case");
-		}
-		else {
 			fail("TCID <156> failed: <show error message when city field with positive case>");
-			
 		}
 		try {
 			Thread.sleep(2000);
@@ -578,9 +506,6 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval3.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID156 sucess 4 test case");
-		}
-		else {
 			fail("TCID <156> failed: <show error message when city field with positive case>");
 			
 		}
@@ -604,10 +529,6 @@ public class AutomationScript extends CustomWebDriver{
 		
 		fail("TCID <157> failed: <no show error message when city field length is incorrect >");
 	}
-	else {
-		
-		System.out.println("TCID157 sucess 1 test case");
-	}
 	try {
 		Thread.sleep(2000);
 	} catch (InterruptedException e) {
@@ -622,10 +543,6 @@ public class AutomationScript extends CustomWebDriver{
 	if(elementvalue1.equals(" ")||(elementval.equals(null))) {
 		
 		fail("TCID <157> failed: <no show error message when city field length is not correct>");
-	}
-	else {
-		
-		System.out.println("TCID157 sucess 2 test case");
 	}
  }
 	//All options available in district field
@@ -652,6 +569,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
+		
 	}
 	
 	//District field Default
@@ -671,9 +589,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(message.isEmpty()||message.equals(null)) {
 			fail("TCID <160> failed: <no show error message when district field with invalid data>");
 			
-		}
-		else {
-			System.out.println("TCID160 success");
 		}
 	}
 	
@@ -695,11 +610,6 @@ public class AutomationScript extends CustomWebDriver{
 			fail("TCID <161> failed: <no show error message when pin field with invalid data>");
 			
 		}
-		else {
-			System.out.println("TCID161 success");
-		}
-		
-		
 	}
 	
 	//Pin filed is empty case
@@ -736,11 +646,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			fail("TCID <162> failed: <no show error message when pin field is empty>");
 		}
-		else {
-			
-			
-			System.out.println("TCID162 success");
-		}
 	}
 	
 	
@@ -761,11 +666,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
-			System.out.println("TCID163 sucess  test case");
-		}
-		else {
-			fail("TCID <163> failed: <show error message when pin field with length is positive case>");
-			
+			fail("TCID <163> failed: <no show error message when pin field length is correct >");
 		}
 	}
 	
@@ -786,9 +687,6 @@ public class AutomationScript extends CustomWebDriver{
 		if(elementval.equals(" ")||(elementval.equals(null))) {
 			
 			fail("TCID <164> failed: <no show error message when pin field length is incorrect >");
-		}
-		else {
-			System.out.println("TCID164 sucess test case");
 		}
 	}
 	
@@ -830,11 +728,6 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <165> failed: <no show error message when landmark field is empty>");
 		}
-		else {
-			System.out.println("TCID165 sucess");
-			
-		}
-		
 	}
 	
 	//Primary address with empty case
@@ -946,8 +839,48 @@ public class AutomationScript extends CustomWebDriver{
 		fastbtn=driver.findElement(By.name("deliverytype"));
 		fastbtn.click();
 	}
-	
-	
+	//Total amount shown in the cart page
+	public void showTotal() {
+		
+		WebElement total1,total2;
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		total1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
+		String value1=total1.getText();
+		String value2="47.00";
+		if(value1.equals(value2)) {
+			
+		 }
+		 else {
+			 fail("TCID <173> failed: Total value mismatch");
+		 }
+		
+		try {
+			Thread.sleep(2000);
+		} 
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		total2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
+		String value3=total2.getText();
+		String value4="64.00";
+		
+		if(value3.equals(value4)) {
+			
+		 }
+		 else {
+			 fail("TCID <173> failed: Total value ");
+		 }
+		
+	}
+
 	
 	
 	

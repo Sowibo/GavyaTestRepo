@@ -142,4 +142,9 @@
       <class name="testcases.TCID172"/>
     </classes>
   </test>
+  <test name="TCID173">
+    <classes>
+      <class name="testcases.TCID173"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->
