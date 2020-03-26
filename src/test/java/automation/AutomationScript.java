@@ -323,6 +323,7 @@ public class AutomationScript extends CustomWebDriver{
 		 catch(InterruptedException e) {
 			 e.printStackTrace();
 		 }
+		
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		String display_message=crntpass.getAttribute("Current password is incorrect!!");
@@ -350,7 +351,9 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement save_btn,crntpass,newpass,conpass ;
 
 		crntpass = driver.findElement(By.id("oldpassword"));
+		String currentpass = crntpass.getText();
 		crntpass.sendKeys("keerthi");
+		
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
@@ -360,6 +363,7 @@ public class AutomationScript extends CustomWebDriver{
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		crntpass.clear();
 		crntpass.sendKeys("keerthisudev12345");
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		save_btn.click();
 		try {
 			 Thread.sleep(2000);
@@ -369,6 +373,14 @@ public class AutomationScript extends CustomWebDriver{
 		 }
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
+		String pass = Settings.getInstance().getProperty("pass");
+		if(currentpass.length() <= 7 || currentpass.length() >= 17) {
+			System.out.println("please enter a password of length between 7 and 17 character");
+		}
+		
+		else {
+			System.out.println("You entered an invalid pass word");
+		}
 	
 	}
 	
@@ -379,14 +391,23 @@ public class AutomationScript extends CustomWebDriver{
 		WebElement save_btn,crntpass,newpass,conpass ;
 
 		crntpass = driver.findElement(By.id("oldpassword"));
-		crntpass.sendKeys("keerthi");
+		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
-		newpass.sendKeys("@");
+		newpass.sendKeys("invalidpass ");
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthisudev");
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+//		String alertmsg = "Confirm password Incorrect!!";
+		String newmsg = newpass.getAttribute("Confirm password Incorrect!!");
+		if(newmsg.isEmpty() || newmsg.equals(null)) {
+			System.out.println("TCID 126 success");
+		}
+		else {
+			
+			fail("TCID 126 failed:invalid new password");
+		}
 	
 	}
 	
