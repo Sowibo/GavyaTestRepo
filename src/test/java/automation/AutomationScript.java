@@ -3,12 +3,14 @@ package automation;
 
 import static org.testng.Assert.fail;
 
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -554,6 +556,26 @@ public class AutomationScript extends CustomWebDriver{
 		close=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div[1]/div/div[1]/span"));
 		close.click();
 		
+		
+	}
+	
+	public void checkReorderBtn() {
+		
+		
+		List<WebElement>reorder=driver.findElements(By.className("preorder-btn"));
+		WebElement a=reorder.get(0);
+		System.out.println(a);
+
+		
+	}
+	
+	public void checkReorderBtnAbsent() {
+		
+		
+		List<WebElement>reorder=driver.findElements(By.className("preorder-btn"));
+		WebElement a=reorder.get(0);
+		System.out.println(a);
+
 		
 	}
 	
