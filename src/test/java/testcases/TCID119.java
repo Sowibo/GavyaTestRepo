@@ -17,7 +17,7 @@ public class TCID119 {
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().accountsSection();
-		AutomationScript.returnobj().testPhoneNumber();
+		AutomationScript.returnobj().testPhoneNumberNeg();
 		
 	}
 

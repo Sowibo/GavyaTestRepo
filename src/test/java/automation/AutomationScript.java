@@ -28,33 +28,30 @@ public class AutomationScript extends CustomWebDriver{
 	
 //		KEERTHI
 	
-
+//		LOGIN FUNCTION
+	
 	public void logIn(){
 		WebElement login,logid,logpass = null,logbtn,cookie;
 		
 		login=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[1]/a"));
 		login.click();
-		
 		logid=driver.findElement(By.id("email"));
-		String mail = Settings.getInstance().getProperty("email");
-//		logid.sendKeys("keerthisudev444@gmail.com");		
+		String mail = Settings.getInstance().getProperty("email");		
 		logid.sendKeys(mail);
 		logpass=driver.findElement(By.id("password"));
 		String pass = Settings.getInstance().getProperty("pass");
-		logpass.sendKeys(pass);
-//		logpass.sendKeys("keerthisudev");		
+		logpass.sendKeys(pass);	
 		logbtn=driver.findElement(By.cssSelector("div.row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > button:nth-child(1)"));
 		logbtn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	}
 	
-	
-	
+//		cookie
+
 	public void cookie() {
 		WebElement cookie;
 		cookie=driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/button"));
 		cookie.click();
-		
 	}
 	
 //		LOGOUT
@@ -62,7 +59,6 @@ public class AutomationScript extends CustomWebDriver{
 	public void logOut() {
 		WebElement logout;		
 		logout = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[1]/div/div/div[2]/ul/li[2]/a"));
-		
 		logout.click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
@@ -83,8 +79,6 @@ public class AutomationScript extends CustomWebDriver{
 		accounts.click();
 	}
 	
-	
-	
 	public void clearAccounts() {
 		WebElement fname,lname,pnum;		
 		fname = driver.findElement(By.id("fname"));
@@ -95,15 +89,10 @@ public class AutomationScript extends CustomWebDriver{
 		pnum.clear();	
 	}
 	
-	
 //			FUNCTIONS NEEDED FOR TCID 119 
 //			login,settingsPage,accountsSection
 	
-	
-	
-	
-		
-	public void testPhoneNumber() {
+	public void testPhoneNumberNeg() {
 		WebElement numfield,updatebtn,page;		
 		numfield=driver.findElement(By.xpath("//*[@id=\"phone\"]"));
 		numfield.sendKeys("9999998");	
@@ -112,120 +101,107 @@ public class AutomationScript extends CustomWebDriver{
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		numfield.clear();
 		numfield.sendKeys("100000000000");
-//		numfield.sendKeys("1234567891");
+		String mobile = numfield.getText();
 		updatebtn.click();
 		
 		String display_message=numfield.getAttribute("validationMessage");
-		
-		if(display_message.isEmpty()||display_message.equals(null)) {
-			fail("TCID <119> failed: <the mobile number is valid >");
-		}
-		else {
-			System.out.println("TCID 119 success");
-		}
+			if(display_message.isEmpty()||display_message.equals(null)) {
+	//			System.out.println("TCID 119 success");
+				fail("TCID <119> failed: <the mobile number is invalid >");
+			}
+//			else {
 			
-		
+			
+			
+//				fail("TCID <119> failed: <the mobile number is invalid >");
+//			}
 	}
-	
-	
-	public void alertTest() {
-		String page = driver.getPageSource();
-		
-	}
-	
 	
 //			FUNCTIONS NEEDED FOR TCID 120 
 	
 //			login,settings ,accounts
+	
 	public void testValidData() {		
 		WebElement fname,lname,pnum,updatebtn;		
 		fname = driver.findElement(By.id("fname"));
-		fname.clear();
 		fname.sendKeys("keerthi");		
 		lname = driver.findElement(By.id("lname"));
-		lname.clear();
 		lname.sendKeys("sudev");		
 		pnum = driver.findElement(By.id("phone"));
-		pnum.clear();
 		pnum.sendKeys("8137006670");		
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();	
 		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
-		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
-		if(alert.equals(null)) {
-			fail("TCID 120 failed:");
-		}
-		else {
-			System.out.println("TCID 120 success");
-		}
-		
-		
-
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+			try {
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+				if(alert.equals(null)) {
+					fail("TCID 120 failed:you entered invalid data");
+				}
+			}
+			catch(NoAlertPresentException n) {
+				
+			}
 	}
 	
-	
 //			FUNCTIONS NEEDED FOR TCID 121
+	
 //	login,settings, acoount,logout
+	
 	public void checkUpdate() {
+		
 		WebElement fname,lname,pnum,updatebtn,name;	
 		fname = driver.findElement(By.id("fname"));
 		fname.clear();
-		fname.sendKeys("Keerthisudev");
-		String full_name = fname.getText();
+		fname.sendKeys("Keerthigs");
+//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);	
 		lname = driver.findElement(By.id("lname"));
 		lname.clear();
 		lname.sendKeys("sudev");		
 		pnum = driver.findElement(By.id("phone"));
 		pnum.clear();
-		pnum.sendKeys("8137006670");		
+		pnum.sendKeys("8137006670");	
+		String full_name = fname.getText();
+		System.out.println(full_name);
 		updatebtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/form/p[2]/button"));
 		updatebtn.click();		
-//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);	
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);	
 		logOut();
 		logIn();
 		name = driver.findElement(By.xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/ul/li[1]/span"));
 		String name_check = name.getText();
 		
-		System.out.println(full_name );
+//		System.out.println(full_name );
 //		String full_name = "keerthi";
-		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		}
-		catch(NoAlertPresentException a) {
-//			System.out.println("NO ALERT IS PRESENT"+a);
-		}
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+			try {
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+			}
+			catch(NoAlertPresentException a) {
+	//			System.out.println("NO ALERT IS PRESENT"+a);
+			}
 		
-		if(full_name.equals(name_check) || full_name == name_check ){
-			System.out.println(full_name);
-			System.out.println(name_check);
-			System.out.println("TCID 121 success");
-			
-		}
-		else {
-			fail("TCID 121 failed:name not change after login");
-			
-		}
-	}
-	public void checkingUpdate() {
-		
+			if(full_name!=(name_check)){
+				fail("TCID 121 failed:name not change after login");
+			}
 	}
 	
 //	FUNCTIONS NEEDED FOR TCID 122
+	
 //	login,settings,accounts,chngpass 
+	
 	public void changePass() {
 	WebElement chngpass	;
 	chngpass = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[1]/div/ul/li[1]/p"));
@@ -234,9 +210,9 @@ public class AutomationScript extends CustomWebDriver{
 
 	public void currentValidPass() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
-		crntpass.sendKeys("keerthisudev");
+		String pass = Settings.getInstance().getProperty("pass");
+		crntpass.sendKeys(pass);
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
@@ -244,22 +220,22 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
 		
-		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
-		if(alert.equals(null)) {
-			fail("TCID 122 failed:");
-		}
-		else {
-			System.out.println("TCID 122 success");
-		}
-		
-	
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+			try {
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+					if(alert.equals(null)) {
+						fail("TCID 122 failed:");
+					}
+			}
+			catch(NoAlertPresentException n) {
+				//
+			}
 	}
 
 
@@ -274,28 +250,25 @@ public class AutomationScript extends CustomWebDriver{
 		newpass.sendKeys("keerthikeerthi");
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthikeerthi");
-//	ivide button add cheyyanam
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
-		
-		
-		
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+		String url = "https://www.greengavya.com/settings";
 		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		Alert alert = driver.switchTo().alert();
-		String al = alert.getText();
-//		System.out.println(al);
-		alert.accept();
-		
-		if(alert.equals(null)) {
-			fail("TCID 123 failed:");
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			String crnt_url = driver.getCurrentUrl();
+				if(url.equals(crnt_url)) {
+					fail("TCID 123 failed: current password is invalid");
+				}
 		}
-		else {
-			System.out.println("TCID 123 success");
+		catch(NoAlertPresentException n) {
+			
 		}
 }
 
@@ -304,9 +277,10 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 
 	public void currentPassLenPos() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthis");
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		String currentpass = crntpass.getText();		
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
@@ -314,6 +288,14 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		try {
+			 Thread.sleep(2000);
+		 }
+		 catch(InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		
+		
 		crntpass.clear();
 		crntpass.sendKeys("keerthisudev1234");
 		save_btn.click();
@@ -328,6 +310,7 @@ public class AutomationScript extends CustomWebDriver{
 		alert.accept();
 		String display_message=crntpass.getAttribute("Current password is incorrect!!");
 		try {
+		
 		if(display_message.isEmpty()||display_message.equals(null)) {
 			System.out.println("TCID 124 success");
 		}
@@ -335,6 +318,15 @@ public class AutomationScript extends CustomWebDriver{
 			
 			fail("TCID <124> failed: <the mobile number is valid >");
 		}
+			
+			
+			
+//			if(currentpass.length() >= 8 && currentpass.length() <= 16) {
+//				success
+//			}
+//			else {
+//				fail("TCID 125 failed:password length incorrect");
+//			}
 		}
 		catch(NullPointerException n) {
 //			System.out.println("nothing to point"	+ n);
@@ -349,11 +341,9 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 	
 	public void currentPassLenNeg() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		String currentpass = crntpass.getText();
-		crntpass.sendKeys("keerthi");
-		
+		crntpass.sendKeys("keerthi");		
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
@@ -362,26 +352,25 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		crntpass.clear();
-		crntpass.sendKeys("keerthisudev12345");
+		crntpass.sendKeys("keerthisudev1234");
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		save_btn.click();
-		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
-		String pass = Settings.getInstance().getProperty("pass");
-		if(currentpass.length() <= 7 || currentpass.length() >= 17) {
-			System.out.println("please enter a password of length between 7 and 17 character");
-		}
-		
-		else {
-			System.out.println("You entered an invalid pass word");
-		}
-	
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+			try {
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+					if(currentpass.length() <= 7 || currentpass.length() >= 17) {
+						fail("TCID 125 failed:password length incorrect");
+					}
+			}
+			catch(NoAlertPresentException n) {
+				
+			}					
 	}
 	
 	
@@ -389,7 +378,6 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 	
 	public void newPassInvalid() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
@@ -399,37 +387,44 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-//		String alertmsg = "Confirm password Incorrect!!";
-		String newmsg = newpass.getAttribute("Confirm password Incorrect!!");
-		if(newmsg.isEmpty() || newmsg.equals(null)) {
-			System.out.println("TCID 126 success");
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			String url = "https://www.greengavya.com/settings";
+			String crnt_url = driver.getCurrentUrl();
+				if(url.equals(crnt_url)) {
+					fail("TCID 126 failed:invalid new password");
+				}
 		}
-		else {
+		catch(NoAlertPresentException n) {
 			
-			fail("TCID 126 failed:invalid new password");
 		}
-	
 	}
 	
-//	127
+//	TCID 127
 //	login,settings,accounts,chngpass 
 	public void newPasslenPos() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthi");
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthis");
+		String npass = newpass.getText();
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthis");
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);		
 		newpass.clear();
 		newpass.sendKeys("keerthisudev1234");
 		save_btn.click();
-	
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		if(npass.length() >=8 || npass.length() <= 16) {
+//			System.out.println("success");
+		}
+		else {
+			fail("test failed");
+		}
 	}
 	
 	
@@ -437,28 +432,38 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 
 	public void newPasslenNeg() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthi");
+		String npass = newpass.getText();
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthisudev");
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		 
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);		 
 		newpass.clear();
 		newpass.sendKeys("keerthisudev12345");
 		save_btn.click();
-	
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			String url = "https://www.greengavya.com/settings";
+			String crnt_url = driver.getCurrentUrl();
+				if(npass.length() <=7 || npass.length() >= 17 && url.equals(crnt_url)) {		
+					fail("TCID 128 failed:newpassword length invalid");
+				}
+		}
+		catch(NoAlertPresentException n) {
+			
+		}
 	}
 	
 //	129
 //	login,settings,accounts,chngpass 
 	public void confirmDiff() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
@@ -468,25 +473,25 @@ public class AutomationScript extends CustomWebDriver{
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		
-		try {
-			 Thread.sleep(2000);
-		 }
-		 catch(InterruptedException e) {
-			 e.printStackTrace();
-		 }
-		Alert alert = driver.switchTo().alert();
-		String alert_text = alert.getText();
-//		System.out.println(alert_text);
-		alert.accept();
-		String text_alert ="Confirm password Incorrect!!";
-		if(alert_text.equals(text_alert)) {
-			fail("TCID 129 failed:confirm password is different");
-		}
-		else {
-			System.out.println("TCID 129 success");
-		}
-	
+			
+			try {
+				 Thread.sleep(2000);
+			 }
+			 catch(InterruptedException e) {
+				 e.printStackTrace();
+			 }
+			try {
+				Alert alert = driver.switchTo().alert();
+				String alert_text = alert.getText();
+				alert.accept();
+				String text_alert ="Confirm password Incorrect!!";
+					if(alert_text.equals(text_alert)) {
+						fail("TCID 129 failed:confirm password is different");
+					}
+			}
+			catch(NoAlertPresentException n) {
+				
+			}
 	}
 	
 	
@@ -495,7 +500,6 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 
 	public void conPasslenPos() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
@@ -504,8 +508,7 @@ public class AutomationScript extends CustomWebDriver{
 		conpass.sendKeys("keerthis");
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		 
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);		 
 		conpass.clear();
 		conpass.sendKeys("keerthisudev1234");
 		save_btn.click();
@@ -517,62 +520,56 @@ public class AutomationScript extends CustomWebDriver{
 //	login,settings,accounts,chngpass 
 	public void conPasslenNeg() {
 		WebElement save_btn,crntpass,newpass,conpass ;
-
 		crntpass = driver.findElement(By.id("oldpassword"));
 		crntpass.sendKeys("keerthisudev");
 		newpass = driver.findElement(By.id("password"));
 		newpass.sendKeys("keerthisudev");
 		conpass = driver.findElement(By.id("confirmpassword"));
 		conpass.sendKeys("keerthi");
+		String cpass = conpass.getText();
 		save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 		save_btn.click();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		 
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);		 
 		conpass.clear();
 		conpass.sendKeys("keerthisudev12345");
 		save_btn.click();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			String url = "https://www.greengavya.com/settings";
+			String crnt_url = driver.getCurrentUrl();
+				if(cpass.length() <=7 || cpass.length() >= 17 && url.equals(crnt_url)) {
 	
+					fail("TCID 128 failed:newpassword length invalid");
+				}
+		}
+		catch(NoAlertPresentException n) {
+			
+		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 //		FUNCTIONS NEEDED FOR TCID 132
 //		login,settings,changepass
 		public void currentPassEmpty() {			
-			WebElement crntpass,newpass,conpass,save_btn,page;		
+			WebElement crntpass,newpass,conpass,save_btn,page;	
+			
+			crntpass = driver.findElement(By.id("oldpassword"));
+			String cpass = crntpass.getText();
 			newpass = driver.findElement(By.id("password"));
 			newpass.sendKeys("keerthikeerthi");			
 			conpass = driver.findElement(By.id("confirmpassword"));
 			conpass.sendKeys("keerthikeerthi");
 			save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 			save_btn.click();
-			page=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form"));
-			String validation = page.getText();
-			if(validation.equals(" ")||(validation.equals(null))) {
-				fail("TCID  132 failed: saving changes");
+//			page=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form"));
+//			page = driver.findElement(By.xpath("//*[@id=\"oldpassword\"]"));	
+	
+
+			if(cpass.isEmpty()) {
+				fail("TCID 132 failed:current password is empty");
 				
-			}
-			else {
-				
-				System.out.println("TCID 132 success");
-			}
-			
+				}
 		}
 			
 			
@@ -587,21 +584,25 @@ public class AutomationScript extends CustomWebDriver{
 			crntpass.sendKeys("keerthisudev");
 			newpass = driver.findElement(By.id("password"));
 			newpass.sendKeys("keerthisudev");			
-		
+			
+			conpass = driver.findElement(By.id("confirmpassword"));
+			String cpass = conpass.getText();
 			save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 			save_btn.click();	
 			
 			
 			
-			page=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form"));
-			String validation = page.getText();
-			if(validation.equals(" ")||(validation.equals(null))) {
-				fail("TCID 133 failed: saving changes");
-				
-			}
-			else {
-				
-				System.out.println("TCID 133 success");
+//			page=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form"));
+//			String validation = page.getText();
+//			if(validation.equals(" ")||(validation.equals(null))) {
+//				fail("TCID 133 failed: confirm password is empty");
+//				
+//			}
+			
+			
+			
+			if(cpass.isEmpty()) {
+				fail("TCID 133 failed:confirm password is empty");
 			}
 		}
 
@@ -615,7 +616,8 @@ public class AutomationScript extends CustomWebDriver{
 			crntpass.sendKeys("keerthisudev");
 			conpass = driver.findElement(By.id("confirmpassword"));
 			conpass.sendKeys("keerthikeerthi");
- 
+			newpass = driver.findElement(By.id("password"));
+			String npass = newpass.getText();
 			save_btn = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form/button"));
 			save_btn.click();	
 			
@@ -623,13 +625,9 @@ public class AutomationScript extends CustomWebDriver{
 			
 			page=driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div[2]/form"));
 			String validation = page.getText();
-			if(validation.equals(" ")||(validation.equals(null))) {
-				fail("TCID 134 failed: saving changes");
+			if(npass.isEmpty()) {
+				fail("TCID 134 failed: newpassword is empty");
 				
-			}
-			else {
-				
-				System.out.println("TCID 134 success");
 			}
 		}
 
@@ -657,15 +655,29 @@ public class AutomationScript extends CustomWebDriver{
 			WebElement useadrs,conordr;
 			useadrs = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[1]/div/div/button"));
 			useadrs.click();
-
+			
 		}
-
 		
+		public void confirmOrder() {
+			WebElement conordr;
+			
+			conordr = driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/div/div/div[4]/a"));
+			conordr.click();
+		}
+		
+		
+		
+		
+//	tcid 136
+//		call addProduct,checkout,proceedcheckout
 		public void removeAddress() {
 			WebElement remove;
 
 			remove = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[1]/div/div/h5/a"));
 			remove.click();	
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			Alert alert = driver.switchTo().alert();
+			alert.dismiss();
 		}
 		
 //		FUNCTIONS NEEDED FOR TCID 137		
@@ -691,6 +703,8 @@ public class AutomationScript extends CustomWebDriver{
 			lmark.sendKeys("near hss school");
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
 		}
 		
 //		FUNCTIONS NEEDED FOR TCID 138		
@@ -715,12 +729,22 @@ public class AutomationScript extends CustomWebDriver{
 			lmark = driver.findElement(By.id("landmark"));
 			lmark.sendKeys("near hss school");			
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
-			deliverbtn.click();			
+			deliverbtn.click();		
+			String url = "https://www.greengavya.com/billing";
+			String crnt_url = driver.getCurrentUrl();
+			if(url.equals(crnt_url)) {
+				fail("TCID 138 failed:  invalid full name");
+			}
+			
+			
+			
 		}
 //			FUNCTIONS NEEDED FOR TCID 139
 
 		public void emptyFullName() {			
-			WebElement mnum,flatnum,area,city,district,pin,lmark,deliverbtn;		
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;	
+			fname = driver.findElement(By.id("fullname"));
+			String full_name = fname.getText();
 			mnum = driver.findElement(By.id("mobile"));
 			mnum.sendKeys("8593026651");		
 			flatnum = driver.findElement(By.id("house"));
@@ -737,6 +761,10 @@ public class AutomationScript extends CustomWebDriver{
 			lmark.sendKeys("near hss school");		
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();		
+			
+			if(full_name.isEmpty()) {
+				fail("TCID 139 failed:full name field is empty");
+			}
 		}
 		
 //	140
@@ -765,8 +793,11 @@ public class AutomationScript extends CustomWebDriver{
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			fname.clear();
 			fname.sendKeys("keerthichithuchithuchithu");
+			String full_name = fname.getText();
 			deliverbtn.click();
-			
+//			if(full_name.length() >=3 && full_name.length() <= 25) {
+//				
+//			}
 		}
 		
 		
@@ -776,7 +807,8 @@ public class AutomationScript extends CustomWebDriver{
 		public void fullNameNeg() {
 			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
 			fname = driver.findElement(By.id("fullname"));
-			fname.sendKeys("ke");			
+			fname.sendKeys("ke");	
+			String full_name = fname.getText();
 			mnum = driver.findElement(By.id("mobile"));
 			mnum.sendKeys("8593026651");			
 			flatnum = driver.findElement(By.id("house"));
@@ -800,36 +832,12 @@ public class AutomationScript extends CustomWebDriver{
 			fname.sendKeys("keerthichithuchithuchithuk");
 			deliverbtn.click();
 			
+			if(full_name.length() <=2 || full_name.length() >= 26) {
+				fail("TCID 141 failed :full name length invalid");
+			}
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 //		FUNCTIONS NEEDED FOR TCID 142		
 //		call addProduct,checkout,proceedcheckout
@@ -839,7 +847,8 @@ public class AutomationScript extends CustomWebDriver{
 			fname = driver.findElement(By.id("fullname"));
 			fname.sendKeys("keerthisudev");			
 			mnum = driver.findElement(By.id("mobile"));
-			mnum.sendKeys("122");			
+			mnum.sendKeys("kk");	
+			String mob = mnum.getText();
 			flatnum = driver.findElement(By.id("house"));
 			flatnum.sendKeys("myhome123");			
 			area = driver.findElement(By.id("area"));
@@ -854,6 +863,10 @@ public class AutomationScript extends CustomWebDriver{
 			lmark.sendKeys("near hss school");			
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();	
+			String character = "a,b,c,d,e,f,g,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+			if(mob.contains(character) || mob.length() <=5 || mob.length() >= 16) {
+				fail("TCID failed :invalid mobile number");
+			}
 		}
 		
 		
@@ -861,9 +874,11 @@ public class AutomationScript extends CustomWebDriver{
 //		call addProduct,checkout,proceedcheckout
 		
 		public void emptyMobileNumber() {
-			WebElement fname,flatnum,area,city,district,pin,lmark,deliverbtn;			
+			WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
 			fname = driver.findElement(By.id("fullname"));
-			fname.sendKeys("keerthisudev");			
+			fname.sendKeys("keerthisudev");	
+			mnum = driver.findElement(By.id("mobile"));
+			String mobile = mnum.getText();
 			flatnum = driver.findElement(By.id("house"));
 			flatnum.sendKeys("myhome123");			
 			area = driver.findElement(By.id("area"));
@@ -878,6 +893,9 @@ public class AutomationScript extends CustomWebDriver{
 			lmark.sendKeys("near hss school");	
 			deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 			deliverbtn.click();		
+			if(mobile.isEmpty()) {
+				fail("TCID 143 failed:mobile number is empty");
+			}
 		}
 //		144
 		
@@ -933,7 +951,38 @@ public class AutomationScript extends CustomWebDriver{
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			mnum.clear();
 			mnum.sendKeys("1000000000000000");
+			String mobile = mnum.getText();
 			deliverbtn.click();
+			if(mobile.length() <= 5 || mobile.length() >=16) {
+				fail("TCID 145 failed :mobile number length invalid");
+			}
+			
+		}
+		
+		
+		
+		public void invalidFlatNum() {
+				WebElement fname,mnum,flatnum,area,city,district,pin,lmark,deliverbtn;			
+				fname = driver.findElement(By.id("fullname"));
+				fname.sendKeys("keerthisudev");		
+				mnum = driver.findElement(By.id("mobile"));
+				mnum.sendKeys("8593026651");
+				flatnum = driver.findElement(By.id("house"));
+				flatnum.sendKeys("~!@");			
+				area = driver.findElement(By.id("area"));
+				area.sendKeys("akg nagar peroorkkada");			
+				city =  driver.findElement(By.id("city"));
+				city.sendKeys("Thiruvananthapuram");
+				district = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/select"));
+				district.sendKeys("Trivandrum");		
+				pin = driver.findElement(By.id("pin"));
+				pin.sendKeys("695020");		
+				lmark = driver.findElement(By.id("landmark"));
+				lmark.sendKeys("near hss school");	
+				deliverbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
+				deliverbtn.click();		
+				driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);				
+				deliverbtn.click();
 		}
 			
 }
