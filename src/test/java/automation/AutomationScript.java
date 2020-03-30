@@ -768,13 +768,10 @@ public class AutomationScript extends CustomWebDriver{
 		Alert alert=driver.switchTo().alert();
 		alert.accept();
 		if(alert.equals(null)) {
-			fail("TCID <167> failed: <alert box not present");
+			fail("TCID <166> failed: <alert box not present");
 		}
-//		 Alert okAlert = driver.switchTo().alert();
-//		 String alertText = okAlert.getText();
-//		 System.out.println("Do you want to set this address as your primary address ? " + alertText);
-//		 okAlert.accept();
-		}
+		
+	}
 	
 	//Display Cookies
 	
