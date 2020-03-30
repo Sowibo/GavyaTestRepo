@@ -765,12 +765,17 @@ public class AutomationScript extends CustomWebDriver{
 		delibtn=driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div[3]/div/div[2]/div[2]/form/input[8]"));
 		delibtn.click();
 		
-		
-		 Alert okAlert = driver.switchTo().alert();
-		 String alertText = okAlert.getText();
-		 System.out.println("Do you want to set this address as your primary address ? " + alertText);
-		 okAlert.accept();
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
+		if(alert.equals(null)) {
+			fail("TCID <167> failed: <alert box not present");
 		}
+//		 Alert okAlert = driver.switchTo().alert();
+//		 String alertText = okAlert.getText();
+//		 System.out.println("Do you want to set this address as your primary address ? " + alertText);
+//		 okAlert.accept();
+		}
+	
 	//Display Cookies
 	
 	public void displayCookies() {
@@ -853,7 +858,7 @@ public class AutomationScript extends CustomWebDriver{
 		
 		total1=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
 		String value1=total1.getText();
-		String value2="47.00";
+		String value2="64.00";
 		if(value1.equals(value2)) {
 			
 		 }
@@ -870,7 +875,7 @@ public class AutomationScript extends CustomWebDriver{
 		}
 		total2=driver.findElement(By.xpath("/html/body/div/div/div/div/div[4]/div/div[3]/div/div[2]/p/span"));
 		String value3=total2.getText();
-		String value4="64.00";
+		String value4="265.00";
 		
 		if(value3.equals(value4)) {
 			
