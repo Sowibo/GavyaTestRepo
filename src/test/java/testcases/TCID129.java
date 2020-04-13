@@ -11,7 +11,7 @@ public class TCID129 {
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().changePass();
-		AutomationScript.returnobj().confirmDiff();
+		AutomationScript.returnobj().confirmDiffPass();
 	
 	}
 }

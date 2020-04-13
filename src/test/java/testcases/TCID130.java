@@ -11,7 +11,7 @@ public class TCID130 {
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().changePass();
-		AutomationScript.returnobj().conPasslenPos();
+		AutomationScript.returnobj().confPassLenPos();
 	
 	}
 }

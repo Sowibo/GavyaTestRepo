@@ -12,6 +12,6 @@ public class TCID144 {
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheckOut();
-		AutomationScript.returnobj().mobileNumberLenPositive();
+		AutomationScript.returnobj().mobNumPositive();
 	}
 }

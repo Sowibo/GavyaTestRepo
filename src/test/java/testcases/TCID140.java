@@ -11,7 +11,7 @@ public class TCID140 {
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheckOut();
-		AutomationScript.returnobj().fullNamePos();
+		AutomationScript.returnobj().fullNamePositive();
 	}
 
 }

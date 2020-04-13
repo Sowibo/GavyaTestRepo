@@ -11,7 +11,7 @@ public class TCID128 {
 		BeforeSuites.suit().init();
 		AutomationScript.returnobj().settingsPage();
 		AutomationScript.returnobj().changePass();
-		AutomationScript.returnobj().newPasslenNeg();
+		AutomationScript.returnobj().newPassLenNeg();
 	
 	}
 }

@@ -11,6 +11,6 @@ public class TCID141 {
 		AutomationScript.returnobj().addProduct();
 		AutomationScript.returnobj().checkOut();
 		AutomationScript.returnobj().proceedCheckOut();
-		AutomationScript.returnobj().fullNameNeg();
+		AutomationScript.returnobj().fullNegative();
 	}
 }
